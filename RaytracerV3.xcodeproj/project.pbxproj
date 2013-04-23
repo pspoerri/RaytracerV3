@@ -19,6 +19,8 @@
 		504452501726D59100C4849B /* Obj.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 504452431726D59100C4849B /* Obj.cpp */; };
 		504452511726D59100C4849B /* RGBE.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 504452461726D59100C4849B /* RGBE.cpp */; };
 		504452521726D59100C4849B /* Warp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5044524B1726D59100C4849B /* Warp.cpp */; };
+		504452551726D5F400C4849B /* GLFWMaster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 504452531726D5F400C4849B /* GLFWMaster.cpp */; };
+		504452581726D62100C4849B /* GfxGLFWWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 504452561726D62000C4849B /* GfxGLFWWindow.cpp */; };
 		50F7B92F1726CFFC003F1FCE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F7B92E1726CFFC003F1FCE /* main.cpp */; };
 		50F7B9311726CFFC003F1FCE /* RaytracerV3.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */; };
 		50F7B9381726D0C0003F1FCE /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F7B9371726D0C0003F1FCE /* libglfw.dylib */; };
@@ -79,6 +81,10 @@
 		5044524A1726D59100C4849B /* Vec4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vec4.h; sourceTree = "<group>"; };
 		5044524B1726D59100C4849B /* Warp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Warp.cpp; sourceTree = "<group>"; };
 		5044524C1726D59100C4849B /* Warp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Warp.h; sourceTree = "<group>"; };
+		504452531726D5F400C4849B /* GLFWMaster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLFWMaster.cpp; sourceTree = "<group>"; };
+		504452541726D5F400C4849B /* GLFWMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLFWMaster.h; sourceTree = "<group>"; };
+		504452561726D62000C4849B /* GfxGLFWWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GfxGLFWWindow.cpp; sourceTree = "<group>"; };
+		504452571726D62100C4849B /* GfxGLFWWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxGLFWWindow.h; sourceTree = "<group>"; };
 		50F7B92B1726CFFC003F1FCE /* RaytracerV3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RaytracerV3; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F7B92E1726CFFC003F1FCE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RaytracerV3.1; sourceTree = "<group>"; };
@@ -118,6 +124,10 @@
 				504452291726D40900C4849B /* Primitive.h */,
 				5044522A1726D40900C4849B /* Text.cpp */,
 				5044522B1726D40900C4849B /* Text.h */,
+				504452531726D5F400C4849B /* GLFWMaster.cpp */,
+				504452541726D5F400C4849B /* GLFWMaster.h */,
+				504452561726D62000C4849B /* GfxGLFWWindow.cpp */,
+				504452571726D62100C4849B /* GfxGLFWWindow.h */,
 			);
 			path = OGL;
 			sourceTree = "<group>";
@@ -258,6 +268,8 @@
 				504452501726D59100C4849B /* Obj.cpp in Sources */,
 				504452511726D59100C4849B /* RGBE.cpp in Sources */,
 				504452521726D59100C4849B /* Warp.cpp in Sources */,
+				504452551726D5F400C4849B /* GLFWMaster.cpp in Sources */,
+				504452581726D62100C4849B /* GfxGLFWWindow.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
