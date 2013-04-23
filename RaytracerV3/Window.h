@@ -19,6 +19,8 @@ namespace Main {
     public:
         Window(uint width=1024, uint height=768);
         void mainLoop();
+        void updateWindowInformation();
+        void getKeyboardInput(double dt);
         int run();
     };
 

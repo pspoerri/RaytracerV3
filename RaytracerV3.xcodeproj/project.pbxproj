@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5007E2171726E1AB00D447B8 /* FBO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E2111726E1AB00D447B8 /* FBO.cpp */; };
-		5007E2181726E1AB00D447B8 /* Primitive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E2131726E1AB00D447B8 /* Primitive.cpp */; };
-		5044524D1726D59100C4849B /* BBH.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 504452331726D59100C4849B /* BBH.cpp */; };
-		5044524E1726D59100C4849B /* Color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 504452361726D59100C4849B /* Color.cpp */; };
-		5044524F1726D59100C4849B /* MeshBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 504452411726D59100C4849B /* MeshBase.cpp */; };
-		504452501726D59100C4849B /* Obj.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 504452431726D59100C4849B /* Obj.cpp */; };
-		504452511726D59100C4849B /* RGBE.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 504452461726D59100C4849B /* RGBE.cpp */; };
-		504452521726D59100C4849B /* Warp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5044524B1726D59100C4849B /* Warp.cpp */; };
-		504452691726DB0E00C4849B /* Progress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 504452621726DB0E00C4849B /* Progress.cpp */; };
-		5044526A1726DB0E00C4849B /* Stopwatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 504452641726DB0E00C4849B /* Stopwatch.cpp */; };
-		5044526B1726DB0E00C4849B /* Timestamp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 504452661726DB0E00C4849B /* Timestamp.cpp */; };
+		5007E2241726EE0800D447B8 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E2221726EE0800D447B8 /* Camera.cpp */; };
+		5007E2401726EE0F00D447B8 /* BBH.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E2261726EE0F00D447B8 /* BBH.cpp */; };
+		5007E2411726EE0F00D447B8 /* Color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E2291726EE0F00D447B8 /* Color.cpp */; };
+		5007E2421726EE0F00D447B8 /* MeshBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E2341726EE0F00D447B8 /* MeshBase.cpp */; };
+		5007E2431726EE0F00D447B8 /* Obj.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E2361726EE0F00D447B8 /* Obj.cpp */; };
+		5007E2441726EE0F00D447B8 /* RGBE.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E2391726EE0F00D447B8 /* RGBE.cpp */; };
+		5007E2451726EE0F00D447B8 /* Warp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E23E1726EE0F00D447B8 /* Warp.cpp */; };
+		5007E2501726EE1D00D447B8 /* FBO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E2481726EE1D00D447B8 /* FBO.cpp */; };
+		5007E2521726EE1D00D447B8 /* Primitive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E24C1726EE1D00D447B8 /* Primitive.cpp */; };
+		5007E25E1726EE2900D447B8 /* Progress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E2571726EE2900D447B8 /* Progress.cpp */; };
+		5007E25F1726EE2900D447B8 /* Stopwatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E2591726EE2900D447B8 /* Stopwatch.cpp */; };
+		5007E2601726EE2900D447B8 /* Timestamp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E25B1726EE2900D447B8 /* Timestamp.cpp */; };
 		504452711726DCA300C4849B /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5044526F1726DCA300C4849B /* Window.cpp */; };
 		50F7B92F1726CFFC003F1FCE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F7B92E1726CFFC003F1FCE /* main.cpp */; };
 		50F7B9311726CFFC003F1FCE /* RaytracerV3.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */; };
@@ -40,46 +41,48 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5007E2101726E1AB00D447B8 /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = core.h; path = OGL/core.h; sourceTree = "<group>"; };
-		5007E2111726E1AB00D447B8 /* FBO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FBO.cpp; path = OGL/FBO.cpp; sourceTree = "<group>"; };
-		5007E2121726E1AB00D447B8 /* FBO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBO.h; path = OGL/FBO.h; sourceTree = "<group>"; };
-		5007E2131726E1AB00D447B8 /* Primitive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Primitive.cpp; path = OGL/Primitive.cpp; sourceTree = "<group>"; };
-		5007E2141726E1AB00D447B8 /* Primitive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Primitive.h; path = OGL/Primitive.h; sourceTree = "<group>"; };
-		504452331726D59100C4849B /* BBH.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BBH.cpp; sourceTree = "<group>"; };
-		504452341726D59100C4849B /* BBH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBH.h; sourceTree = "<group>"; };
-		504452351726D59100C4849B /* Box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
-		504452361726D59100C4849B /* Color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Color.cpp; sourceTree = "<group>"; };
-		504452371726D59100C4849B /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
-		504452381726D59100C4849B /* Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
-		504452391726D59100C4849B /* FastMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastMath.h; sourceTree = "<group>"; };
-		5044523A1726D59100C4849B /* Fwd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fwd.h; sourceTree = "<group>"; };
-		5044523B1726D59100C4849B /* LimitsT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitsT.h; sourceTree = "<group>"; };
-		5044523C1726D59100C4849B /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
-		5044523D1726D59100C4849B /* LineAlgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineAlgo.h; sourceTree = "<group>"; };
-		5044523E1726D59100C4849B /* Mat44.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mat44.h; sourceTree = "<group>"; };
-		5044523F1726D59100C4849B /* MathGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathGL.h; sourceTree = "<group>"; };
-		504452401726D59100C4849B /* MathT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathT.h; sourceTree = "<group>"; };
-		504452411726D59100C4849B /* MeshBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MeshBase.cpp; sourceTree = "<group>"; };
-		504452421726D59100C4849B /* MeshBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeshBase.h; sourceTree = "<group>"; };
-		504452431726D59100C4849B /* Obj.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Obj.cpp; sourceTree = "<group>"; };
-		504452441726D59100C4849B /* Obj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Obj.h; sourceTree = "<group>"; };
-		504452451726D59100C4849B /* Rand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rand.h; sourceTree = "<group>"; };
-		504452461726D59100C4849B /* RGBE.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RGBE.cpp; sourceTree = "<group>"; };
-		504452471726D59100C4849B /* RGBE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGBE.h; sourceTree = "<group>"; };
-		504452481726D59100C4849B /* Vec2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vec2.h; sourceTree = "<group>"; };
-		504452491726D59100C4849B /* Vec3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vec3.h; sourceTree = "<group>"; };
-		5044524A1726D59100C4849B /* Vec4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vec4.h; sourceTree = "<group>"; };
-		5044524B1726D59100C4849B /* Warp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Warp.cpp; sourceTree = "<group>"; };
-		5044524C1726D59100C4849B /* Warp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Warp.h; sourceTree = "<group>"; };
-		504452601726DB0E00C4849B /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
-		504452611726DB0E00C4849B /* Fwd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fwd.h; sourceTree = "<group>"; };
-		504452621726DB0E00C4849B /* Progress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Progress.cpp; sourceTree = "<group>"; };
-		504452631726DB0E00C4849B /* Progress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Progress.h; sourceTree = "<group>"; };
-		504452641726DB0E00C4849B /* Stopwatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Stopwatch.cpp; sourceTree = "<group>"; };
-		504452651726DB0E00C4849B /* Stopwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stopwatch.h; sourceTree = "<group>"; };
-		504452661726DB0E00C4849B /* Timestamp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timestamp.cpp; sourceTree = "<group>"; };
-		504452671726DB0E00C4849B /* Timestamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timestamp.h; sourceTree = "<group>"; };
-		504452681726DB0E00C4849B /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
+		5007E2221726EE0800D447B8 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		5007E2231726EE0800D447B8 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		5007E2261726EE0F00D447B8 /* BBH.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BBH.cpp; sourceTree = "<group>"; };
+		5007E2271726EE0F00D447B8 /* BBH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBH.h; sourceTree = "<group>"; };
+		5007E2281726EE0F00D447B8 /* Box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
+		5007E2291726EE0F00D447B8 /* Color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Color.cpp; sourceTree = "<group>"; };
+		5007E22A1726EE0F00D447B8 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		5007E22B1726EE0F00D447B8 /* Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
+		5007E22C1726EE0F00D447B8 /* FastMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastMath.h; sourceTree = "<group>"; };
+		5007E22D1726EE0F00D447B8 /* Fwd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fwd.h; sourceTree = "<group>"; };
+		5007E22E1726EE0F00D447B8 /* LimitsT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitsT.h; sourceTree = "<group>"; };
+		5007E22F1726EE0F00D447B8 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
+		5007E2301726EE0F00D447B8 /* LineAlgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineAlgo.h; sourceTree = "<group>"; };
+		5007E2311726EE0F00D447B8 /* Mat44.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mat44.h; sourceTree = "<group>"; };
+		5007E2321726EE0F00D447B8 /* MathGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathGL.h; sourceTree = "<group>"; };
+		5007E2331726EE0F00D447B8 /* MathT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathT.h; sourceTree = "<group>"; };
+		5007E2341726EE0F00D447B8 /* MeshBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MeshBase.cpp; sourceTree = "<group>"; };
+		5007E2351726EE0F00D447B8 /* MeshBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeshBase.h; sourceTree = "<group>"; };
+		5007E2361726EE0F00D447B8 /* Obj.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Obj.cpp; sourceTree = "<group>"; };
+		5007E2371726EE0F00D447B8 /* Obj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Obj.h; sourceTree = "<group>"; };
+		5007E2381726EE0F00D447B8 /* Rand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rand.h; sourceTree = "<group>"; };
+		5007E2391726EE0F00D447B8 /* RGBE.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RGBE.cpp; sourceTree = "<group>"; };
+		5007E23A1726EE0F00D447B8 /* RGBE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGBE.h; sourceTree = "<group>"; };
+		5007E23B1726EE0F00D447B8 /* Vec2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vec2.h; sourceTree = "<group>"; };
+		5007E23C1726EE0F00D447B8 /* Vec3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vec3.h; sourceTree = "<group>"; };
+		5007E23D1726EE0F00D447B8 /* Vec4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vec4.h; sourceTree = "<group>"; };
+		5007E23E1726EE0F00D447B8 /* Warp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Warp.cpp; sourceTree = "<group>"; };
+		5007E23F1726EE0F00D447B8 /* Warp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Warp.h; sourceTree = "<group>"; };
+		5007E2471726EE1D00D447B8 /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
+		5007E2481726EE1D00D447B8 /* FBO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FBO.cpp; sourceTree = "<group>"; };
+		5007E2491726EE1D00D447B8 /* FBO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBO.h; sourceTree = "<group>"; };
+		5007E24C1726EE1D00D447B8 /* Primitive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Primitive.cpp; sourceTree = "<group>"; };
+		5007E24D1726EE1D00D447B8 /* Primitive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Primitive.h; sourceTree = "<group>"; };
+		5007E2551726EE2900D447B8 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		5007E2561726EE2900D447B8 /* Fwd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fwd.h; sourceTree = "<group>"; };
+		5007E2571726EE2900D447B8 /* Progress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Progress.cpp; sourceTree = "<group>"; };
+		5007E2581726EE2900D447B8 /* Progress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Progress.h; sourceTree = "<group>"; };
+		5007E2591726EE2900D447B8 /* Stopwatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Stopwatch.cpp; sourceTree = "<group>"; };
+		5007E25A1726EE2900D447B8 /* Stopwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stopwatch.h; sourceTree = "<group>"; };
+		5007E25B1726EE2900D447B8 /* Timestamp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timestamp.cpp; sourceTree = "<group>"; };
+		5007E25C1726EE2900D447B8 /* Timestamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timestamp.h; sourceTree = "<group>"; };
+		5007E25D1726EE2900D447B8 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
 		5044526F1726DCA300C4849B /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
 		504452701726DCA300C4849B /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
 		50F7B92B1726CFFC003F1FCE /* RaytracerV3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RaytracerV3; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,65 +108,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		504452321726D59100C4849B /* Math */ = {
+		5007E2211726EE0800D447B8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				504452331726D59100C4849B /* BBH.cpp */,
-				504452341726D59100C4849B /* BBH.h */,
-				504452351726D59100C4849B /* Box.h */,
-				504452361726D59100C4849B /* Color.cpp */,
-				504452371726D59100C4849B /* Color.h */,
-				504452381726D59100C4849B /* Core.h */,
-				504452391726D59100C4849B /* FastMath.h */,
-				5044523A1726D59100C4849B /* Fwd.h */,
-				5044523B1726D59100C4849B /* LimitsT.h */,
-				5044523C1726D59100C4849B /* Line.h */,
-				5044523D1726D59100C4849B /* LineAlgo.h */,
-				5044523E1726D59100C4849B /* Mat44.h */,
-				5044523F1726D59100C4849B /* MathGL.h */,
-				504452401726D59100C4849B /* MathT.h */,
-				504452411726D59100C4849B /* MeshBase.cpp */,
-				504452421726D59100C4849B /* MeshBase.h */,
-				504452431726D59100C4849B /* Obj.cpp */,
-				504452441726D59100C4849B /* Obj.h */,
-				504452451726D59100C4849B /* Rand.h */,
-				504452461726D59100C4849B /* RGBE.cpp */,
-				504452471726D59100C4849B /* RGBE.h */,
-				504452481726D59100C4849B /* Vec2.h */,
-				504452491726D59100C4849B /* Vec3.h */,
-				5044524A1726D59100C4849B /* Vec4.h */,
-				5044524B1726D59100C4849B /* Warp.cpp */,
-				5044524C1726D59100C4849B /* Warp.h */,
+				5007E2221726EE0800D447B8 /* Camera.cpp */,
+				5007E2231726EE0800D447B8 /* Camera.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		5007E2251726EE0F00D447B8 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				5007E2261726EE0F00D447B8 /* BBH.cpp */,
+				5007E2271726EE0F00D447B8 /* BBH.h */,
+				5007E2281726EE0F00D447B8 /* Box.h */,
+				5007E2291726EE0F00D447B8 /* Color.cpp */,
+				5007E22A1726EE0F00D447B8 /* Color.h */,
+				5007E22B1726EE0F00D447B8 /* Core.h */,
+				5007E22C1726EE0F00D447B8 /* FastMath.h */,
+				5007E22D1726EE0F00D447B8 /* Fwd.h */,
+				5007E22E1726EE0F00D447B8 /* LimitsT.h */,
+				5007E22F1726EE0F00D447B8 /* Line.h */,
+				5007E2301726EE0F00D447B8 /* LineAlgo.h */,
+				5007E2311726EE0F00D447B8 /* Mat44.h */,
+				5007E2321726EE0F00D447B8 /* MathGL.h */,
+				5007E2331726EE0F00D447B8 /* MathT.h */,
+				5007E2341726EE0F00D447B8 /* MeshBase.cpp */,
+				5007E2351726EE0F00D447B8 /* MeshBase.h */,
+				5007E2361726EE0F00D447B8 /* Obj.cpp */,
+				5007E2371726EE0F00D447B8 /* Obj.h */,
+				5007E2381726EE0F00D447B8 /* Rand.h */,
+				5007E2391726EE0F00D447B8 /* RGBE.cpp */,
+				5007E23A1726EE0F00D447B8 /* RGBE.h */,
+				5007E23B1726EE0F00D447B8 /* Vec2.h */,
+				5007E23C1726EE0F00D447B8 /* Vec3.h */,
+				5007E23D1726EE0F00D447B8 /* Vec4.h */,
+				5007E23E1726EE0F00D447B8 /* Warp.cpp */,
+				5007E23F1726EE0F00D447B8 /* Warp.h */,
 			);
 			path = Math;
 			sourceTree = "<group>";
 		};
-		5044525F1726DB0E00C4849B /* Platform */ = {
+		5007E2461726EE1D00D447B8 /* OGL */ = {
 			isa = PBXGroup;
 			children = (
-				504452601726DB0E00C4849B /* config.h */,
-				504452611726DB0E00C4849B /* Fwd.h */,
-				504452621726DB0E00C4849B /* Progress.cpp */,
-				504452631726DB0E00C4849B /* Progress.h */,
-				504452641726DB0E00C4849B /* Stopwatch.cpp */,
-				504452651726DB0E00C4849B /* Stopwatch.h */,
-				504452661726DB0E00C4849B /* Timestamp.cpp */,
-				504452671726DB0E00C4849B /* Timestamp.h */,
-				504452681726DB0E00C4849B /* Types.h */,
+				5007E2471726EE1D00D447B8 /* core.h */,
+				5007E2481726EE1D00D447B8 /* FBO.cpp */,
+				5007E2491726EE1D00D447B8 /* FBO.h */,
+				5007E24C1726EE1D00D447B8 /* Primitive.cpp */,
+				5007E24D1726EE1D00D447B8 /* Primitive.h */,
 			);
-			path = Platform;
+			path = OGL;
 			sourceTree = "<group>";
 		};
-		504452721726E00800C4849B /* OGL */ = {
+		5007E2541726EE2900D447B8 /* Platform */ = {
 			isa = PBXGroup;
 			children = (
-				5007E2101726E1AB00D447B8 /* core.h */,
-				5007E2111726E1AB00D447B8 /* FBO.cpp */,
-				5007E2121726E1AB00D447B8 /* FBO.h */,
-				5007E2131726E1AB00D447B8 /* Primitive.cpp */,
-				5007E2141726E1AB00D447B8 /* Primitive.h */,
+				5007E2551726EE2900D447B8 /* config.h */,
+				5007E2561726EE2900D447B8 /* Fwd.h */,
+				5007E2571726EE2900D447B8 /* Progress.cpp */,
+				5007E2581726EE2900D447B8 /* Progress.h */,
+				5007E2591726EE2900D447B8 /* Stopwatch.cpp */,
+				5007E25A1726EE2900D447B8 /* Stopwatch.h */,
+				5007E25B1726EE2900D447B8 /* Timestamp.cpp */,
+				5007E25C1726EE2900D447B8 /* Timestamp.h */,
+				5007E25D1726EE2900D447B8 /* Types.h */,
 			);
-			name = OGL;
+			path = Platform;
 			sourceTree = "<group>";
 		};
 		50F7B9221726CFFC003F1FCE = {
@@ -186,9 +198,10 @@
 		50F7B92D1726CFFC003F1FCE /* RaytracerV3 */ = {
 			isa = PBXGroup;
 			children = (
-				504452721726E00800C4849B /* OGL */,
-				5044525F1726DB0E00C4849B /* Platform */,
-				504452321726D59100C4849B /* Math */,
+				5007E2541726EE2900D447B8 /* Platform */,
+				5007E2461726EE1D00D447B8 /* OGL */,
+				5007E2251726EE0F00D447B8 /* Math */,
+				5007E2211726EE0800D447B8 /* Core */,
 				50F7B92E1726CFFC003F1FCE /* main.cpp */,
 				50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */,
 				50F7B93A1726D0EB003F1FCE /* platform_includes.h */,
@@ -260,18 +273,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				50F7B92F1726CFFC003F1FCE /* main.cpp in Sources */,
-				5044524D1726D59100C4849B /* BBH.cpp in Sources */,
-				5044524E1726D59100C4849B /* Color.cpp in Sources */,
-				5044524F1726D59100C4849B /* MeshBase.cpp in Sources */,
-				504452501726D59100C4849B /* Obj.cpp in Sources */,
-				504452511726D59100C4849B /* RGBE.cpp in Sources */,
-				504452521726D59100C4849B /* Warp.cpp in Sources */,
-				504452691726DB0E00C4849B /* Progress.cpp in Sources */,
-				5044526A1726DB0E00C4849B /* Stopwatch.cpp in Sources */,
-				5044526B1726DB0E00C4849B /* Timestamp.cpp in Sources */,
 				504452711726DCA300C4849B /* Window.cpp in Sources */,
-				5007E2171726E1AB00D447B8 /* FBO.cpp in Sources */,
-				5007E2181726E1AB00D447B8 /* Primitive.cpp in Sources */,
+				5007E2241726EE0800D447B8 /* Camera.cpp in Sources */,
+				5007E2401726EE0F00D447B8 /* BBH.cpp in Sources */,
+				5007E2411726EE0F00D447B8 /* Color.cpp in Sources */,
+				5007E2421726EE0F00D447B8 /* MeshBase.cpp in Sources */,
+				5007E2431726EE0F00D447B8 /* Obj.cpp in Sources */,
+				5007E2441726EE0F00D447B8 /* RGBE.cpp in Sources */,
+				5007E2451726EE0F00D447B8 /* Warp.cpp in Sources */,
+				5007E2501726EE1D00D447B8 /* FBO.cpp in Sources */,
+				5007E2521726EE1D00D447B8 /* Primitive.cpp in Sources */,
+				5007E25E1726EE2900D447B8 /* Progress.cpp in Sources */,
+				5007E25F1726EE2900D447B8 /* Stopwatch.cpp in Sources */,
+				5007E2601726EE2900D447B8 /* Timestamp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

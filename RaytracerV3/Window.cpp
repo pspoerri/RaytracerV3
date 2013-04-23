@@ -59,3 +59,23 @@ Window::mainLoop()
 {
     
 }
+
+void
+Window::getKeyboardInput(double dt)
+{
+//    if (glfwGetKey('D')) _do_something;
+
+}
+
+void
+Window::updateWindowInformation()
+{
+    GLFWvidmode return_struct;
+    
+    glfwGetDesktopMode( &return_struct );
+    if (height != return_struct.Height && width != return_struct.Width)
+    {
+        height = return_struct.Height;
+        width = return_struct.Width;
+    }
+}

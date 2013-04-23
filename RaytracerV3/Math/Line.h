@@ -5,8 +5,8 @@
 #ifndef MATH_LINE_H_INCLUDED
 #define MATH_LINE_H_INCLUDED
 
-#include <Math/Fwd.h>
-#include <Math/MathT.h>
+#include "Fwd.h"
+#include "MathT.h"
 #include <iostream>
 
 namespace Math

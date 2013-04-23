@@ -14,7 +14,11 @@
 #include <iostream>
 #include <cassert>
 
-#include "core.h"
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
+#include <GL/glfw.h>
+
+
 typedef unsigned int uint;
 typedef unsigned long ulong;
 typedef unsigned short ushort;
