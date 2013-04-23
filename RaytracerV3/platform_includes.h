@@ -15,6 +15,8 @@
 #include <cassert>
 
 #include <GL/glfw.h>
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
 
 typedef unsigned int uint;
 typedef unsigned long ulong;
