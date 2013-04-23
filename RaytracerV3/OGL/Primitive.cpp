@@ -7,7 +7,7 @@
 
 #include "Core.h"
 #include "Primitive.h"
-#include "Text.h"
+//#include "Text.h"
 #include "MathGL.h"
 #include "FastMath.h"
 #include <stdlib.h>
@@ -156,77 +156,77 @@ Primitive::drawGrid(float size)
     glPopAttrib(); // GL_CURRENT_BIT
 }
 
-
-void
-Primitive::drawTextOverlay(const char* str, int windowWidth, int windowHeight)
-{
-	int top = 50;
-	
-	glPushAttrib(GL_ENABLE_BIT);
-	glPushAttrib(GL_DEPTH_BUFFER_BIT);
-	glPushAttrib(GL_POLYGON_BIT);
-	glPushAttrib(GL_TRANSFORM_BIT);
-	glPushAttrib(GL_COLOR_BUFFER_BIT);
-	
-	glDisable(GL_LINE_SMOOTH);
-	glDisable(GL_TEXTURE_2D);
-	glDisable(GL_DEPTH_TEST);
-	
-	glEnable(GL_BLEND);
-	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-	
-	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-	glMatrixMode(GL_PROJECTION);
-	
-	// Now set scissor to smaller red sub region
-	glScissor(top-1, top-1, windowWidth-2*(top-1), windowHeight-2*(top-1));
-	glEnable(GL_SCISSOR_TEST);
-	
-	glPushMatrix();
-	{
-		glLoadIdentity();
-		gluOrtho2D(0, windowWidth, windowHeight, 0);
-		
-		glMatrixMode(GL_MODELVIEW);
-		glPushMatrix();
-		{
-			glLoadIdentity();
-			
-			glColor4f(0.25f, 0.25f, 0.25f, 0.85f);
-			glBegin(GL_QUADS);
-			{
-				glVertex2i(top, top);
-				glVertex2i(top, windowHeight-top);
-				glVertex2i(windowWidth-top, windowHeight-top);
-				glVertex2i(windowWidth-top, top);
-			}
-			glEnd();
-			
-			glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
-			glBegin(GL_LINE_LOOP);
-			{
-				glVertex2i(top, top);
-				glVertex2i(top, windowHeight-top);
-				glVertex2i(windowWidth-top, windowHeight-top);
-				glVertex2i(windowWidth-top, top);
-			}
-			glEnd();
-			
-			glColor3f(1.0f, 1.0f, 1.0f);
-			glText(top + 10, windowHeight - top -15, str);
-		}
-		glPopMatrix();
-	}
-	glPopMatrix();
-	
-	glDisable(GL_SCISSOR_TEST);
-
-	glPopAttrib(); // GL_COLOR_BUFFER_BIT
-	glPopAttrib(); // GL_TRANSFORM_BIT
-	glPopAttrib(); // GL_POLYGON_BIT
-	glPopAttrib(); // GL_DEPTH_BUFFER_BIT
-	glPopAttrib(); // GL_ENABLE_BIT
-}
+//
+//void
+//Primitive::drawTextOverlay(const char* str, int windowWidth, int windowHeight)
+//{
+//	int top = 50;
+//	
+//	glPushAttrib(GL_ENABLE_BIT);
+//	glPushAttrib(GL_DEPTH_BUFFER_BIT);
+//	glPushAttrib(GL_POLYGON_BIT);
+//	glPushAttrib(GL_TRANSFORM_BIT);
+//	glPushAttrib(GL_COLOR_BUFFER_BIT);
+//	
+//	glDisable(GL_LINE_SMOOTH);
+//	glDisable(GL_TEXTURE_2D);
+//	glDisable(GL_DEPTH_TEST);
+//	
+//	glEnable(GL_BLEND);
+//	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+//	
+//	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+//	glMatrixMode(GL_PROJECTION);
+//	
+//	// Now set scissor to smaller red sub region
+//	glScissor(top-1, top-1, windowWidth-2*(top-1), windowHeight-2*(top-1));
+//	glEnable(GL_SCISSOR_TEST);
+//	
+//	glPushMatrix();
+//	{
+//		glLoadIdentity();
+//		gluOrtho2D(0, windowWidth, windowHeight, 0);
+//		
+//		glMatrixMode(GL_MODELVIEW);
+//		glPushMatrix();
+//		{
+//			glLoadIdentity();
+//			
+//			glColor4f(0.25f, 0.25f, 0.25f, 0.85f);
+//			glBegin(GL_QUADS);
+//			{
+//				glVertex2i(top, top);
+//				glVertex2i(top, windowHeight-top);
+//				glVertex2i(windowWidth-top, windowHeight-top);
+//				glVertex2i(windowWidth-top, top);
+//			}
+//			glEnd();
+//			
+//			glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+//			glBegin(GL_LINE_LOOP);
+//			{
+//				glVertex2i(top, top);
+//				glVertex2i(top, windowHeight-top);
+//				glVertex2i(windowWidth-top, windowHeight-top);
+//				glVertex2i(windowWidth-top, top);
+//			}
+//			glEnd();
+//			
+//			glColor3f(1.0f, 1.0f, 1.0f);
+//			glText(top + 10, windowHeight - top -15, str);
+//		}
+//		glPopMatrix();
+//	}
+//	glPopMatrix();
+//	
+//	glDisable(GL_SCISSOR_TEST);
+//
+//	glPopAttrib(); // GL_COLOR_BUFFER_BIT
+//	glPopAttrib(); // GL_TRANSFORM_BIT
+//	glPopAttrib(); // GL_POLYGON_BIT
+//	glPopAttrib(); // GL_DEPTH_BUFFER_BIT
+//	glPopAttrib(); // GL_ENABLE_BIT
+//}
 
 
 } // end namespace OGL

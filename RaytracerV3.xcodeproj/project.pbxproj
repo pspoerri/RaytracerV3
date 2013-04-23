@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5007E2171726E1AB00D447B8 /* FBO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E2111726E1AB00D447B8 /* FBO.cpp */; };
+		5007E2181726E1AB00D447B8 /* Primitive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E2131726E1AB00D447B8 /* Primitive.cpp */; };
 		5044524D1726D59100C4849B /* BBH.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 504452331726D59100C4849B /* BBH.cpp */; };
 		5044524E1726D59100C4849B /* Color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 504452361726D59100C4849B /* Color.cpp */; };
 		5044524F1726D59100C4849B /* MeshBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 504452411726D59100C4849B /* MeshBase.cpp */; };
@@ -38,6 +40,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5007E2101726E1AB00D447B8 /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = core.h; path = OGL/core.h; sourceTree = "<group>"; };
+		5007E2111726E1AB00D447B8 /* FBO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FBO.cpp; path = OGL/FBO.cpp; sourceTree = "<group>"; };
+		5007E2121726E1AB00D447B8 /* FBO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBO.h; path = OGL/FBO.h; sourceTree = "<group>"; };
+		5007E2131726E1AB00D447B8 /* Primitive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Primitive.cpp; path = OGL/Primitive.cpp; sourceTree = "<group>"; };
+		5007E2141726E1AB00D447B8 /* Primitive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Primitive.h; path = OGL/Primitive.h; sourceTree = "<group>"; };
 		504452331726D59100C4849B /* BBH.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BBH.cpp; sourceTree = "<group>"; };
 		504452341726D59100C4849B /* BBH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBH.h; sourceTree = "<group>"; };
 		504452351726D59100C4849B /* Box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
@@ -75,7 +82,6 @@
 		504452681726DB0E00C4849B /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
 		5044526F1726DCA300C4849B /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
 		504452701726DCA300C4849B /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
-		504452731726E01500C4849B /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
 		50F7B92B1726CFFC003F1FCE /* RaytracerV3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RaytracerV3; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F7B92E1726CFFC003F1FCE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RaytracerV3.1; sourceTree = "<group>"; };
@@ -151,7 +157,11 @@
 		504452721726E00800C4849B /* OGL */ = {
 			isa = PBXGroup;
 			children = (
-				504452731726E01500C4849B /* core.h */,
+				5007E2101726E1AB00D447B8 /* core.h */,
+				5007E2111726E1AB00D447B8 /* FBO.cpp */,
+				5007E2121726E1AB00D447B8 /* FBO.h */,
+				5007E2131726E1AB00D447B8 /* Primitive.cpp */,
+				5007E2141726E1AB00D447B8 /* Primitive.h */,
 			);
 			name = OGL;
 			sourceTree = "<group>";
@@ -260,6 +270,8 @@
 				5044526A1726DB0E00C4849B /* Stopwatch.cpp in Sources */,
 				5044526B1726DB0E00C4849B /* Timestamp.cpp in Sources */,
 				504452711726DCA300C4849B /* Window.cpp in Sources */,
+				5007E2171726E1AB00D447B8 /* FBO.cpp in Sources */,
+				5007E2181726E1AB00D447B8 /* Primitive.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

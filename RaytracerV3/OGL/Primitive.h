@@ -13,7 +13,7 @@ namespace Primitive
 {
     void drawAxes(float length);
     void drawGrid(float size);
-    void drawTextOverlay(const char* str, int windowWidth, int windowHeight);
+//    void drawTextOverlay(const char* str, int windowWidth, int windowHeight);
 
 } // namespace Primtive
 
