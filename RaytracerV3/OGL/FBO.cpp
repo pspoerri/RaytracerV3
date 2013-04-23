@@ -20,7 +20,7 @@
 #include <string.h>
 #include <assert.h>
 #include <iostream>
-#include <OGL/FBO.h>
+#include "FBO.h"
 
 #pragma warning(disable: 4996)
 

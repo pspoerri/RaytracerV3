@@ -5,10 +5,10 @@
 #  include <config.h>
 #endif // HAVE_CONFIG_H
 
-#include <OGL/GfxGLUTWindow.h>
-#include <OGL/Core.h>
-#include <OGL/Text.h>
-#include <OGL/Primitive.h>
+#include "GfxGLUTWindow.h"
+#include "Core.h"
+#include "Text.h"
+#include "Primitive.h"
 #include <stdlib.h>
 
 namespace OGL

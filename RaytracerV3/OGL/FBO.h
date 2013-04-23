@@ -23,7 +23,7 @@
 #ifndef ___FRAMEBUFFER_OBJECT_H
 #define ___FRAMEBUFFER_OBJECT_H
 
-#include <OGL/Core.h>
+#include "Core.h"
 
 #define FBO_DEPTH         0
 #define FBO_STENCIL       10

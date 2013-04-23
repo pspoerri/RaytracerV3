@@ -5,11 +5,11 @@
 #  include <config.h>
 #endif // HAVE_CONFIG_H
 
-#include <OGL/Core.h>
-#include <OGL/Primitive.h>
-#include <OGL/Text.h>
-#include <Math/MathGL.h>
-#include <Math/FastMath.h>
+#include "Core.h"
+#include "Primitive.h"
+#include "Text.h"
+#include "MathGL.h"
+#include "FastMath.h"
 #include <stdlib.h>
 
 using namespace Math;
