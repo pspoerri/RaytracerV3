@@ -24,7 +24,8 @@ Window::Window(uint width, uint height):
     }
     
     /* Create a windowed mode window and its OpenGL context */
-    if (!glfwOpenWindow(width, height, 8, 8, 8, 0, 24, 0, GLFW_WINDOW))
+    if (!glfwOpenWindow(width, height, 32, 32, 32, 24, 24, 0, GLFW_WINDOW))
+//    if (!glfwOpenWindow(width, height, 8, 8, 8, 0, 24, 0, GLFW_WINDOW))
     {
         initialized = false;
         return;
@@ -40,15 +41,21 @@ Window::run()
     {
         return -1;
     }
-    
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     /* Loop until the user closes the window */
     while (glfwGetWindowParam(GLFW_OPENED))
     {
         /* Render here */
-        
+        mainLoop();
         /* Swap front and back buffers and process events */
         glfwSwapBuffers();
     }
     
     return 0;
+}
+
+void
+Window::mainLoop()
+{
+    
 }

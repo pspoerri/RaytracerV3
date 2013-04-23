@@ -18,7 +18,7 @@ namespace Main {
         bool initialized;
     public:
         Window(uint width=1024, uint height=768);
-        
+        void mainLoop();
         int run();
     };
 
