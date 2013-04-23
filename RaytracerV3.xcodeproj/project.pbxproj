@@ -1,0 +1,254 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50F7B92F1726CFFC003F1FCE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F7B92E1726CFFC003F1FCE /* main.cpp */; };
+		50F7B9311726CFFC003F1FCE /* RaytracerV3.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */; };
+		50F7B9381726D0C0003F1FCE /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F7B9371726D0C0003F1FCE /* libglfw.dylib */; };
+		50F7B93C1726D1C8003F1FCE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F7B93B1726D1C8003F1FCE /* Cocoa.framework */; };
+		50F7B93E1726D1CE003F1FCE /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F7B93D1726D1CE003F1FCE /* OpenGL.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		50F7B9291726CFFC003F1FCE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				50F7B9311726CFFC003F1FCE /* RaytracerV3.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		50F7B92B1726CFFC003F1FCE /* RaytracerV3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RaytracerV3; sourceTree = BUILT_PRODUCTS_DIR; };
+		50F7B92E1726CFFC003F1FCE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RaytracerV3.1; sourceTree = "<group>"; };
+		50F7B9371726D0C0003F1FCE /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = /usr/local/Cellar/glfw/2.7.7/lib/libglfw.dylib; sourceTree = "<absolute>"; };
+		50F7B93A1726D0EB003F1FCE /* platform_includes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform_includes.h; sourceTree = "<group>"; };
+		50F7B93B1726D1C8003F1FCE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		50F7B93D1726D1CE003F1FCE /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50F7B9281726CFFC003F1FCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50F7B93E1726D1CE003F1FCE /* OpenGL.framework in Frameworks */,
+				50F7B93C1726D1C8003F1FCE /* Cocoa.framework in Frameworks */,
+				50F7B9381726D0C0003F1FCE /* libglfw.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50F7B9221726CFFC003F1FCE = {
+			isa = PBXGroup;
+			children = (
+				50F7B9391726D0C9003F1FCE /* References */,
+				50F7B92D1726CFFC003F1FCE /* RaytracerV3 */,
+				50F7B92C1726CFFC003F1FCE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		50F7B92C1726CFFC003F1FCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50F7B92B1726CFFC003F1FCE /* RaytracerV3 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50F7B92D1726CFFC003F1FCE /* RaytracerV3 */ = {
+			isa = PBXGroup;
+			children = (
+				50F7B92E1726CFFC003F1FCE /* main.cpp */,
+				50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */,
+				50F7B93A1726D0EB003F1FCE /* platform_includes.h */,
+			);
+			path = RaytracerV3;
+			sourceTree = "<group>";
+		};
+		50F7B9391726D0C9003F1FCE /* References */ = {
+			isa = PBXGroup;
+			children = (
+				50F7B93D1726D1CE003F1FCE /* OpenGL.framework */,
+				50F7B93B1726D1C8003F1FCE /* Cocoa.framework */,
+				50F7B9371726D0C0003F1FCE /* libglfw.dylib */,
+			);
+			name = References;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50F7B92A1726CFFC003F1FCE /* RaytracerV3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50F7B9341726CFFC003F1FCE /* Build configuration list for PBXNativeTarget "RaytracerV3" */;
+			buildPhases = (
+				50F7B9271726CFFC003F1FCE /* Sources */,
+				50F7B9281726CFFC003F1FCE /* Frameworks */,
+				50F7B9291726CFFC003F1FCE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RaytracerV3;
+			productName = RaytracerV3;
+			productReference = 50F7B92B1726CFFC003F1FCE /* RaytracerV3 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50F7B9231726CFFC003F1FCE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Pascal Spörri";
+			};
+			buildConfigurationList = 50F7B9261726CFFC003F1FCE /* Build configuration list for PBXProject "RaytracerV3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 50F7B9221726CFFC003F1FCE;
+			productRefGroup = 50F7B92C1726CFFC003F1FCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50F7B92A1726CFFC003F1FCE /* RaytracerV3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50F7B9271726CFFC003F1FCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50F7B92F1726CFFC003F1FCE /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		50F7B9321726CFFC003F1FCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		50F7B9331726CFFC003F1FCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		50F7B9351726CFFC003F1FCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include/;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/2.7.7/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		50F7B9361726CFFC003F1FCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include/;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/2.7.7/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50F7B9261726CFFC003F1FCE /* Build configuration list for PBXProject "RaytracerV3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50F7B9321726CFFC003F1FCE /* Debug */,
+				50F7B9331726CFFC003F1FCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50F7B9341726CFFC003F1FCE /* Build configuration list for PBXNativeTarget "RaytracerV3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50F7B9351726CFFC003F1FCE /* Debug */,
+				50F7B9361726CFFC003F1FCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50F7B9231726CFFC003F1FCE /* Project object */;
+}
