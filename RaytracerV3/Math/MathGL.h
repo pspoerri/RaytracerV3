@@ -4,12 +4,13 @@
 #ifndef MATH_MATHGL_H_INCLUDED
 #define MATH_MATHGL_H_INCLUDED
 
-#include <OGL/Core.h>
+//#include <OGL/Core.h>
+#include "platform_includes.h"
 
-#include <Math/Vec2.h>
-#include <Math/Vec3.h>
-#include <Math/Vec4.h>
-#include <Math/Mat44.h>
+#include "Vec2.h"
+#include "Vec3.h"
+#include "Vec4.h"
+#include "Mat44.h"
 
 inline void glVertex   (const Math::Vec2f &v) {glVertex2f(v.x,v.y);          }
 inline void glVertex   (const Math::Vec2d &v) {glVertex2d(v.x,v.y);          }

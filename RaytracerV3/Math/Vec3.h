@@ -5,8 +5,8 @@
 #ifndef MATH_VEC3_H
 #define MATH_VEC3_H
 
-#include <Math/Fwd.h>
-#include <Math/MathT.h>
+#include "Fwd.h"
+#include "MathT.h"
 #include <iostream>
 
 namespace Math

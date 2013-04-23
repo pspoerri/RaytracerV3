@@ -4,7 +4,7 @@
 #ifndef MESH_OBJ_H
 #define MESH_OBJ_H
 
-#include <Math/MeshBase.h>
+#include "MeshBase.h"
 #include <string>
 
 namespace Math

@@ -26,8 +26,8 @@
 // glvutext.cpp : bitmap text drawing routine; works like "printf"
 //============================================================================
 
-#include <OGL/Core.h>
-#include <OGL/Text.h>
+#include "Core.h"
+#include "Text.h"
 #include <stdio.h>
 #include <stdarg.h>
 

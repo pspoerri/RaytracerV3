@@ -4,10 +4,10 @@
 #ifndef MATH_MESH_H
 #define MATH_MESH_H
 
-#include <Math/LimitsT.h>
-#include <Math/Vec2.h>
-#include <Math/Vec3.h>
-#include <Math/Box.h>
+#include "LimitsT.h"
+#include "Vec2.h"
+#include "Vec3.h"
+#include "Box.h"
 #include <vector>
 #include "stdint.h"
 

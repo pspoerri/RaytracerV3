@@ -5,10 +5,10 @@
 #  include <config.h>
 #endif // HAVE_CONFIG_H
 
-#include <Math/Color.h>
-#include <Math/Core.h>
-#include <Math/MathT.h>
-#include <Math/FastMath.h>
+#include "Color.h"
+#include "Core.h"
+#include "MathT.h"
+#include "FastMath.h"
 
 namespace Img
 {

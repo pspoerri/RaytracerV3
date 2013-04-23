@@ -5,9 +5,9 @@
 #ifndef MATH_WARP_H
 #define MATH_WARP_H
 
-#include <Math/Vec2.h>
-#include <Math/Vec3.h>
-#include <Math/Core.h>
+#include "Vec2.h"
+#include "Vec3.h"
+#include "Core.h"
 #include <cmath>
 namespace Math
 {

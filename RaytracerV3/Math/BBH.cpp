@@ -6,9 +6,9 @@
 #  include <config.h>
 #endif // HAVE_CONFIG_H
 
-#include <Math/BBH.h>
-#include <Math/MathGL.h>
-#include <Platform/Progress.h>
+#include "BBH.h"
+#include "MathGL.h"
+#include "../Platform/Progress.h"
 #include <sstream>
 
 using namespace Platform;

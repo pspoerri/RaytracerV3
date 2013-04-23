@@ -5,9 +5,9 @@
 #ifndef MATH_BOX_H
 #define MATH_BOX_H
 
-#include <Math/Fwd.h>
-#include <Math/LimitsT.h>
-#include <Math/Core.h>
+#include "Fwd.h"
+#include "LimitsT.h"
+#include "Core.h"
 #include <iostream>
 
 namespace Math

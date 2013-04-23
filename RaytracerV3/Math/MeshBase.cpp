@@ -5,8 +5,8 @@
 #  include <config.h>
 #endif // HAVE_CONFIG_H
 
-#include <Math/MeshBase.h>
-#include <Math/Obj.h>
+#include "MeshBase.h"
+#include "Obj.h"
 #include <string.h>
 #include <stdlib.h>
 #include "stdint.h"

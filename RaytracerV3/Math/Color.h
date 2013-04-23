@@ -5,11 +5,11 @@
 #ifndef IMG_COLOR_H
 #define IMG_COLOR_H
 
-#include <Math/Fwd.h>
+#include "Fwd.h"
 #include <iostream>
 #include <math.h>
-#include <Math/Vec3.h>
-#include <Math/Vec4.h>
+#include "Vec3.h"
+#include "Vec4.h"
 
 namespace Math
 {

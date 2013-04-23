@@ -5,7 +5,7 @@
 #  include <config.h>
 #endif // HAVE_CONFIG_H
 
-#include <Math/RGBE.h>
+#include "RGBE.h"
 
 namespace Math
 {

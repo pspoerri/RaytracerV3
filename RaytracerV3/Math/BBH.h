@@ -5,10 +5,10 @@
 #ifndef MATH_BBH_H_INCLUDED
 #define MATH_BBH_H_INCLUDED
 
-#include <Math/FastMath.h>
-#include <Math/Box.h>
-#include <Math/Vec3.h>
-#include <Platform/Fwd.h>
+#include "FastMath.h"
+#include "Box.h"
+#include "Vec3.h"
+#include "../Platform/Fwd.h"
 
 #include <vector>
 #include <assert.h>

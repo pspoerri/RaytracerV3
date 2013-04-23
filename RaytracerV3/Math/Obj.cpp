@@ -5,8 +5,8 @@
 #  include <config.h>
 #endif // HAVE_CONFIG_H
 
-#include <Math/Obj.h>
-#include <Math/Color.h>
+#include "Obj.h"
+#include "Color.h"
 #include <string.h>
 #include <map>
 #include <vector>

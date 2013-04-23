@@ -16,7 +16,7 @@
 #  include <config.h>
 #endif // HAVE_CONFIG_H
 
-#include <OGL/GLUTWindow.h>
+#include "GLUTWindow.h"
 
 namespace OGL
 {

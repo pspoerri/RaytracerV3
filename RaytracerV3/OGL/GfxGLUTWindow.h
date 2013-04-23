@@ -4,8 +4,8 @@
 #ifndef OGLUT_DEMO_WINDOW_H
 #define OGLUT_DEMO_WINDOW_H
 
-#include <OGL/GLUTMaster.h>
-#include <OGL/GLUTWindow.h>
+#include "GLUTMaster.h"
+#include "GLUTWindow.h"
 
 
 // TODO

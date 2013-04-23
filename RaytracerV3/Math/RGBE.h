@@ -4,7 +4,7 @@
 #ifndef IMG_RGBE_H
 #define IMG_RGBE_H
 
-#include <Math/Color.h>
+#include "Color.h"
 
 namespace Math
 {
