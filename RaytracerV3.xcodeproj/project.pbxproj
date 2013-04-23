@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5044522C1726D40900C4849B /* FBO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 504452201726D40900C4849B /* FBO.cpp */; };
+		5044522D1726D40900C4849B /* GfxGLUTWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 504452221726D40900C4849B /* GfxGLUTWindow.cpp */; };
+		5044522E1726D40900C4849B /* GLUTMaster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 504452241726D40900C4849B /* GLUTMaster.cpp */; };
+		5044522F1726D40900C4849B /* GLUTWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 504452261726D40900C4849B /* GLUTWindow.cpp */; };
+		504452301726D40900C4849B /* Primitive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 504452281726D40900C4849B /* Primitive.cpp */; };
+		504452311726D40900C4849B /* Text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5044522A1726D40900C4849B /* Text.cpp */; };
 		50F7B92F1726CFFC003F1FCE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F7B92E1726CFFC003F1FCE /* main.cpp */; };
 		50F7B9311726CFFC003F1FCE /* RaytracerV3.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */; };
 		50F7B9381726D0C0003F1FCE /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F7B9371726D0C0003F1FCE /* libglfw.dylib */; };
@@ -28,6 +34,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5044521F1726D40900C4849B /* Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
+		504452201726D40900C4849B /* FBO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FBO.cpp; sourceTree = "<group>"; };
+		504452211726D40900C4849B /* FBO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBO.h; sourceTree = "<group>"; };
+		504452221726D40900C4849B /* GfxGLUTWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GfxGLUTWindow.cpp; sourceTree = "<group>"; };
+		504452231726D40900C4849B /* GfxGLUTWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GfxGLUTWindow.h; sourceTree = "<group>"; };
+		504452241726D40900C4849B /* GLUTMaster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLUTMaster.cpp; sourceTree = "<group>"; };
+		504452251726D40900C4849B /* GLUTMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUTMaster.h; sourceTree = "<group>"; };
+		504452261726D40900C4849B /* GLUTWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLUTWindow.cpp; sourceTree = "<group>"; };
+		504452271726D40900C4849B /* GLUTWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUTWindow.h; sourceTree = "<group>"; };
+		504452281726D40900C4849B /* Primitive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Primitive.cpp; sourceTree = "<group>"; };
+		504452291726D40900C4849B /* Primitive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Primitive.h; sourceTree = "<group>"; };
+		5044522A1726D40900C4849B /* Text.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Text.cpp; sourceTree = "<group>"; };
+		5044522B1726D40900C4849B /* Text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Text.h; sourceTree = "<group>"; };
 		50F7B92B1726CFFC003F1FCE /* RaytracerV3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RaytracerV3; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F7B92E1726CFFC003F1FCE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RaytracerV3.1; sourceTree = "<group>"; };
@@ -51,6 +70,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5044521E1726D40900C4849B /* OGL */ = {
+			isa = PBXGroup;
+			children = (
+				5044521F1726D40900C4849B /* Core.h */,
+				504452201726D40900C4849B /* FBO.cpp */,
+				504452211726D40900C4849B /* FBO.h */,
+				504452221726D40900C4849B /* GfxGLUTWindow.cpp */,
+				504452231726D40900C4849B /* GfxGLUTWindow.h */,
+				504452241726D40900C4849B /* GLUTMaster.cpp */,
+				504452251726D40900C4849B /* GLUTMaster.h */,
+				504452261726D40900C4849B /* GLUTWindow.cpp */,
+				504452271726D40900C4849B /* GLUTWindow.h */,
+				504452281726D40900C4849B /* Primitive.cpp */,
+				504452291726D40900C4849B /* Primitive.h */,
+				5044522A1726D40900C4849B /* Text.cpp */,
+				5044522B1726D40900C4849B /* Text.h */,
+			);
+			path = OGL;
+			sourceTree = "<group>";
+		};
 		50F7B9221726CFFC003F1FCE = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +110,7 @@
 		50F7B92D1726CFFC003F1FCE /* RaytracerV3 */ = {
 			isa = PBXGroup;
 			children = (
+				5044521E1726D40900C4849B /* OGL */,
 				50F7B92E1726CFFC003F1FCE /* main.cpp */,
 				50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */,
 				50F7B93A1726D0EB003F1FCE /* platform_includes.h */,
@@ -140,6 +180,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				50F7B92F1726CFFC003F1FCE /* main.cpp in Sources */,
+				5044522C1726D40900C4849B /* FBO.cpp in Sources */,
+				5044522D1726D40900C4849B /* GfxGLUTWindow.cpp in Sources */,
+				5044522E1726D40900C4849B /* GLUTMaster.cpp in Sources */,
+				5044522F1726D40900C4849B /* GLUTWindow.cpp in Sources */,
+				504452301726D40900C4849B /* Primitive.cpp in Sources */,
+				504452311726D40900C4849B /* Text.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
