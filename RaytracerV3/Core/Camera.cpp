@@ -66,12 +66,17 @@ Camera::generateRay(Ray &r, double x, double y) const
 void
 Camera::setResolution(unsigned x, unsigned y)
 {
+    if (m_resolution.x == x && m_resolution.y == y){
+        return;
+    }
 	m_resolution.set(x, y);
 	m_aspect = x / double(y);
 	m_width = m_height*m_aspect;
 	m_perspective.perspective(m_fovy, m_aspect, 0.1f, 1000.0f);
 	m_worldToNDC = m_perspective * m_worldToCamera;
     m_NDCToWindow.viewport(m_resolution.x, m_resolution.y);
+    m_ScreenToWorld = m_NDCToWindow.inverse()*m_worldToNDC.inverse();
+    m_worldToScreen = m_NDCToWindow*m_worldToNDC;
 
     update();
 }

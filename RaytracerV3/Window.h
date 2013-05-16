@@ -38,6 +38,8 @@ namespace Main {
         
         void display();
         
+        void updateScreenSize();
+        
         void rotate(int dx, int dy);
         void twist(int dx, int dy);
         void pan(int dx, int dy, int dz);

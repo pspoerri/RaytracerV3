@@ -79,6 +79,7 @@ Window::run()
 void
 Window::mainLoop()
 {
+    updateScreenSize();
     handle_keyboardInteraction();
     handle_mouse();
     
@@ -198,7 +199,6 @@ Window::handle_mouse()
 {
     int x = mouseX;
     int y = mouseY;
-    int button;
     glfwGetMousePos(&mouseX, &mouseY);
     if (glfwGetMouseButton(GLFW_MOUSE_BUTTON_1))
     {
@@ -215,6 +215,13 @@ Window::handle_mouse()
 	
 }
 
+void
+Window::updateScreenSize()
+{
+    int height, width;
+    glfwGetWindowSize(&width, &height);
+    scene.camera.setResolution(width, height);
+}
 
 void
 Window::handle_keyboardInteraction()
