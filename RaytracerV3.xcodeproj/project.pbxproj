@@ -19,6 +19,17 @@
 		5007E25E1726EE2900D447B8 /* Progress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E2571726EE2900D447B8 /* Progress.cpp */; };
 		5007E25F1726EE2900D447B8 /* Stopwatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E2591726EE2900D447B8 /* Stopwatch.cpp */; };
 		5007E2601726EE2900D447B8 /* Timestamp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E25B1726EE2900D447B8 /* Timestamp.cpp */; };
+		502588BD174563990067F080 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 502588BB174563990067F080 /* Scene.cpp */; };
+		502588C0174576960067F080 /* RenderGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 502588BE174576960067F080 /* RenderGL.cpp */; };
+		502588C3174576E40067F080 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 502588C1174576E40067F080 /* Renderer.cpp */; };
+		502588C7174578B70067F080 /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 502588C5174578B70067F080 /* Shape.cpp */; };
+		502588CA174578C70067F080 /* Light.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 502588C8174578C70067F080 /* Light.cpp */; };
+		502588CE174579260067F080 /* SurfaceShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 502588CC174579260067F080 /* SurfaceShader.cpp */; };
+		502588D617457A380067F080 /* HitInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 502588D217457A370067F080 /* HitInfo.cpp */; };
+		502588D717457A380067F080 /* Ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 502588D417457A370067F080 /* Ray.cpp */; };
+		502588DB174586280067F080 /* Sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 502588D9174586280067F080 /* Sphere.cpp */; };
+		502588DD1745878E0067F080 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502588DC1745878E0067F080 /* GLUT.framework */; };
+		502588E017458BA90067F080 /* SceneLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 502588DE17458BA90067F080 /* SceneLoader.cpp */; };
 		504452711726DCA300C4849B /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5044526F1726DCA300C4849B /* Window.cpp */; };
 		50F7B92F1726CFFC003F1FCE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F7B92E1726CFFC003F1FCE /* main.cpp */; };
 		50F7B9311726CFFC003F1FCE /* RaytracerV3.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */; };
@@ -83,6 +94,27 @@
 		5007E25B1726EE2900D447B8 /* Timestamp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timestamp.cpp; sourceTree = "<group>"; };
 		5007E25C1726EE2900D447B8 /* Timestamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timestamp.h; sourceTree = "<group>"; };
 		5007E25D1726EE2900D447B8 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
+		502588BB174563990067F080 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Scene.cpp; path = ../Scene.cpp; sourceTree = "<group>"; };
+		502588BC174563990067F080 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scene.h; path = ../Scene.h; sourceTree = "<group>"; };
+		502588BE174576960067F080 /* RenderGL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RenderGL.cpp; sourceTree = "<group>"; };
+		502588BF174576960067F080 /* RenderGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenderGL.h; sourceTree = "<group>"; };
+		502588C1174576E40067F080 /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
+		502588C2174576E40067F080 /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		502588C5174578B70067F080 /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shape.cpp; sourceTree = "<group>"; };
+		502588C6174578B70067F080 /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = "<group>"; };
+		502588C8174578C70067F080 /* Light.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Light.cpp; sourceTree = "<group>"; };
+		502588C9174578C70067F080 /* Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Light.h; sourceTree = "<group>"; };
+		502588CC174579260067F080 /* SurfaceShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SurfaceShader.cpp; sourceTree = "<group>"; };
+		502588CD174579260067F080 /* SurfaceShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SurfaceShader.h; sourceTree = "<group>"; };
+		502588D217457A370067F080 /* HitInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HitInfo.cpp; sourceTree = "<group>"; };
+		502588D317457A370067F080 /* HitInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitInfo.h; sourceTree = "<group>"; };
+		502588D417457A370067F080 /* Ray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ray.cpp; sourceTree = "<group>"; };
+		502588D517457A370067F080 /* Ray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ray.h; sourceTree = "<group>"; };
+		502588D9174586280067F080 /* Sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sphere.cpp; sourceTree = "<group>"; };
+		502588DA174586280067F080 /* Sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sphere.h; sourceTree = "<group>"; };
+		502588DC1745878E0067F080 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		502588DE17458BA90067F080 /* SceneLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneLoader.cpp; sourceTree = "<group>"; };
+		502588DF17458BA90067F080 /* SceneLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneLoader.h; sourceTree = "<group>"; };
 		5044526F1726DCA300C4849B /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
 		504452701726DCA300C4849B /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
 		50F7B92B1726CFFC003F1FCE /* RaytracerV3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RaytracerV3; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				502588DD1745878E0067F080 /* GLUT.framework in Frameworks */,
 				50F7B93E1726D1CE003F1FCE /* OpenGL.framework in Frameworks */,
 				50F7B93C1726D1C8003F1FCE /* Cocoa.framework in Frameworks */,
 				50F7B9381726D0C0003F1FCE /* libglfw.dylib in Frameworks */,
@@ -111,8 +144,16 @@
 		5007E2211726EE0800D447B8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				502588D217457A370067F080 /* HitInfo.cpp */,
+				502588D317457A370067F080 /* HitInfo.h */,
+				502588D417457A370067F080 /* Ray.cpp */,
+				502588D517457A370067F080 /* Ray.h */,
+				502588BC174563990067F080 /* Scene.h */,
+				502588BB174563990067F080 /* Scene.cpp */,
 				5007E2221726EE0800D447B8 /* Camera.cpp */,
 				5007E2231726EE0800D447B8 /* Camera.h */,
+				502588C1174576E40067F080 /* Renderer.cpp */,
+				502588C2174576E40067F080 /* Renderer.h */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -178,9 +219,41 @@
 			path = Platform;
 			sourceTree = "<group>";
 		};
+		502588C4174578AB0067F080 /* Primitives */ = {
+			isa = PBXGroup;
+			children = (
+				502588D8174586170067F080 /* Shapes */,
+				502588CB174579170067F080 /* Shaders */,
+				502588C5174578B70067F080 /* Shape.cpp */,
+				502588C6174578B70067F080 /* Shape.h */,
+				502588C8174578C70067F080 /* Light.cpp */,
+				502588C9174578C70067F080 /* Light.h */,
+			);
+			name = Primitives;
+			sourceTree = "<group>";
+		};
+		502588CB174579170067F080 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				502588CC174579260067F080 /* SurfaceShader.cpp */,
+				502588CD174579260067F080 /* SurfaceShader.h */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		502588D8174586170067F080 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				502588D9174586280067F080 /* Sphere.cpp */,
+				502588DA174586280067F080 /* Sphere.h */,
+			);
+			name = Shapes;
+			sourceTree = "<group>";
+		};
 		50F7B9221726CFFC003F1FCE = {
 			isa = PBXGroup;
 			children = (
+				502588DC1745878E0067F080 /* GLUT.framework */,
 				50F7B9391726D0C9003F1FCE /* References */,
 				50F7B92D1726CFFC003F1FCE /* RaytracerV3 */,
 				50F7B92C1726CFFC003F1FCE /* Products */,
@@ -198,6 +271,7 @@
 		50F7B92D1726CFFC003F1FCE /* RaytracerV3 */ = {
 			isa = PBXGroup;
 			children = (
+				502588C4174578AB0067F080 /* Primitives */,
 				5007E2541726EE2900D447B8 /* Platform */,
 				5007E2461726EE1D00D447B8 /* OGL */,
 				5007E2251726EE0F00D447B8 /* Math */,
@@ -207,6 +281,10 @@
 				50F7B93A1726D0EB003F1FCE /* platform_includes.h */,
 				5044526F1726DCA300C4849B /* Window.cpp */,
 				504452701726DCA300C4849B /* Window.h */,
+				502588BE174576960067F080 /* RenderGL.cpp */,
+				502588BF174576960067F080 /* RenderGL.h */,
+				502588DE17458BA90067F080 /* SceneLoader.cpp */,
+				502588DF17458BA90067F080 /* SceneLoader.h */,
 			);
 			path = RaytracerV3;
 			sourceTree = "<group>";
@@ -286,6 +364,16 @@
 				5007E25E1726EE2900D447B8 /* Progress.cpp in Sources */,
 				5007E25F1726EE2900D447B8 /* Stopwatch.cpp in Sources */,
 				5007E2601726EE2900D447B8 /* Timestamp.cpp in Sources */,
+				502588BD174563990067F080 /* Scene.cpp in Sources */,
+				502588C0174576960067F080 /* RenderGL.cpp in Sources */,
+				502588C3174576E40067F080 /* Renderer.cpp in Sources */,
+				502588C7174578B70067F080 /* Shape.cpp in Sources */,
+				502588CA174578C70067F080 /* Light.cpp in Sources */,
+				502588CE174579260067F080 /* SurfaceShader.cpp in Sources */,
+				502588D617457A380067F080 /* HitInfo.cpp in Sources */,
+				502588D717457A380067F080 /* Ray.cpp in Sources */,
+				502588DB174586280067F080 /* Sphere.cpp in Sources */,
+				502588E017458BA90067F080 /* SceneLoader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,14 +5,14 @@
 #ifndef OGL_CORE_H
 #define OGL_CORE_H
 
-//#if defined(__APPLE__)
-//#include <GLUT/glut.h>
+#if defined(__APPLE__)
+#include <GLUT/glut.h>
 #include <OpenGL/gl.h>
 #include <OpenGL/glu.h>
-//#else
-//#include <GL/glew.h>
-//#include <GL/glut.h>
-//#endif
+#else
+#include <GL/glew.h>
+#include <GL/glut.h>
+#endif
 
 #include <GL/glfw.h>
 

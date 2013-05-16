@@ -7,8 +7,8 @@
 #endif // HAVE_CONFIG_H
 
 #include "Ray.h"
-#include <Math/Core.h>
-#include <Math/LimitsT.h>
+#include "../Math/Core.h"
+#include "../Math/LimitsT.h"
 
 #if defined(_WIN32)
 #define isnan _isnan

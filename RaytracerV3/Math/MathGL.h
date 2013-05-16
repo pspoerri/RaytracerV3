@@ -4,7 +4,7 @@
 #ifndef MATH_MATHGL_H_INCLUDED
 #define MATH_MATHGL_H_INCLUDED
 
-//#include <OGL/Core.h>
+#include "../OGL/Core.h"
 #include "platform_includes.h"
 
 #include "Vec2.h"
