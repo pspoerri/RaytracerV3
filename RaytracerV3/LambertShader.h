@@ -9,6 +9,31 @@
 #ifndef __RaytracerV3__LambertShader__
 #define __RaytracerV3__LambertShader__
 
-#include <iostream>
-
+#include "SurfaceShader.h"
+#include "Scene.h"
+//#include "Shader.h"
+class Renderer;
+class LambertShader : public SurfaceShader
+{
+protected:
+    Math::Color3f m_kd;
+    
+public:
+    LambertShader(const Math::Color3f & kd = Math::Color3f(0.8f));
+    ~LambertShader();
+    
+    virtual Math::Color3f shade(const HitInfo & hit, const Scene &scene) const;
+    
+//    virtual Math::Color3f shade(const Renderer *render,
+//                                const HitInfo & hit,
+//                                Photon_map &photonMap,
+//                                Photon_map &specularPhotonMap,
+//                                const Scene &scene) const;
+//    
+//    virtual void processPhoton(const HitInfo & hit,
+//                               EmittedPhoton photon,
+//                               Photon_map &photonMap,
+//                               Photon_map &specularPhotonMap,
+//                               const Scene &scene) const;
+};
 #endif /* defined(__RaytracerV3__LambertShader__) */
