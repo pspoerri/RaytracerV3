@@ -39,7 +39,7 @@ Shape::renderGL() const
 }
 
 bool
-Shape::areaLight()
+Shape::areaLight() const 
 {
     return false;
 }

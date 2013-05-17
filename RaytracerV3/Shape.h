@@ -25,6 +25,6 @@ public:
 
     virtual void renderGL() const = 0;
 
-    virtual bool areaLight();
+    virtual bool areaLight() const;
 };
 #endif /* defined(__RaytracerV3__Shape__) */

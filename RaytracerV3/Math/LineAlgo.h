@@ -5,7 +5,7 @@
 #ifndef MATH_LINE_ALGO_H
 #define MATH_LINE_ALGO_H
 
-#include <Math/Line.h>
+#include "Line.h"
 
 namespace Math
 {

@@ -31,6 +31,8 @@
 		502588DD1745878E0067F080 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502588DC1745878E0067F080 /* GLUT.framework */; };
 		502588E017458BA90067F080 /* SceneLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 502588DE17458BA90067F080 /* SceneLoader.cpp */; };
 		504452711726DCA300C4849B /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5044526F1726DCA300C4849B /* Window.cpp */; };
+		508EAAFD1745A84E00A2AC9A /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 508EAAFB1745A84E00A2AC9A /* Mesh.cpp */; };
+		508EAB001745A8F900A2AC9A /* LambertShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 508EAAFE1745A8F900A2AC9A /* LambertShader.cpp */; };
 		50F7B92F1726CFFC003F1FCE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F7B92E1726CFFC003F1FCE /* main.cpp */; };
 		50F7B9311726CFFC003F1FCE /* RaytracerV3.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */; };
 		50F7B9381726D0C0003F1FCE /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F7B9371726D0C0003F1FCE /* libglfw.dylib */; };
@@ -117,6 +119,10 @@
 		502588DF17458BA90067F080 /* SceneLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneLoader.h; sourceTree = "<group>"; };
 		5044526F1726DCA300C4849B /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
 		504452701726DCA300C4849B /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		508EAAFB1745A84E00A2AC9A /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mesh.cpp; sourceTree = "<group>"; };
+		508EAAFC1745A84E00A2AC9A /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
+		508EAAFE1745A8F900A2AC9A /* LambertShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LambertShader.cpp; sourceTree = "<group>"; };
+		508EAAFF1745A8F900A2AC9A /* LambertShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LambertShader.h; sourceTree = "<group>"; };
 		50F7B92B1726CFFC003F1FCE /* RaytracerV3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RaytracerV3; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F7B92E1726CFFC003F1FCE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RaytracerV3.1; sourceTree = "<group>"; };
@@ -237,6 +243,8 @@
 			children = (
 				502588CC174579260067F080 /* SurfaceShader.cpp */,
 				502588CD174579260067F080 /* SurfaceShader.h */,
+				508EAAFE1745A8F900A2AC9A /* LambertShader.cpp */,
+				508EAAFF1745A8F900A2AC9A /* LambertShader.h */,
 			);
 			name = Shaders;
 			sourceTree = "<group>";
@@ -246,6 +254,8 @@
 			children = (
 				502588D9174586280067F080 /* Sphere.cpp */,
 				502588DA174586280067F080 /* Sphere.h */,
+				508EAAFB1745A84E00A2AC9A /* Mesh.cpp */,
+				508EAAFC1745A84E00A2AC9A /* Mesh.h */,
 			);
 			name = Shapes;
 			sourceTree = "<group>";
@@ -374,6 +384,8 @@
 				502588D717457A380067F080 /* Ray.cpp in Sources */,
 				502588DB174586280067F080 /* Sphere.cpp in Sources */,
 				502588E017458BA90067F080 /* SceneLoader.cpp in Sources */,
+				508EAAFD1745A84E00A2AC9A /* Mesh.cpp in Sources */,
+				508EAB001745A8F900A2AC9A /* LambertShader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

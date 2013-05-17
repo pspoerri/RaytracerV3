@@ -7,6 +7,7 @@
 //
 
 #include "RenderGL.h"
+#include "Shape.h"
 
 RenderGL::RenderGL():
     m_fbo(FrameBuffer(GL_TEXTURE_2D, 512, 512, -1, GL_RGBA32F_ARB, 1, 1, 0, "OpenGL FBO"))
