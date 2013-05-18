@@ -38,6 +38,7 @@
 		5071D7411747D10B009A60D3 /* Ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D7391747D10A009A60D3 /* Ray.cpp */; };
 		5071D7421747D10B009A60D3 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D73B1747D10B009A60D3 /* Renderer.cpp */; };
 		5071D7431747D10B009A60D3 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D73D1747D10B009A60D3 /* Scene.cpp */; };
+		5071D7461747D93B009A60D3 /* AreaLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D7441747D93B009A60D3 /* AreaLight.cpp */; };
 		50F7B9311726CFFC003F1FCE /* RaytracerV3.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */; };
 		50F7B9381726D0C0003F1FCE /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F7B9371726D0C0003F1FCE /* libglfw.dylib */; };
 		50F7B93C1726D1C8003F1FCE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F7B93B1726D1C8003F1FCE /* Cocoa.framework */; };
@@ -140,6 +141,8 @@
 		5071D73C1747D10B009A60D3 /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
 		5071D73D1747D10B009A60D3 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
 		5071D73E1747D10B009A60D3 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		5071D7441747D93B009A60D3 /* AreaLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AreaLight.cpp; sourceTree = "<group>"; };
+		5071D7451747D93B009A60D3 /* AreaLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaLight.h; sourceTree = "<group>"; };
 		50F7B92B1726CFFC003F1FCE /* RaytracerV3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RaytracerV3; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F7B92E1726CFFC003F1FCE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RaytracerV3.1; sourceTree = "<group>"; };
@@ -167,22 +170,22 @@
 		5007E2211726EE0800D447B8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5071D7101747A769009A60D3 /* Primitives */,
+				5071D70F1747A758009A60D3 /* Shaders */,
 				5071D7351747D10A009A60D3 /* Camera.cpp */,
 				5071D7361747D10A009A60D3 /* Camera.h */,
 				5071D7371747D10A009A60D3 /* HitInfo.cpp */,
 				5071D7381747D10A009A60D3 /* HitInfo.h */,
+				5071D71A1747CE0F009A60D3 /* PhotonMap.cpp */,
+				5071D71B1747CE0F009A60D3 /* PhotonMap.h */,
+				5071D71D1747CF5A009A60D3 /* PhotonSource.cpp */,
+				5071D71E1747CF5A009A60D3 /* PhotonSource.h */,
 				5071D7391747D10A009A60D3 /* Ray.cpp */,
 				5071D73A1747D10A009A60D3 /* Ray.h */,
 				5071D73B1747D10B009A60D3 /* Renderer.cpp */,
 				5071D73C1747D10B009A60D3 /* Renderer.h */,
 				5071D73D1747D10B009A60D3 /* Scene.cpp */,
 				5071D73E1747D10B009A60D3 /* Scene.h */,
-				5071D71A1747CE0F009A60D3 /* PhotonMap.cpp */,
-				5071D71B1747CE0F009A60D3 /* PhotonMap.h */,
-				5071D7101747A769009A60D3 /* Primitives */,
-				5071D70F1747A758009A60D3 /* Shaders */,
-				5071D71D1747CF5A009A60D3 /* PhotonSource.cpp */,
-				5071D71E1747CF5A009A60D3 /* PhotonSource.h */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -272,6 +275,8 @@
 				5071D7271747D0A4009A60D3 /* Shape.h */,
 				5071D7281747D0A4009A60D3 /* Sphere.cpp */,
 				5071D7291747D0A4009A60D3 /* Sphere.h */,
+				5071D7441747D93B009A60D3 /* AreaLight.cpp */,
+				5071D7451747D93B009A60D3 /* AreaLight.h */,
 			);
 			name = Primitives;
 			sourceTree = "<group>";
@@ -420,6 +425,7 @@
 				5071D7411747D10B009A60D3 /* Ray.cpp in Sources */,
 				5071D7421747D10B009A60D3 /* Renderer.cpp in Sources */,
 				5071D7431747D10B009A60D3 /* Scene.cpp in Sources */,
+				5071D7461747D93B009A60D3 /* AreaLight.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
