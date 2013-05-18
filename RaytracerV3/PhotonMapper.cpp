@@ -9,6 +9,8 @@
 #include "PhotonMapper.h"
 #include <OpenGL/OpenGL.h>
 #include "Platform/Progress.h"
+#include "PhotonSource.h"
+#include "PhotonMap.h"
 
 PhotonMapper::PhotonMapper():
     m_fbo(FrameBuffer(GL_TEXTURE_2D, 512, 512, -1, GL_RGBA32F_ARB, 1, 1, 0, "PhotonMapper FBO"))
@@ -50,6 +52,21 @@ PhotonMapper::render(Scene &scene)
     
     Platform::Progress progress = Platform::Progress("Raytracing Image", xRes*yRes);
 	//for each pixel generate a camera ray
+    
+    std::cout << "Emitting Photons..." << std::endl;
+    std::vector<EmittedPhoton> emittedPhotons;
+    for (PhotonSource *source: scene.photonSources)
+    {
+        source->emitPhotons(emittedPhotons, scene);
+    }
+    
+//    PhotonMap photonMap(1024*1024*1024);
+//    PhotonMap specularPhotonMap(1024*1024*1024);
+//    scatterPhotons(emittedPhotons, photonMap, specularPhotonMap, scene);
+//    photonMap.balance();
+//    specularPhotonMap.balance();
+    
+    
     for (int i=0; i < xRes; i++) {
         for (int j=0; j<yRes; j++) {
             Ray r = Ray();
