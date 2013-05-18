@@ -34,3 +34,13 @@ SurfaceShader::processPhoton(const HitInfo & hit,
 {
     return;
 }
+
+Math::Color3f
+SurfaceShader::shade(const Renderer *render,
+                     const HitInfo & hit,
+                     PhotonMap &photonMap,
+                     PhotonMap &specularPhotonMap,
+                     const Scene &scene) const
+{
+    return Color3f(0,0,0);
+}

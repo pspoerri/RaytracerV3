@@ -11,6 +11,7 @@
 #include "Platform/Progress.h"
 #include "PhotonSource.h"
 #include "PhotonMap.h"
+#include "Shape.h"
 
 PhotonMapper::PhotonMapper():
     m_fbo(FrameBuffer(GL_TEXTURE_2D, 512, 512, -1, GL_RGBA32F_ARB, 1, 1, 0, "PhotonMapper FBO"))
@@ -97,6 +98,22 @@ PhotonMapper::render(Scene &scene)
     glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, m_fbo.width(), m_fbo.height(), GL_RGBA, GL_FLOAT, &m_rgbaBuffer(0,0));
     glBindTexture(GL_TEXTURE_2D, 0);    //Render to Screen
 	m_fbo.blitFramebuffer(FBO_COLOR0);
+}
 
-    
+Math::Vec3f
+PhotonMapper::recursiveRender(Ray &r,
+                              PhotonMap &photonMap,
+                              PhotonMap &specularPhotonMap,
+                              const Scene &scene) const
+{
+    Shape *s_hit = scene.intersect(r);
+    if (s_hit != NULL) {
+        s_hit->fillHitInfo(r);
+        Math::Vec3f  col = s_hit->surfaceShader->shade(this, r.hit, photonMap, specularPhotonMap, scene);
+        if (s_hit->areaLight()) {
+            col = Math::Vec3f(1.0,1.0, 1.0);
+        }
+        return col;
+    }
+    return Math::Vec3f(0,0,0);
 }

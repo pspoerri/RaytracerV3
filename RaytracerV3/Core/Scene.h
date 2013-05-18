@@ -32,6 +32,9 @@ public:
     vector<PhotonSource *> photonSources;
     Camera camera;
     
+    float maxPhotonMapSearchDist;
+    float numPhotonMapPhotons;
+    
     void generateStratifiedJitteredSamples(std::vector<Math::Vec2d> &samples,
                                            int N) const;
     void generateRandomSamples(std::vector<Math::Vec2d> &samples,

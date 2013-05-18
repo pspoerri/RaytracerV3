@@ -14,6 +14,8 @@ Scene::Scene():
     rand_gen(new Math::RandMT(time(NULL))),
     _monteCarloSamples(64)
 {
+    maxPhotonMapSearchDist = 0.1;
+    numPhotonMapPhotons = 64;
 }
 
 Scene::~Scene()

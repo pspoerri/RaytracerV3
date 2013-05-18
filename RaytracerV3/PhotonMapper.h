@@ -26,5 +26,10 @@ public:
     
     virtual void render(Scene &scene);
     
+    virtual Math::Vec3f recursiveRender(Ray &r,
+                                        PhotonMap& photonMap,
+                                        PhotonMap& specularPhotonMap,
+                                        const Scene& scene) const;
+    
 };
 #endif /* defined(__RaytracerV3__PhotonMapper__) */

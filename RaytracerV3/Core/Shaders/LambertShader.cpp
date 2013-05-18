@@ -12,7 +12,7 @@
 #include "Light.h"
 #include "Shape.h"
 #include <assert.h>
-
+#include "PhotonMap.h"
 
 using namespace Math;
 using namespace std;
@@ -94,67 +94,67 @@ LambertShader::shade(const HitInfo & hit, const Scene &scene) const
 }
 
 
-//Math::Color3f
-//LambertShader::shade(const Renderer *render,
-//                     const HitInfo & hit,
-//                     PhotonMap &photonMap,
-//                     PhotonMap &specularPhotonMap,
-//                     const Scene &scene) const
-//{
-//    float maxDist = scene.maxPhotonMapSearchDist;
-//    float nPhotons = scene.numPhotonMapPhotons;
-//    float irrStdc[3];
-//    float irrSpec[3];
-//    float pos[3];
-//    float normal[3];
-//    
-//    pos[0] = hit.P.x;
-//    pos[1] = hit.P.y;
-//    pos[2] = hit.P.z;
-//    normal[0] = hit.N.x;
-//    normal[1] = hit.N.y;
-//    normal[2] = hit.N.z;
-//    
-//    photonMap.irradiance_estimate(irrStdc, pos, normal, maxDist, nPhotons);
-//    specularPhotonMap.irradiance_estimate(irrSpec, pos, normal, maxDist, nPhotons);
-//    
-//    Math::Color3f col(irrStdc[0], irrStdc[1], irrStdc[2]);
-//    col.x += irrSpec[0];
-//    col.y += irrSpec[1];
-//    col.z += irrSpec[2];
-//    col *= m_kd;
-//    return col;
-//}
-//
-//
-//void
-//LambertShader::processPhoton(const HitInfo & hit,
-//                             EmittedPhoton photon,
-//                             PhotonMap &photonMap,
-//                             PhotonMap &specularPhotonMap,
-//                             const Scene &scene) const
-//{
-//    float power[3];
-//    power[0] = photon.power.x;
-//    power[1] = photon.power.y;
-//    power[2] = photon.power.z;
-//    
-//    float pos[3];
-//    pos[0] = hit.P.x;
-//    pos[1] = hit.P.y;
-//    pos[2] = hit.P.z;
-//    
-//    float dir[3];
-//    dir[0] = hit.I.x;
-//    dir[1] = hit.I.y;
-//    dir[2] = hit.I.z;
-//    if (photon.specularBounces)
-//    {
-//        specularPhotonMap.store(power, pos, dir);
-//    }
-//    photonMap.store(power, pos, dir);
-//    
-//}
+Math::Color3f
+LambertShader::shade(const Renderer *render,
+                     const HitInfo & hit,
+                     PhotonMap &photonMap,
+                     PhotonMap &specularPhotonMap,
+                     const Scene &scene) const
+{
+    float maxDist = scene.maxPhotonMapSearchDist;
+    float nPhotons = scene.numPhotonMapPhotons;
+    float irrStdc[3];
+    float irrSpec[3];
+    float pos[3];
+    float normal[3];
+    
+    pos[0] = hit.P.x;
+    pos[1] = hit.P.y;
+    pos[2] = hit.P.z;
+    normal[0] = hit.N.x;
+    normal[1] = hit.N.y;
+    normal[2] = hit.N.z;
+    
+    photonMap.irradiance_estimate(irrStdc, pos, normal, maxDist, nPhotons);
+    specularPhotonMap.irradiance_estimate(irrSpec, pos, normal, maxDist, nPhotons);
+    
+    Math::Color3f col(irrStdc[0], irrStdc[1], irrStdc[2]);
+    col.x += irrSpec[0];
+    col.y += irrSpec[1];
+    col.z += irrSpec[2];
+    col *= m_kd;
+    return col;
+}
+
+
+void
+LambertShader::processPhoton(const HitInfo & hit,
+                             EmittedPhoton photon,
+                             PhotonMap &photonMap,
+                             PhotonMap &specularPhotonMap,
+                             const Scene &scene) const
+{
+    float power[3];
+    power[0] = photon.power.x;
+    power[1] = photon.power.y;
+    power[2] = photon.power.z;
+    
+    float pos[3];
+    pos[0] = hit.P.x;
+    pos[1] = hit.P.y;
+    pos[2] = hit.P.z;
+    
+    float dir[3];
+    dir[0] = hit.I.x;
+    dir[1] = hit.I.y;
+    dir[2] = hit.I.z;
+    if (photon.specularBounces)
+    {
+        specularPhotonMap.store(power, pos, dir);
+    }
+    photonMap.store(power, pos, dir);
+    
+}
 
 LambertShader::LambertShader(const Color3f & kd) :
 m_kd(kd)

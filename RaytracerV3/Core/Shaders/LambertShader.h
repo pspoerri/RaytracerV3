@@ -24,16 +24,16 @@ public:
     
     virtual Math::Color3f shade(const HitInfo & hit, const Scene &scene) const;
     
-//    virtual Math::Color3f shade(const Renderer *render,
-//                                const HitInfo & hit,
-//                                PhotonMap &photonMap,
-//                                PhotonMap &specularPhotonMap,
-//                                const Scene &scene) const;
-//    
-//    virtual void processPhoton(const HitInfo & hit,
-//                               EmittedPhoton photon,
-//                               PhotonMap &photonMap,
-//                               PhotonMap &specularPhotonMap,
-//                               const Scene &scene) const;
+    virtual Math::Color3f shade(const Renderer *render,
+                                const HitInfo & hit,
+                                PhotonMap &photonMap,
+                                PhotonMap &specularPhotonMap,
+                                const Scene &scene) const;
+    
+    virtual void processPhoton(const HitInfo & hit,
+                               EmittedPhoton photon,
+                               PhotonMap &photonMap,
+                               PhotonMap &specularPhotonMap,
+                               const Scene &scene) const;
 };
 #endif /* defined(__RaytracerV3__LambertShader__) */

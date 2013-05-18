@@ -23,7 +23,6 @@ public:
                                         PhotonMap& specularPhotonMap,
                                         const Scene& scene) const
     {
-        
         return Math::Vec3f(0,0,0);
     }
 };

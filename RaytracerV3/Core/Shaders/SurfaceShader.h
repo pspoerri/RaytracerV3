@@ -12,6 +12,7 @@
 class HitInfo;
 class Scene;
 class PhotonMap;
+class Renderer;
 #include "Math/Color.h"
 #include <iostream>
 #include "PhotonSource.h"
@@ -23,6 +24,12 @@ public:
     ~SurfaceShader();
     
     virtual Math::Color3f shade(const HitInfo & hit,
+                                const Scene &scene) const;
+    
+    virtual Math::Color3f shade(const Renderer *render,
+                                const HitInfo & hit,
+                                PhotonMap &photonMap,
+                                PhotonMap &specularPhotonMap,
                                 const Scene &scene) const;
     
     virtual void processPhoton(const HitInfo & hit,
