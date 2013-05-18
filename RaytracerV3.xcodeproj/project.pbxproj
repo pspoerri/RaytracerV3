@@ -36,6 +36,7 @@
 		5071D6E41747A22C009A60D3 /* SceneLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 502588DE17458BA90067F080 /* SceneLoader.cpp */; };
 		5071D70E1747A33C009A60D3 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 502588BB174563990067F080 /* Scene.cpp */; };
 		5071D7191747AE1E009A60D3 /* PointLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D7171747AE1E009A60D3 /* PointLight.cpp */; };
+		5071D71C1747CE0F009A60D3 /* PhotonMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D71A1747CE0F009A60D3 /* PhotonMap.cpp */; };
 		50F7B9311726CFFC003F1FCE /* RaytracerV3.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */; };
 		50F7B9381726D0C0003F1FCE /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F7B9371726D0C0003F1FCE /* libglfw.dylib */; };
 		50F7B93C1726D1C8003F1FCE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F7B93B1726D1C8003F1FCE /* Cocoa.framework */; };
@@ -134,6 +135,8 @@
 		5071D7161747AC90009A60D3 /* Fwd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fwd.h; sourceTree = "<group>"; };
 		5071D7171747AE1E009A60D3 /* PointLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PointLight.cpp; sourceTree = "<group>"; };
 		5071D7181747AE1E009A60D3 /* PointLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointLight.h; sourceTree = "<group>"; };
+		5071D71A1747CE0F009A60D3 /* PhotonMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhotonMap.cpp; sourceTree = "<group>"; };
+		5071D71B1747CE0F009A60D3 /* PhotonMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotonMap.h; sourceTree = "<group>"; };
 		50F7B92B1726CFFC003F1FCE /* RaytracerV3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RaytracerV3; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F7B92E1726CFFC003F1FCE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RaytracerV3.1; sourceTree = "<group>"; };
@@ -161,6 +164,8 @@
 		5007E2211726EE0800D447B8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5071D71A1747CE0F009A60D3 /* PhotonMap.cpp */,
+				5071D71B1747CE0F009A60D3 /* PhotonMap.h */,
 				5071D7101747A769009A60D3 /* Primitives */,
 				5071D70F1747A758009A60D3 /* Shaders */,
 				5071D6AB1747A07A009A60D3 /* Camera.cpp */,
@@ -408,6 +413,7 @@
 				5071D6D11747A20D009A60D3 /* MeshBase.cpp in Sources */,
 				5071D6CA1747A1FE009A60D3 /* Progress.cpp in Sources */,
 				5071D7191747AE1E009A60D3 /* PointLight.cpp in Sources */,
+				5071D71C1747CE0F009A60D3 /* PhotonMap.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
