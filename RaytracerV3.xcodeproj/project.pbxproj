@@ -27,10 +27,7 @@
 		5071D71C1747CE0F009A60D3 /* PhotonMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D71A1747CE0F009A60D3 /* PhotonMap.cpp */; };
 		5071D71F1747CF5A009A60D3 /* PhotonSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D71D1747CF5A009A60D3 /* PhotonSource.cpp */; };
 		5071D72A1747D0A4009A60D3 /* Light.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D7201747D0A4009A60D3 /* Light.cpp */; };
-		5071D72B1747D0A4009A60D3 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D7221747D0A4009A60D3 /* Mesh.cpp */; };
-		5071D72C1747D0A4009A60D3 /* PointLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D7241747D0A4009A60D3 /* PointLight.cpp */; };
 		5071D72D1747D0A4009A60D3 /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D7261747D0A4009A60D3 /* Shape.cpp */; };
-		5071D72E1747D0A4009A60D3 /* Sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D7281747D0A4009A60D3 /* Sphere.cpp */; };
 		5071D7331747D0CF009A60D3 /* LambertShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D72F1747D0CF009A60D3 /* LambertShader.cpp */; };
 		5071D7341747D0CF009A60D3 /* SurfaceShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D7311747D0CF009A60D3 /* SurfaceShader.cpp */; };
 		5071D73F1747D10B009A60D3 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D7351747D10A009A60D3 /* Camera.cpp */; };
@@ -38,8 +35,11 @@
 		5071D7411747D10B009A60D3 /* Ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D7391747D10A009A60D3 /* Ray.cpp */; };
 		5071D7421747D10B009A60D3 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D73B1747D10B009A60D3 /* Renderer.cpp */; };
 		5071D7431747D10B009A60D3 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D73D1747D10B009A60D3 /* Scene.cpp */; };
-		5071D7461747D93B009A60D3 /* AreaLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D7441747D93B009A60D3 /* AreaLight.cpp */; };
-		5071D74A1747D9C7009A60D3 /* IsotropicPointLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D7481747D9C7009A60D3 /* IsotropicPointLight.cpp */; };
+		5071D7511747DAF7009A60D3 /* AreaLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D74B1747DAF7009A60D3 /* AreaLight.cpp */; };
+		5071D7521747DAF7009A60D3 /* IsotropicPointLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D74D1747DAF7009A60D3 /* IsotropicPointLight.cpp */; };
+		5071D7531747DAF7009A60D3 /* PointLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D74F1747DAF7009A60D3 /* PointLight.cpp */; };
+		5071D7591747DB1C009A60D3 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D7551747DB1C009A60D3 /* Mesh.cpp */; };
+		5071D75A1747DB1C009A60D3 /* Sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D7571747DB1C009A60D3 /* Sphere.cpp */; };
 		50F7B9311726CFFC003F1FCE /* RaytracerV3.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */; };
 		50F7B9381726D0C0003F1FCE /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F7B9371726D0C0003F1FCE /* libglfw.dylib */; };
 		50F7B93C1726D1C8003F1FCE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F7B93B1726D1C8003F1FCE /* Cocoa.framework */; };
@@ -120,14 +120,8 @@
 		5071D71E1747CF5A009A60D3 /* PhotonSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotonSource.h; sourceTree = "<group>"; };
 		5071D7201747D0A4009A60D3 /* Light.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Light.cpp; path = Primitives/Light.cpp; sourceTree = "<group>"; };
 		5071D7211747D0A4009A60D3 /* Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Light.h; path = Primitives/Light.h; sourceTree = "<group>"; };
-		5071D7221747D0A4009A60D3 /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Mesh.cpp; path = Primitives/Mesh.cpp; sourceTree = "<group>"; };
-		5071D7231747D0A4009A60D3 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mesh.h; path = Primitives/Mesh.h; sourceTree = "<group>"; };
-		5071D7241747D0A4009A60D3 /* PointLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PointLight.cpp; path = Primitives/PointLight.cpp; sourceTree = "<group>"; };
-		5071D7251747D0A4009A60D3 /* PointLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointLight.h; path = Primitives/PointLight.h; sourceTree = "<group>"; };
 		5071D7261747D0A4009A60D3 /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Shape.cpp; path = Primitives/Shape.cpp; sourceTree = "<group>"; };
 		5071D7271747D0A4009A60D3 /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shape.h; path = Primitives/Shape.h; sourceTree = "<group>"; };
-		5071D7281747D0A4009A60D3 /* Sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Sphere.cpp; path = Primitives/Sphere.cpp; sourceTree = "<group>"; };
-		5071D7291747D0A4009A60D3 /* Sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sphere.h; path = Primitives/Sphere.h; sourceTree = "<group>"; };
 		5071D72F1747D0CF009A60D3 /* LambertShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LambertShader.cpp; path = Shaders/LambertShader.cpp; sourceTree = "<group>"; };
 		5071D7301747D0CF009A60D3 /* LambertShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LambertShader.h; path = Shaders/LambertShader.h; sourceTree = "<group>"; };
 		5071D7311747D0CF009A60D3 /* SurfaceShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SurfaceShader.cpp; path = Shaders/SurfaceShader.cpp; sourceTree = "<group>"; };
@@ -142,10 +136,16 @@
 		5071D73C1747D10B009A60D3 /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
 		5071D73D1747D10B009A60D3 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
 		5071D73E1747D10B009A60D3 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
-		5071D7441747D93B009A60D3 /* AreaLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AreaLight.cpp; sourceTree = "<group>"; };
-		5071D7451747D93B009A60D3 /* AreaLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaLight.h; sourceTree = "<group>"; };
-		5071D7481747D9C7009A60D3 /* IsotropicPointLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IsotropicPointLight.cpp; sourceTree = "<group>"; };
-		5071D7491747D9C7009A60D3 /* IsotropicPointLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsotropicPointLight.h; sourceTree = "<group>"; };
+		5071D74B1747DAF7009A60D3 /* AreaLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AreaLight.cpp; path = Primitives/Lights/AreaLight.cpp; sourceTree = "<group>"; };
+		5071D74C1747DAF7009A60D3 /* AreaLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AreaLight.h; path = Primitives/Lights/AreaLight.h; sourceTree = "<group>"; };
+		5071D74D1747DAF7009A60D3 /* IsotropicPointLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IsotropicPointLight.cpp; path = Primitives/Lights/IsotropicPointLight.cpp; sourceTree = "<group>"; };
+		5071D74E1747DAF7009A60D3 /* IsotropicPointLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IsotropicPointLight.h; path = Primitives/Lights/IsotropicPointLight.h; sourceTree = "<group>"; };
+		5071D74F1747DAF7009A60D3 /* PointLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PointLight.cpp; path = Primitives/Lights/PointLight.cpp; sourceTree = "<group>"; };
+		5071D7501747DAF7009A60D3 /* PointLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointLight.h; path = Primitives/Lights/PointLight.h; sourceTree = "<group>"; };
+		5071D7551747DB1C009A60D3 /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Mesh.cpp; path = Primitives/Shapes/Mesh.cpp; sourceTree = "<group>"; };
+		5071D7561747DB1C009A60D3 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mesh.h; path = Primitives/Shapes/Mesh.h; sourceTree = "<group>"; };
+		5071D7571747DB1C009A60D3 /* Sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Sphere.cpp; path = Primitives/Shapes/Sphere.cpp; sourceTree = "<group>"; };
+		5071D7581747DB1C009A60D3 /* Sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sphere.h; path = Primitives/Shapes/Sphere.h; sourceTree = "<group>"; };
 		50F7B92B1726CFFC003F1FCE /* RaytracerV3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RaytracerV3; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F7B92E1726CFFC003F1FCE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RaytracerV3.1; sourceTree = "<group>"; };
@@ -268,19 +268,12 @@
 		5071D7101747A769009A60D3 /* Primitives */ = {
 			isa = PBXGroup;
 			children = (
+				5071D7541747DB07009A60D3 /* Shapes */,
 				5071D7471747D9B6009A60D3 /* Lights */,
 				5071D7201747D0A4009A60D3 /* Light.cpp */,
 				5071D7211747D0A4009A60D3 /* Light.h */,
-				5071D7221747D0A4009A60D3 /* Mesh.cpp */,
-				5071D7231747D0A4009A60D3 /* Mesh.h */,
-				5071D7241747D0A4009A60D3 /* PointLight.cpp */,
-				5071D7251747D0A4009A60D3 /* PointLight.h */,
 				5071D7261747D0A4009A60D3 /* Shape.cpp */,
 				5071D7271747D0A4009A60D3 /* Shape.h */,
-				5071D7281747D0A4009A60D3 /* Sphere.cpp */,
-				5071D7291747D0A4009A60D3 /* Sphere.h */,
-				5071D7441747D93B009A60D3 /* AreaLight.cpp */,
-				5071D7451747D93B009A60D3 /* AreaLight.h */,
 			);
 			name = Primitives;
 			sourceTree = "<group>";
@@ -300,10 +293,25 @@
 		5071D7471747D9B6009A60D3 /* Lights */ = {
 			isa = PBXGroup;
 			children = (
-				5071D7481747D9C7009A60D3 /* IsotropicPointLight.cpp */,
-				5071D7491747D9C7009A60D3 /* IsotropicPointLight.h */,
+				5071D74B1747DAF7009A60D3 /* AreaLight.cpp */,
+				5071D74C1747DAF7009A60D3 /* AreaLight.h */,
+				5071D74D1747DAF7009A60D3 /* IsotropicPointLight.cpp */,
+				5071D74E1747DAF7009A60D3 /* IsotropicPointLight.h */,
+				5071D74F1747DAF7009A60D3 /* PointLight.cpp */,
+				5071D7501747DAF7009A60D3 /* PointLight.h */,
 			);
 			name = Lights;
+			sourceTree = "<group>";
+		};
+		5071D7541747DB07009A60D3 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				5071D7551747DB1C009A60D3 /* Mesh.cpp */,
+				5071D7561747DB1C009A60D3 /* Mesh.h */,
+				5071D7571747DB1C009A60D3 /* Sphere.cpp */,
+				5071D7581747DB1C009A60D3 /* Sphere.h */,
+			);
+			name = Shapes;
 			sourceTree = "<group>";
 		};
 		50F7B9221726CFFC003F1FCE = {
@@ -427,10 +435,7 @@
 				5071D71C1747CE0F009A60D3 /* PhotonMap.cpp in Sources */,
 				5071D71F1747CF5A009A60D3 /* PhotonSource.cpp in Sources */,
 				5071D72A1747D0A4009A60D3 /* Light.cpp in Sources */,
-				5071D72B1747D0A4009A60D3 /* Mesh.cpp in Sources */,
-				5071D72C1747D0A4009A60D3 /* PointLight.cpp in Sources */,
 				5071D72D1747D0A4009A60D3 /* Shape.cpp in Sources */,
-				5071D72E1747D0A4009A60D3 /* Sphere.cpp in Sources */,
 				5071D7331747D0CF009A60D3 /* LambertShader.cpp in Sources */,
 				5071D7341747D0CF009A60D3 /* SurfaceShader.cpp in Sources */,
 				5071D73F1747D10B009A60D3 /* Camera.cpp in Sources */,
@@ -438,8 +443,11 @@
 				5071D7411747D10B009A60D3 /* Ray.cpp in Sources */,
 				5071D7421747D10B009A60D3 /* Renderer.cpp in Sources */,
 				5071D7431747D10B009A60D3 /* Scene.cpp in Sources */,
-				5071D7461747D93B009A60D3 /* AreaLight.cpp in Sources */,
-				5071D74A1747D9C7009A60D3 /* IsotropicPointLight.cpp in Sources */,
+				5071D7511747DAF7009A60D3 /* AreaLight.cpp in Sources */,
+				5071D7521747DAF7009A60D3 /* IsotropicPointLight.cpp in Sources */,
+				5071D7531747DAF7009A60D3 /* PointLight.cpp in Sources */,
+				5071D7591747DB1C009A60D3 /* Mesh.cpp in Sources */,
+				5071D75A1747DB1C009A60D3 /* Sphere.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
