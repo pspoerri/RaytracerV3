@@ -60,12 +60,14 @@ PhotonMapper::render(Scene &scene)
         source->emitPhotons(emittedPhotons, scene);
     }
     
-//    PhotonMap photonMap(1024*1024*1024);
-//    PhotonMap specularPhotonMap(1024*1024*1024);
-//    scatterPhotons(emittedPhotons, photonMap, specularPhotonMap, scene);
-//    photonMap.balance();
-//    specularPhotonMap.balance();
-    
+    PhotonMap photonMap(1024*1024*1024);
+    PhotonMap specularPhotonMap(1024*1024*1024);
+    for (size_t i=0; i<emittedPhotons.size(); i++)
+    {
+        scene.photonScattering(emittedPhotons[i], photonMap, specularPhotonMap);
+    }
+    photonMap.balance();
+    specularPhotonMap.balance();
     
     for (int i=0; i < xRes; i++) {
         for (int j=0; j<yRes; j++) {

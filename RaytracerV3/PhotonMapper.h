@@ -25,5 +25,6 @@ public:
     ~PhotonMapper();
     
     virtual void render(Scene &scene);
+    
 };
 #endif /* defined(__RaytracerV3__PhotonMapper__) */

@@ -13,11 +13,12 @@
 #include <iostream>
 #include "Camera.h"
 #include "Math/Rand.h"
+#include "PhotonSource.h"
 
 class Light;
 class Shape;
 class PhotonSource;
-
+class PhotonMap;
 using namespace std;
 class Scene
 {
@@ -41,6 +42,10 @@ public:
     int getMonteCarloSamples() const;
     
     Shape* intersect(Ray &r) const;
+    
+    void photonScattering(EmittedPhoton photon,
+                          PhotonMap &photonMap,
+                          PhotonMap &specularPhotonMap) const;
 
 private:
     int _monteCarloSamples;

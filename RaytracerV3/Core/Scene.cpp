@@ -8,6 +8,8 @@
 
 #include "Scene.h"
 #include "Shape.h"
+#include "PhotonMap.h"
+
 Scene::Scene():
     rand_gen(new Math::RandMT(time(NULL))),
     _monteCarloSamples(64)
@@ -106,4 +108,29 @@ Scene::intersect(Ray &r) const {
     }
     r.hit.t = t;
     return s_hit;
+}
+
+void
+Scene::photonScattering(EmittedPhoton photon,
+                        PhotonMap &photonMap,
+                        PhotonMap &specularPhotonMap) const
+{
+    Ray r;
+    r.o = photon.position+0.001*photon.dir;
+    r.d = photon.dir;
+    
+    Shape* hitShape = intersect(r);
+    if (hitShape != NULL)
+    {
+        hitShape->fillHitInfo(r);
+        if (hitShape->surfaceShader == NULL)
+        {
+            return;
+        }
+        r.hit.surfaceShader->processPhoton(r.hit,
+                                           photon,
+                                           photonMap,
+                                           specularPhotonMap,
+                                           *this);
+    }
 }
