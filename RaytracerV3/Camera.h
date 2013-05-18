@@ -7,9 +7,9 @@
 
 class Ray;
 
-#include "Vec2.h"
-#include "Vec3.h"
-#include "Mat44.h"
+#include "Math/Vec2.h"
+#include "Math/Vec3.h"
+#include "Math/Mat44.h"
 #include "Ray.h"
 
 /*!

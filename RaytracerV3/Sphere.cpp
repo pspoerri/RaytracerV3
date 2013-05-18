@@ -11,7 +11,6 @@
 #include "OGL/Primitive.h"
 #include "Math/MathGL.h"
 #include "Math/Core.h"
-#include "config.h"
 
 using namespace Math;
 
