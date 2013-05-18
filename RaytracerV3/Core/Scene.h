@@ -16,6 +16,7 @@
 
 class Light;
 class Shape;
+class PhotonSource;
 
 using namespace std;
 class Scene
@@ -27,6 +28,7 @@ public:
 
     vector<Shape *> shapes;
     vector<Light *> lights;
+    vector<PhotonSource *> photonSources;
     Camera camera;
     
     void generateStratifiedJitteredSamples(std::vector<Math::Vec2d> &samples,
