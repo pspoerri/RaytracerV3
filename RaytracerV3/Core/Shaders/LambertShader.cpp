@@ -97,8 +97,8 @@ LambertShader::shade(const HitInfo & hit, const Scene &scene) const
 //Math::Color3f
 //LambertShader::shade(const Renderer *render,
 //                     const HitInfo & hit,
-//                     Photon_map &photonMap,
-//                     Photon_map &specularPhotonMap,
+//                     PhotonMap &photonMap,
+//                     PhotonMap &specularPhotonMap,
 //                     const Scene &scene) const
 //{
 //    float maxDist = scene.maxPhotonMapSearchDist;
@@ -130,8 +130,8 @@ LambertShader::shade(const HitInfo & hit, const Scene &scene) const
 //void
 //LambertShader::processPhoton(const HitInfo & hit,
 //                             EmittedPhoton photon,
-//                             Photon_map &photonMap,
-//                             Photon_map &specularPhotonMap,
+//                             PhotonMap &photonMap,
+//                             PhotonMap &specularPhotonMap,
 //                             const Scene &scene) const
 //{
 //    float power[3];

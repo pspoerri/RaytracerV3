@@ -40,6 +40,8 @@
 		5071D7531747DAF7009A60D3 /* PointLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D74F1747DAF7009A60D3 /* PointLight.cpp */; };
 		5071D7591747DB1C009A60D3 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D7551747DB1C009A60D3 /* Mesh.cpp */; };
 		5071D75A1747DB1C009A60D3 /* Sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D7571747DB1C009A60D3 /* Sphere.cpp */; };
+		5071D75F1747DE07009A60D3 /* SpecularDielectricShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D75B1747DE07009A60D3 /* SpecularDielectricShader.cpp */; };
+		5071D7601747DE07009A60D3 /* SpecularMirrorShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D75D1747DE07009A60D3 /* SpecularMirrorShader.cpp */; };
 		50F7B9311726CFFC003F1FCE /* RaytracerV3.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */; };
 		50F7B9381726D0C0003F1FCE /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F7B9371726D0C0003F1FCE /* libglfw.dylib */; };
 		50F7B93C1726D1C8003F1FCE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F7B93B1726D1C8003F1FCE /* Cocoa.framework */; };
@@ -146,6 +148,10 @@
 		5071D7561747DB1C009A60D3 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mesh.h; path = Primitives/Shapes/Mesh.h; sourceTree = "<group>"; };
 		5071D7571747DB1C009A60D3 /* Sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Sphere.cpp; path = Primitives/Shapes/Sphere.cpp; sourceTree = "<group>"; };
 		5071D7581747DB1C009A60D3 /* Sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sphere.h; path = Primitives/Shapes/Sphere.h; sourceTree = "<group>"; };
+		5071D75B1747DE07009A60D3 /* SpecularDielectricShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SpecularDielectricShader.cpp; path = Shaders/SpecularDielectricShader.cpp; sourceTree = "<group>"; };
+		5071D75C1747DE07009A60D3 /* SpecularDielectricShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpecularDielectricShader.h; path = Shaders/SpecularDielectricShader.h; sourceTree = "<group>"; };
+		5071D75D1747DE07009A60D3 /* SpecularMirrorShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SpecularMirrorShader.cpp; path = Shaders/SpecularMirrorShader.cpp; sourceTree = "<group>"; };
+		5071D75E1747DE07009A60D3 /* SpecularMirrorShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpecularMirrorShader.h; path = Shaders/SpecularMirrorShader.h; sourceTree = "<group>"; };
 		50F7B92B1726CFFC003F1FCE /* RaytracerV3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RaytracerV3; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F7B92E1726CFFC003F1FCE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RaytracerV3.1; sourceTree = "<group>"; };
@@ -257,6 +263,10 @@
 		5071D70F1747A758009A60D3 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
+				5071D75B1747DE07009A60D3 /* SpecularDielectricShader.cpp */,
+				5071D75C1747DE07009A60D3 /* SpecularDielectricShader.h */,
+				5071D75D1747DE07009A60D3 /* SpecularMirrorShader.cpp */,
+				5071D75E1747DE07009A60D3 /* SpecularMirrorShader.h */,
 				5071D72F1747D0CF009A60D3 /* LambertShader.cpp */,
 				5071D7301747D0CF009A60D3 /* LambertShader.h */,
 				5071D7311747D0CF009A60D3 /* SurfaceShader.cpp */,
@@ -448,6 +458,8 @@
 				5071D7531747DAF7009A60D3 /* PointLight.cpp in Sources */,
 				5071D7591747DB1C009A60D3 /* Mesh.cpp in Sources */,
 				5071D75A1747DB1C009A60D3 /* Sphere.cpp in Sources */,
+				5071D75F1747DE07009A60D3 /* SpecularDielectricShader.cpp in Sources */,
+				5071D7601747DE07009A60D3 /* SpecularMirrorShader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
