@@ -126,6 +126,11 @@
 		5071D6BC1747A07B009A60D3 /* Sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sphere.h; path = RaytracerV3/Sphere.h; sourceTree = SOURCE_ROOT; };
 		5071D6BD1747A07B009A60D3 /* SurfaceShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SurfaceShader.cpp; path = RaytracerV3/SurfaceShader.cpp; sourceTree = SOURCE_ROOT; };
 		5071D6BE1747A07B009A60D3 /* SurfaceShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SurfaceShader.h; path = RaytracerV3/SurfaceShader.h; sourceTree = SOURCE_ROOT; };
+		5071D7121747AC90009A60D3 /* Array1D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array1D.h; sourceTree = "<group>"; };
+		5071D7131747AC90009A60D3 /* Array2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array2D.h; sourceTree = "<group>"; };
+		5071D7141747AC90009A60D3 /* Array3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array3D.h; sourceTree = "<group>"; };
+		5071D7151747AC90009A60D3 /* Array4D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array4D.h; sourceTree = "<group>"; };
+		5071D7161747AC90009A60D3 /* Fwd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fwd.h; sourceTree = "<group>"; };
 		50F7B92B1726CFFC003F1FCE /* RaytracerV3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RaytracerV3; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F7B92E1726CFFC003F1FCE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RaytracerV3.1; sourceTree = "<group>"; };
@@ -153,26 +158,16 @@
 		5007E2211726EE0800D447B8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5071D7101747A769009A60D3 /* Primitives */,
+				5071D70F1747A758009A60D3 /* Shaders */,
 				5071D6AB1747A07A009A60D3 /* Camera.cpp */,
 				5071D6AC1747A07A009A60D3 /* Camera.h */,
 				5071D6AD1747A07A009A60D3 /* HitInfo.cpp */,
 				5071D6AE1747A07A009A60D3 /* HitInfo.h */,
-				5071D6AF1747A07A009A60D3 /* LambertShader.cpp */,
-				5071D6B01747A07A009A60D3 /* LambertShader.h */,
-				5071D6B11747A07A009A60D3 /* Light.cpp */,
-				5071D6B21747A07A009A60D3 /* Light.h */,
-				5071D6B31747A07A009A60D3 /* Mesh.cpp */,
-				5071D6B41747A07A009A60D3 /* Mesh.h */,
 				5071D6B51747A07B009A60D3 /* Ray.cpp */,
 				5071D6B61747A07B009A60D3 /* Ray.h */,
 				5071D6B71747A07B009A60D3 /* Renderer.cpp */,
 				5071D6B81747A07B009A60D3 /* Renderer.h */,
-				5071D6B91747A07B009A60D3 /* Shape.cpp */,
-				5071D6BA1747A07B009A60D3 /* Shape.h */,
-				5071D6BB1747A07B009A60D3 /* Sphere.cpp */,
-				5071D6BC1747A07B009A60D3 /* Sphere.h */,
-				5071D6BD1747A07B009A60D3 /* SurfaceShader.cpp */,
-				5071D6BE1747A07B009A60D3 /* SurfaceShader.h */,
 				502588BC174563990067F080 /* Scene.h */,
 				502588BB174563990067F080 /* Scene.cpp */,
 			);
@@ -240,6 +235,44 @@
 			path = Platform;
 			sourceTree = "<group>";
 		};
+		5071D70F1747A758009A60D3 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				5071D6AF1747A07A009A60D3 /* LambertShader.cpp */,
+				5071D6B01747A07A009A60D3 /* LambertShader.h */,
+				5071D6BD1747A07B009A60D3 /* SurfaceShader.cpp */,
+				5071D6BE1747A07B009A60D3 /* SurfaceShader.h */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		5071D7101747A769009A60D3 /* Primitives */ = {
+			isa = PBXGroup;
+			children = (
+				5071D6B11747A07A009A60D3 /* Light.cpp */,
+				5071D6B21747A07A009A60D3 /* Light.h */,
+				5071D6B31747A07A009A60D3 /* Mesh.cpp */,
+				5071D6B41747A07A009A60D3 /* Mesh.h */,
+				5071D6B91747A07B009A60D3 /* Shape.cpp */,
+				5071D6BA1747A07B009A60D3 /* Shape.h */,
+				5071D6BB1747A07B009A60D3 /* Sphere.cpp */,
+				5071D6BC1747A07B009A60D3 /* Sphere.h */,
+			);
+			name = Primitives;
+			sourceTree = "<group>";
+		};
+		5071D7111747AC90009A60D3 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				5071D7121747AC90009A60D3 /* Array1D.h */,
+				5071D7131747AC90009A60D3 /* Array2D.h */,
+				5071D7141747AC90009A60D3 /* Array3D.h */,
+				5071D7151747AC90009A60D3 /* Array4D.h */,
+				5071D7161747AC90009A60D3 /* Fwd.h */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		50F7B9221726CFFC003F1FCE = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +294,7 @@
 		50F7B92D1726CFFC003F1FCE /* RaytracerV3 */ = {
 			isa = PBXGroup;
 			children = (
+				5071D7111747AC90009A60D3 /* Util */,
 				5007E2541726EE2900D447B8 /* Platform */,
 				5007E2461726EE1D00D447B8 /* OGL */,
 				5007E2251726EE0F00D447B8 /* Math */,
