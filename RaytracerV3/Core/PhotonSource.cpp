@@ -7,3 +7,18 @@
 //
 
 #include "PhotonSource.h"
+
+PhotonSource::PhotonSource(const Math::Color3f& color,
+                           double power,
+                           int photons):
+color(color),
+power(power),
+photons(photons)
+{
+    
+}
+
+PhotonSource::~PhotonSource()
+{
+    
+}
