@@ -34,46 +34,6 @@ Sphere::renderGL() const
 bool
 Sphere::intersect(Ray & ray) const
 {
-    //    // new code based on http://wiki.cgsociety.org/index.php/Ray_Sphere_Intersection
-    //
-    //    Vec3d o = ray.o-location;
-    //
-    //    double b = 2.0*ray.d.dot(o);
-    //    double c = o.dot(o)-(radius*radius);
-    //
-    //    double disc = b*b-4.0*c;
-    //
-    //    if (disc < 0.0) {
-    //        return false;
-    //    }
-    //
-    //    double distSqrt = sqrtf(disc);
-    //    double t0 = (-b-distSqrt)*0.5;
-    //
-    //    double t1 = (-b+distSqrt)*0.5;
-    //
-    //    if (t0 > t1) {
-    //        double tmp = t0;
-    //        t0 = t1;
-    //        t1 = tmp;
-    //    }
-    //
-    //    if (t0 > ray.tMin && t0 < ray.tMax) {
-    ////        intersection = t1;
-    //        ray.hit.t = t0;
-    //        fillHitInfo(ray);
-    //        return true;
-    //    } else if (t0 > ray.tMin && t0 < ray.tMax) {
-    //        ray.hit.t = t1;
-    //        fillHitInfo(ray);
-    //        return true;
-    //    }
-    //
-    ////    ray.hit.t = -1.0;
-    //
-    //
-    //    return false;
-    
     const Vec3d &c = location;
     const Vec3d &o = ray.o;
     const Vec3d &d = ray.d;
