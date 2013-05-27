@@ -72,11 +72,13 @@ Window::run()
         /* Render here */
         mainLoop();
         /* Swap front and back buffers and process events */
-        glFinish();
 
         if (render || renderMode == RENDER_GL) {
+            glFinish();
             glfwSwapBuffers();
             render = false;
+        } else {
+            glfwWaitEvents();
         }
     }
     
