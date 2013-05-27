@@ -19,7 +19,9 @@ public:
 
     void loadScene();
     void loadSpheres();
-    void loadCornellBox4();
+    void loadCave();
+    
+    void loadCornellBox();
 
 };
 #endif /* defined(__RaytracerV3__SceneLoader__) */

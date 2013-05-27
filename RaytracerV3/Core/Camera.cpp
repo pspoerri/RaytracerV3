@@ -1,5 +1,6 @@
 #include "Camera.h"
 #include "MathGL.h"
+#include <iostream>
 
 using namespace Math;
 
@@ -31,6 +32,7 @@ Camera::updateCameraPos(const Math::Vec3d &eye, const Math::Vec3d &center, const
     m_NDCToWindow.viewport(m_resolution.x, m_resolution.y);
     m_ScreenToWorld = m_NDCToWindow.inverse()*m_worldToNDC.inverse();
     m_worldToScreen = m_NDCToWindow*m_worldToNDC;
+    std::cout << "Camera pos: " << center << std::endl;
     update();
 }
 

@@ -17,6 +17,8 @@
 #include "Math/Obj.h"
 #include "DiffuseSquareAreaLight.h"
 #include "SpecularDielectricShader.h"
+#include "SpecularMirrorShader.h"
+
 using namespace Math;
 SceneLoader::SceneLoader(Scene &scene):
     scene(scene)
@@ -27,7 +29,8 @@ SceneLoader::SceneLoader(Scene &scene):
 void
 SceneLoader::loadScene()
 {
-    loadCornellBox4();
+//    loadCornellBox();
+    loadCave();
 }
 
 void
@@ -55,13 +58,24 @@ SceneLoader::loadSpheres()
     new IsotropicPointLight(
                             smallsphere_center-Vec3d(-smallsphere_radius, smallsphere_radius*10.0, -1.0*smallsphere_radius),
                             Math::Color3f(1,1,1),
-                            1000000, 10000000);
+                            1000, 1000000);
     //    scene.lights.push_back(pointLight);
     scene.photonSources.push_back(pointLight);
 }
 
 void
-SceneLoader::loadCornellBox4()
+SceneLoader::loadCave()
+{
+    reset();
+    MeshBase *cave = Math::readObjMesh("data/cave/cave.obj");
+    Color3f white(1.0, 1.0, 1.0);
+    LambertShader *white_shader = new LambertShader(white,0.5);
+    scene.shapes.push_back(new Mesh(white_shader, cave));
+
+}
+
+void
+SceneLoader::loadCornellBox()
 {
     reset();
     MeshBase *mtop    = Math::readObjMesh("data/cornell_box/top.obj");
@@ -74,9 +88,9 @@ SceneLoader::loadCornellBox4()
     Color3f white(1.0, 1.0, 1.0);
     Color3f red(1.0, 0.0, 0.0);
     Color3f green(0.0, 1.0, 0.0);
-    LambertShader *white_shader = new LambertShader(white);
-    LambertShader *green_shader = new LambertShader(green);
-    LambertShader *red_shader = new LambertShader(red);
+    LambertShader *white_shader = new LambertShader(white,0.5);
+    LambertShader *green_shader = new LambertShader(green, 0.5);
+    LambertShader *red_shader = new LambertShader(red, 0.5);
     
     scene.shapes.push_back(new Mesh(white_shader, mtop));
     scene.shapes.push_back(new Mesh(white_shader, mbottom));
@@ -92,28 +106,37 @@ SceneLoader::loadCornellBox4()
     double width = 0.5;
     double height = 0.5;
     
-    
-    DiffuseSquareAreaLight *areaLight = new DiffuseSquareAreaLight(
-                                                                   mlight,
-                                                                   lowerPos,
-                                                                   dx,
-                                                                   dy,
-                                                                   height,
-                                                                   width,
-                                                                   normal,
-                                                                   lightColor,
-                                                                   100.0,
-                                                                   1024*1024);
-    scene.shapes.push_back(areaLight);
-    scene.photonSources.push_back(areaLight);
+    IsotropicPointLight *light = new IsotropicPointLight(
+                                                         Vec3d(0,0,1.001),
+                                                       lightColor,
+                                                       50.0,
+                                                       50*1024*1024);
+    scene.photonSources.push_back(light);
+
+//    DiffuseSquareAreaLight *areaLight = new DiffuseSquareAreaLight(
+//                                                                   mlight,
+//                                                                   lowerPos,
+//                                                                   dx,
+//                                                                   dy,
+//                                                                   height,
+//                                                                   width,
+//                                                                   normal,
+//                                                                   lightColor,
+//                                                                   10.0,
+//                                                                   1024*1024);
+//    scene.shapes.push_back(areaLight);
+//    scene.photonSources.push_back(areaLight);
     
     double sphere_radius = 0.3;
     double pos = 1.0-1.8*sphere_radius;
     
-    SpecularDielectricShader *refraction = new SpecularDielectricShader(1.0);
-    Sphere *mirrored = new Sphere(refraction, Vec3d(pos, -pos, -1.0+sphere_radius), sphere_radius);
+//    SpecularDielectricShader *refraction = new SpecularDielectricShader(2.42);
+//    Sphere *mirrored = new Sphere(refraction, Vec3d(pos, -pos, -1.0+sphere_radius), sphere_radius);
+//    Sphere *glass = new Sphere(refraction, Vec3d(-pos, pos, -1.0+sphere_radius), sphere_radius);
+    SpecularMirrorShader *mirror = new SpecularMirrorShader(0.5);
+    SpecularDielectricShader *refraction = new SpecularDielectricShader(1.333);
+    Sphere *mirrored = new Sphere(mirror, Vec3d(pos, -pos, -1.0+sphere_radius), sphere_radius);
     Sphere *glass = new Sphere(refraction, Vec3d(-pos, pos, -1.0+sphere_radius), sphere_radius);
-    
     scene.shapes.push_back(mirrored);
     scene.shapes.push_back(glass);
     ////

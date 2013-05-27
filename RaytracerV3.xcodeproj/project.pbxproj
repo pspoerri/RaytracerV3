@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		502588DD1745878E0067F080 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502588DC1745878E0067F080 /* GLUT.framework */; };
+		506BFFDE17540CD000A3AC1C /* cave.obj in CopyFiles */ = {isa = PBXBuildFile; fileRef = 506BFFDC17540CB800A3AC1C /* cave.obj */; };
 		5071D6CA1747A1FE009A60D3 /* Progress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E2571726EE2900D447B8 /* Progress.cpp */; };
 		5071D6CB1747A20D009A60D3 /* Stopwatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E2591726EE2900D447B8 /* Stopwatch.cpp */; };
 		5071D6CC1747A20D009A60D3 /* Timestamp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E25B1726EE2900D447B8 /* Timestamp.cpp */; };
@@ -57,6 +58,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		506BFFDA17540C9900A3AC1C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = data/cave;
+			dstSubfolderSpec = 16;
+			files = (
+				506BFFDE17540CD000A3AC1C /* cave.obj in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		508C55EC1753D48F0096004A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,6 +143,8 @@
 		502588DF17458BA90067F080 /* SceneLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneLoader.h; sourceTree = "<group>"; };
 		5044526F1726DCA300C4849B /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
 		504452701726DCA300C4849B /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		506BFFDC17540CB800A3AC1C /* cave.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = cave.obj; sourceTree = "<group>"; };
+		506BFFDD17540CB800A3AC1C /* source.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = source.txt; sourceTree = "<group>"; };
 		5071D6A817479F4E009A60D3 /* PhotonMapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhotonMapper.cpp; sourceTree = "<group>"; };
 		5071D6A917479F4E009A60D3 /* PhotonMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotonMapper.h; sourceTree = "<group>"; };
 		5071D7121747AC90009A60D3 /* Array1D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array1D.h; sourceTree = "<group>"; };
@@ -293,6 +306,15 @@
 			path = Platform;
 			sourceTree = "<group>";
 		};
+		506BFFDB17540CB800A3AC1C /* cave */ = {
+			isa = PBXGroup;
+			children = (
+				506BFFDC17540CB800A3AC1C /* cave.obj */,
+				506BFFDD17540CB800A3AC1C /* source.txt */,
+			);
+			path = cave;
+			sourceTree = "<group>";
+		};
 		5071D70F1747A758009A60D3 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +386,7 @@
 		508C55FA1753D4F70096004A /* data */ = {
 			isa = PBXGroup;
 			children = (
+				506BFFDB17540CB800A3AC1C /* cave */,
 				508C55FB1753D4F70096004A /* cornell_box */,
 			);
 			path = data;
@@ -445,6 +468,7 @@
 				50F7B9281726CFFC003F1FCE /* Frameworks */,
 				50F7B9291726CFFC003F1FCE /* CopyFiles */,
 				508C55EC1753D48F0096004A /* CopyFiles */,
+				506BFFDA17540C9900A3AC1C /* CopyFiles */,
 			);
 			buildRules = (
 			);
