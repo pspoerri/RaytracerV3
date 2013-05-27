@@ -30,11 +30,12 @@ void
 IsotropicPointLight::emitPhotons(std::vector<EmittedPhoton>& photonEmitter, Scene& scene)
 {
     std::vector<Math::Vec2d> samples;
-    scene.generateRandomSamples(samples, photons);
+    scene.generateStratifiedJitteredSamples(samples, photons);
+    const double sampleSize = samples.size();
     photonEmitter.reserve(photonEmitter.size()+photons);
 #warning Please check formula
     float total_color = color.x+color.y+color.z;
-    Math::Vec3f emittedPower = power/(double(photons)*total_color)*color;
+    Math::Vec3f emittedPower = power/(sampleSize*total_color)*color;
     for (Math::Vec2d &sample: samples)
     {
         Math::Vec3d dir;

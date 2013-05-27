@@ -14,7 +14,7 @@ Scene::Scene():
     rand_gen(new Math::RandMT(time(NULL))),
     _monteCarloSamples(64)
 {
-    maxPhotonMapSearchDist = 0.1;
+    maxPhotonMapSearchDist = 10;
     numPhotonMapPhotons = 64;
 }
 
@@ -31,10 +31,13 @@ Scene::generateStratifiedJitteredSamples(std::vector<Math::Vec2d> &samples,
     if (N != n*n) {
         n++;
         N = n*n;
+#ifdef DEBUG
+        std::cerr << "Scene::generateStratifiedJitteredSamples increasing sample size"<<std::endl;
+#endif
     }
     samples.clear();
     samples.reserve(n*n);
-    double factor = 1.0/double(n+1);
+    double factor = 1.0/double(n);
     double dx = factor;
     for (int i=0; i< n; i++)
     {

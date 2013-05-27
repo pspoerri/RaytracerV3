@@ -13,6 +13,7 @@
 #include "Window.h"
 #include "Math/Core.h"
 #include "RenderGL.h"
+#include "PhotonMapper.h"
 
 using namespace Main;
 using namespace Math;
@@ -51,7 +52,8 @@ Window::Window(uint width, uint height):
     }
     
     initialized = true;
-    
+    render = true;
+    renderMode = RENDER_GL;
     sceneLoader.loadScene();
     
 }
@@ -70,7 +72,12 @@ Window::run()
         /* Render here */
         mainLoop();
         /* Swap front and back buffers and process events */
-        glfwSwapBuffers();
+        glFinish();
+
+        if (render || renderMode == RENDER_GL) {
+            glfwSwapBuffers();
+            render = false;
+        }
     }
     
     return 0;
@@ -82,22 +89,24 @@ Window::mainLoop()
     updateScreenSize();
     handle_keyboardInteraction();
     handle_mouse();
-    
-    switch (renderMode) {
-        case RENDER_GL:
-        {
-            RenderGL renderer;
-            renderer.render(scene);
-            break;
+    if (render  || renderMode == RENDER_GL) {
+        switch (renderMode) {
+            case RENDER_GL:
+            {
+                RenderGL renderer;
+                renderer.render(scene);
+                break;
+            }
+            case RENDER_RAYTRACE:
+            {
+                PhotonMapper renderer;
+                renderer.render(scene);
+                break;
+            }
+            default:
+                break;
+                
         }
-        case RENDER_RAYTRACE:
-        {
-            
-        }
-        default:
-            
-            break;
-            
     }
 }
 
@@ -203,14 +212,17 @@ Window::handle_mouse()
     if (glfwGetMouseButton(GLFW_MOUSE_BUTTON_1))
     {
         rotate(mouseX-x, mouseY-y);
+        render = true;
     }
     if (glfwGetMouseButton(GLFW_MOUSE_BUTTON_2))
     {
         pan(0,0,2*(mouseX-x+mouseY-y));
+        render = true;
     }
     if (glfwGetMouseButton(GLFW_MOUSE_BUTTON_3))
     {
         pan(mouseX-x ,mouseY-y, 0);
+        render = true;
     }
 	
 }
@@ -226,12 +238,32 @@ Window::updateScreenSize()
 void
 Window::handle_keyboardInteraction()
 {
-    if (glfwGetKey(GLFW_KEY_UP))
+    if (glfwGetKey(GLFW_KEY_UP)) {
         pan(0,0,100);
-    if (glfwGetKey(GLFW_KEY_DOWN))
-        pan(0,0,-100); 
-    if (glfwGetKey(GLFW_KEY_LEFT))
+        render = true;
+    }
+    if (glfwGetKey(GLFW_KEY_DOWN)) {
+        pan(0,0,-100);
+        render = true;
+    }
+    if (glfwGetKey(GLFW_KEY_LEFT)) {
         pan(100,0,0);
-    if (glfwGetKey(GLFW_KEY_RIGHT))
+        render = true;
+    }
+    if (glfwGetKey(GLFW_KEY_RIGHT)) {
         pan(-100,0,0);
+        render = true;
+    }
+    if (glfwGetKey('q') || glfwGetKey('Q')) {
+        renderMode = RENDER_GL;
+        render =true;
+    }
+    if (glfwGetKey('w') || glfwGetKey('W')) {
+        if (renderMode != RENDER_RAYTRACE)
+            render = true;
+        renderMode = RENDER_RAYTRACE;
+    }
+    if (glfwGetKey('r') || glfwGetKey('R')) {
+        render = true;
+    }
 }

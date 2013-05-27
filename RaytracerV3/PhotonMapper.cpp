@@ -48,7 +48,7 @@ PhotonMapper::render(Scene &scene)
     setRes(xRes, yRes);
     
 	//clear m_rgbaBuffer
-    m_rgbaBuffer.reset(Math::Color4f(0,0,0,1.0));
+    m_rgbaBuffer.reset(Math::Color4f(1.0,1,1,1.0));
 	//setup progress reporting using Platform::Progress
     
     Platform::Progress progress = Platform::Progress("Raytracing Image", xRes*yRes);
@@ -63,6 +63,7 @@ PhotonMapper::render(Scene &scene)
     
     PhotonMap photonMap(1024*1024*1024);
     PhotonMap specularPhotonMap(1024*1024*1024);
+    std::cout << "Scattering Photons..." << std::endl;
     for (size_t i=0; i<emittedPhotons.size(); i++)
     {
         scene.photonScattering(emittedPhotons[i], photonMap, specularPhotonMap);
@@ -74,21 +75,8 @@ PhotonMapper::render(Scene &scene)
         for (int j=0; j<yRes; j++) {
             Ray r = Ray();
             scene.camera.generateRay(r, i, j);
-    		//loop over all scene objects and find the closest intersection
-            Shape *s_hit = scene.intersect(r);
-//            //if ray hit something then shade it
-//            if (s_hit != NULL) {
-//                s_hit->fillHitInfo(r);
-//                Math::Vec3f col = s_hit->surfaceShader->shade(r.hit, scene);
-//                //                if (s_hit->areaLight()) {
-//                //                    Math::Vec3d d = (r.hit.P-r.o).normalize();
-//                //                    col = col*fabs(d.dot(r.d));
-//                //                }
-//                m_rgbaBuffer(i, j) = Math::Vec4f(col.x, col.y, col.z, 1.0);
-//            } else {
-//                Math::Vec3d col = scene.getSkylightColor(i, j);
-//                m_rgbaBuffer(i, j) = Math::Vec4f(col.x, col.y, col.z, 1.0);
-//            }
+            Math::Vec3f col = recursiveRender(r, photonMap, specularPhotonMap, scene);
+            m_rgbaBuffer(i, j) = Math::Vec4f(col.x, col.y, col.z, 1.0);
         }
         progress.step(yRes);
     }
@@ -98,6 +86,10 @@ PhotonMapper::render(Scene &scene)
     glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, m_fbo.width(), m_fbo.height(), GL_RGBA, GL_FLOAT, &m_rgbaBuffer(0,0));
     glBindTexture(GL_TEXTURE_2D, 0);    //Render to Screen
 	m_fbo.blitFramebuffer(FBO_COLOR0);
+//    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    
+//    m_fbo.displayAlphaAsFullScreenTexture(FBO_COLOR0);
+
 }
 
 Math::Vec3f
@@ -111,6 +103,7 @@ PhotonMapper::recursiveRender(Ray &r,
         s_hit->fillHitInfo(r);
         Math::Vec3f  col = s_hit->surfaceShader->shade(this, r.hit, photonMap, specularPhotonMap, scene);
         if (s_hit->areaLight()) {
+            // TODO
             col = Math::Vec3f(1.0,1.0, 1.0);
         }
         return col;

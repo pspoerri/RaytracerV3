@@ -23,6 +23,7 @@ namespace Main {
         uint height;
         uint width;
         bool initialized;
+        bool render;
         Scene scene;
         SceneLoader sceneLoader;
         int mouseX;
