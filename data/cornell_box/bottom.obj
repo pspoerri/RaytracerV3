@@ -1,0 +1,17 @@
+## Top side
+# lower left
+v -1 -1 -1
+# lower right
+v 1 -1 -1
+# upper right
+v 1  2 -1
+# upper left
+v -1 2 -1
+vn 0 0 1
+vn 0 0 1
+vn 0 0 1
+vn 0 0 1
+
+f 1 2 3
+f 1 3 4
+

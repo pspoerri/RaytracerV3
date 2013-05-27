@@ -15,6 +15,11 @@ class SceneLoader
     Scene &scene;
 public:
     SceneLoader(Scene &scene);
+    void reset();
+
     void loadScene();
+    void loadSpheres();
+    void loadCornellBox4();
+
 };
 #endif /* defined(__RaytracerV3__SceneLoader__) */

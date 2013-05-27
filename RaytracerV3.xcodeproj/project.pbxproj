@@ -42,6 +42,14 @@
 		5071D75A1747DB1C009A60D3 /* Sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D7571747DB1C009A60D3 /* Sphere.cpp */; };
 		5071D75F1747DE07009A60D3 /* SpecularDielectricShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D75B1747DE07009A60D3 /* SpecularDielectricShader.cpp */; };
 		5071D7601747DE07009A60D3 /* SpecularMirrorShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D75D1747DE07009A60D3 /* SpecularMirrorShader.cpp */; };
+		508C55E81753CD680096004A /* DiffuseSquareAreaLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 508C55E61753CD680096004A /* DiffuseSquareAreaLight.cpp */; };
+		508C55EB1753CDDD0096004A /* EmptyShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 508C55E91753CDDD0096004A /* EmptyShader.cpp */; };
+		508C56021753D50D0096004A /* bottom.obj in CopyFiles */ = {isa = PBXBuildFile; fileRef = 508C55FC1753D4F70096004A /* bottom.obj */; };
+		508C56031753D5130096004A /* left.obj in CopyFiles */ = {isa = PBXBuildFile; fileRef = 508C55FD1753D4F70096004A /* left.obj */; };
+		508C56041753D5210096004A /* light.obj in CopyFiles */ = {isa = PBXBuildFile; fileRef = 508C55FE1753D4F70096004A /* light.obj */; };
+		508C56051753D5210096004A /* lower.obj in CopyFiles */ = {isa = PBXBuildFile; fileRef = 508C55FF1753D4F70096004A /* lower.obj */; };
+		508C56061753D5210096004A /* right.obj in CopyFiles */ = {isa = PBXBuildFile; fileRef = 508C56001753D4F70096004A /* right.obj */; };
+		508C56071753D5210096004A /* top.obj in CopyFiles */ = {isa = PBXBuildFile; fileRef = 508C56011753D4F70096004A /* top.obj */; };
 		50F7B9311726CFFC003F1FCE /* RaytracerV3.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */; };
 		50F7B9381726D0C0003F1FCE /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F7B9371726D0C0003F1FCE /* libglfw.dylib */; };
 		50F7B93C1726D1C8003F1FCE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F7B93B1726D1C8003F1FCE /* Cocoa.framework */; };
@@ -49,11 +57,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		508C55EC1753D48F0096004A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = data/cornell_box;
+			dstSubfolderSpec = 16;
+			files = (
+				508C56041753D5210096004A /* light.obj in CopyFiles */,
+				508C56051753D5210096004A /* lower.obj in CopyFiles */,
+				508C56061753D5210096004A /* right.obj in CopyFiles */,
+				508C56071753D5210096004A /* top.obj in CopyFiles */,
+				508C56031753D5130096004A /* left.obj in CopyFiles */,
+				508C56021753D50D0096004A /* bottom.obj in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		50F7B9291726CFFC003F1FCE /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstPath = usr/share/man/man1;
+			dstSubfolderSpec = 16;
 			files = (
 				50F7B9311726CFFC003F1FCE /* RaytracerV3.1 in CopyFiles */,
 			);
@@ -152,6 +175,16 @@
 		5071D75C1747DE07009A60D3 /* SpecularDielectricShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpecularDielectricShader.h; path = Shaders/SpecularDielectricShader.h; sourceTree = "<group>"; };
 		5071D75D1747DE07009A60D3 /* SpecularMirrorShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SpecularMirrorShader.cpp; path = Shaders/SpecularMirrorShader.cpp; sourceTree = "<group>"; };
 		5071D75E1747DE07009A60D3 /* SpecularMirrorShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpecularMirrorShader.h; path = Shaders/SpecularMirrorShader.h; sourceTree = "<group>"; };
+		508C55E61753CD680096004A /* DiffuseSquareAreaLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DiffuseSquareAreaLight.cpp; path = Primitives/Lights/DiffuseSquareAreaLight.cpp; sourceTree = "<group>"; };
+		508C55E71753CD680096004A /* DiffuseSquareAreaLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiffuseSquareAreaLight.h; path = Primitives/Lights/DiffuseSquareAreaLight.h; sourceTree = "<group>"; };
+		508C55E91753CDDD0096004A /* EmptyShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EmptyShader.cpp; sourceTree = "<group>"; };
+		508C55EA1753CDDD0096004A /* EmptyShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyShader.h; sourceTree = "<group>"; };
+		508C55FC1753D4F70096004A /* bottom.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bottom.obj; sourceTree = "<group>"; };
+		508C55FD1753D4F70096004A /* left.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = left.obj; sourceTree = "<group>"; };
+		508C55FE1753D4F70096004A /* light.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = light.obj; sourceTree = "<group>"; };
+		508C55FF1753D4F70096004A /* lower.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lower.obj; sourceTree = "<group>"; };
+		508C56001753D4F70096004A /* right.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = right.obj; sourceTree = "<group>"; };
+		508C56011753D4F70096004A /* top.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = top.obj; sourceTree = "<group>"; };
 		50F7B92B1726CFFC003F1FCE /* RaytracerV3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RaytracerV3; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F7B92E1726CFFC003F1FCE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		50F7B9301726CFFC003F1FCE /* RaytracerV3.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RaytracerV3.1; sourceTree = "<group>"; };
@@ -271,6 +304,8 @@
 				5071D7301747D0CF009A60D3 /* LambertShader.h */,
 				5071D7311747D0CF009A60D3 /* SurfaceShader.cpp */,
 				5071D7321747D0CF009A60D3 /* SurfaceShader.h */,
+				508C55E91753CDDD0096004A /* EmptyShader.cpp */,
+				508C55EA1753CDDD0096004A /* EmptyShader.h */,
 			);
 			name = Shaders;
 			sourceTree = "<group>";
@@ -309,6 +344,8 @@
 				5071D74E1747DAF7009A60D3 /* IsotropicPointLight.h */,
 				5071D74F1747DAF7009A60D3 /* PointLight.cpp */,
 				5071D7501747DAF7009A60D3 /* PointLight.h */,
+				508C55E61753CD680096004A /* DiffuseSquareAreaLight.cpp */,
+				508C55E71753CD680096004A /* DiffuseSquareAreaLight.h */,
 			);
 			name = Lights;
 			sourceTree = "<group>";
@@ -324,9 +361,31 @@
 			name = Shapes;
 			sourceTree = "<group>";
 		};
+		508C55FA1753D4F70096004A /* data */ = {
+			isa = PBXGroup;
+			children = (
+				508C55FB1753D4F70096004A /* cornell_box */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		508C55FB1753D4F70096004A /* cornell_box */ = {
+			isa = PBXGroup;
+			children = (
+				508C55FC1753D4F70096004A /* bottom.obj */,
+				508C55FD1753D4F70096004A /* left.obj */,
+				508C55FE1753D4F70096004A /* light.obj */,
+				508C55FF1753D4F70096004A /* lower.obj */,
+				508C56001753D4F70096004A /* right.obj */,
+				508C56011753D4F70096004A /* top.obj */,
+			);
+			path = cornell_box;
+			sourceTree = "<group>";
+		};
 		50F7B9221726CFFC003F1FCE = {
 			isa = PBXGroup;
 			children = (
+				508C55FA1753D4F70096004A /* data */,
 				502588DC1745878E0067F080 /* GLUT.framework */,
 				50F7B9391726D0C9003F1FCE /* References */,
 				50F7B92D1726CFFC003F1FCE /* RaytracerV3 */,
@@ -385,6 +444,7 @@
 				5071D6C91747A1F4009A60D3 /* Sources */,
 				50F7B9281726CFFC003F1FCE /* Frameworks */,
 				50F7B9291726CFFC003F1FCE /* CopyFiles */,
+				508C55EC1753D48F0096004A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -460,6 +520,8 @@
 				5071D75A1747DB1C009A60D3 /* Sphere.cpp in Sources */,
 				5071D75F1747DE07009A60D3 /* SpecularDielectricShader.cpp in Sources */,
 				5071D7601747DE07009A60D3 /* SpecularMirrorShader.cpp in Sources */,
+				508C55E81753CD680096004A /* DiffuseSquareAreaLight.cpp in Sources */,
+				508C55EB1753CDDD0096004A /* EmptyShader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
