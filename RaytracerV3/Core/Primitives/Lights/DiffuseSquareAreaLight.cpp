@@ -47,12 +47,13 @@ DiffuseSquareAreaLight::emitPhotons(std::vector<EmittedPhoton> &photonEmitter, S
     scene.generateStratifiedJitteredSamples(samples, photons);
     std::vector<Math::Vec2d> lightSamples;
     scene.generateStratifiedJitteredSamples(lightSamples, photons);
+    const double emittedPhotons = (double) samples.size();
     
     photonEmitter.reserve(photonEmitter.size()+photons);
 #warning Not Sure if correct
     float total_color = color.x+color.y+color.z;
     
-    Math::Vec3f emittedPower = power/(double(photons)*total_color)*color;
+    Math::Vec3f emittedPower = power/(emittedPhotons*total_color)*color;
     
     //    Math::Mat44d tr;
     //    tr.makeIdentity();

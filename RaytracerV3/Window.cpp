@@ -254,11 +254,11 @@ Window::handle_keyboardInteraction()
         pan(-100,0,0);
         render = true;
     }
-    if (glfwGetKey('q') || glfwGetKey('Q')) {
+    if (glfwGetKey('g') || glfwGetKey('G')) {
         renderMode = RENDER_GL;
         render =true;
     }
-    if (glfwGetKey('w') || glfwGetKey('W')) {
+    if (glfwGetKey('t') || glfwGetKey('T')) {
         if (renderMode != RENDER_RAYTRACE)
             render = true;
         renderMode = RENDER_RAYTRACE;

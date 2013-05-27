@@ -153,11 +153,23 @@ LambertShader::processPhoton(const HitInfo & hit,
         specularPhotonMap.store(power, pos, dir);
     }
     photonMap.store(power, pos, dir);
+
+    double r = scene.rand_gen->nextd();
+    if (r > surface_reflectance)
+    {
+        photon.dir = Math::reflect(hit.N, hit.I);
+        photon.position = hit.P+0.001*hit.N;
+        photon.specularBounces = false;
+        scene.photonScattering(photon, photonMap, specularPhotonMap);
+    }
+    
+
     
 }
 
-LambertShader::LambertShader(const Color3f & kd) :
-m_kd(kd)
+LambertShader::LambertShader(const Color3f & kd, double surface_reflectance) :
+    m_kd(kd),
+    surface_reflectance(surface_reflectance)
 {
     
 }

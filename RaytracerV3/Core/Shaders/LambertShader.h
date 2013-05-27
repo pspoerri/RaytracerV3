@@ -17,9 +17,9 @@ class LambertShader : public SurfaceShader
 {
 protected:
     Math::Color3f m_kd;
-    
+    const double surface_reflectance;
 public:
-    LambertShader(const Math::Color3f & kd = Math::Color3f(0.8f));
+    LambertShader(const Math::Color3f & kd = Math::Color3f(0.8f), double surface_reflectance=1.0);
     ~LambertShader();
     
     virtual Math::Color3f shade(const HitInfo & hit, const Scene &scene) const;
