@@ -12,15 +12,20 @@
 
 Scene::Scene():
     rand_gen(new Math::RandMT(time(NULL))),
+photonMap(NULL),
+specularPhotonMap(NULL),
     _monteCarloSamples(64)
 {
-    maxPhotonMapSearchDist = 0.1;
+//    maxPhotonMapSearchDist = 0.1;
+    maxPhotonMapSearchDist = 10.0;
     numPhotonMapPhotons = 100;
 }
 
 Scene::~Scene()
 {
     delete rand_gen;
+    delete photonMap;
+    delete specularPhotonMap;
 }
 
 void
@@ -116,6 +121,29 @@ Scene::intersect(Ray &r) const {
 }
 
 void
+Scene::emit_scatterPhotons()
+{
+    std::cout << "Emitting Photons..." << std::endl;
+    std::vector<EmittedPhoton> emittedPhotons;
+    for (PhotonSource *source: photonSources)
+    {
+        source->emitPhotons(emittedPhotons, *this);
+    }
+    
+    photonMap = new PhotonMap(1024*1024*1024);
+    specularPhotonMap = new PhotonMap(1024*1024*1024);
+    std::cout << "Scattering Photons..." << std::endl;
+    for (size_t i=0; i<emittedPhotons.size(); i++)
+    {
+        photonScattering(emittedPhotons[i],
+                         *photonMap,
+                         *specularPhotonMap);
+    }
+    photonMap->balance();
+    specularPhotonMap->balance();
+}
+
+void
 Scene::photonScattering(EmittedPhoton photon,
                         PhotonMap &photonMap,
                         PhotonMap &specularPhotonMap) const
@@ -138,4 +166,14 @@ Scene::photonScattering(EmittedPhoton photon,
                                            specularPhotonMap,
                                            *this);
     }
+}
+
+void
+Scene::reset()
+{
+    delete photonMap;
+    delete specularPhotonMap;
+    shapes.clear();
+    lights.clear();
+    photonSources.clear();
 }

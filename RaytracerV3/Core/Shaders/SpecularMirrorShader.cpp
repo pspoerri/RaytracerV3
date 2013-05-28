@@ -52,7 +52,8 @@ SpecularMirrorShader::processPhoton(const HitInfo &hit,
     }
     photon.dir = Math::reflect(hit.N, hit.I);
     photon.position = hit.P+0.001*hit.N;
-    photon.specularBounces = true;
+    if (!photon.indirect)
+        photon.specularBounces = true;
     scene.photonScattering(photon, photonMap, specularPhotonMap);
     
 }

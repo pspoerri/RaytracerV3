@@ -29,8 +29,8 @@ SceneLoader::SceneLoader(Scene &scene):
 void
 SceneLoader::loadScene()
 {
-//    loadCornellBox();
-    loadCave();
+    loadCornellBox();
+//    loadCave();
 }
 
 void
@@ -41,8 +41,6 @@ SceneLoader::loadSpheres()
     SurfaceShader *gray = new LambertShader(color);
     //    new AmbientOcclusionShader(JITTERED, COSINE_HEMISPHERE, color);
     //    scene.setSkylightColor(color);
-    
-    
     
     double bigsphere_radius = 1000000.0f;
     Vec3d bigsphere_center(0,0, -bigsphere_radius);
@@ -71,6 +69,24 @@ SceneLoader::loadCave()
     Color3f white(1.0, 1.0, 1.0);
     LambertShader *white_shader = new LambertShader(white,0.5);
     scene.shapes.push_back(new Mesh(white_shader, cave));
+
+    Vec3d entrance(0,-17,15);
+    Vec3d cameraPos(0.6, -15.9,-6.9);
+    Vec3d lightColor(1.0, 1.0, 1.0);
+//    Vec3d dir = (entrance-cameraPos).normalize();
+    Vec3d dir = Vec3d(4.79,-129.774,-55.50).normalize();
+    Vec3d up = Vec3d(0.745, 0.661, 0.08).normalize();
+//    Vec3d dir = Vec3d(-0.21, 0.67,-0.015).normalize();
+//    Vec3d up = Vec3d(0,0,1).normalize();
+    
+    IsotropicPointLight *light = new IsotropicPointLight(
+                                                         entrance,
+                                                         lightColor,
+                                                         50000.0,
+                                                         10*1024*1024);
+    scene.photonSources.push_back(light);
+    
+    scene.camera.updateCameraPos(cameraPos, dir, up);
 
 }
 
@@ -109,9 +125,11 @@ SceneLoader::loadCornellBox()
     IsotropicPointLight *light = new IsotropicPointLight(
                                                          Vec3d(0,0,1.001),
                                                        lightColor,
-                                                       50.0,
-                                                       50*1024*1024);
+                                                       70.0,
+                                                       10*1024*1024);
     scene.photonSources.push_back(light);
+    scene.maxPhotonMapSearchDist = 0.1;
+    scene.numPhotonMapPhotons = 500;
 
 //    DiffuseSquareAreaLight *areaLight = new DiffuseSquareAreaLight(
 //                                                                   mlight,
@@ -149,8 +167,5 @@ SceneLoader::loadCornellBox()
 void
 SceneLoader::reset()
 {
-    scene.shapes.clear();
-    scene.lights.clear();
-    scene.photonSources.clear();
-    
+    scene.reset();
 }

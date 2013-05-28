@@ -51,31 +51,17 @@ PhotonMapper::render(Scene &scene)
     m_rgbaBuffer.reset(Math::Color4f(1.0,1,1,1.0));
 	//setup progress reporting using Platform::Progress
     
-    Platform::Progress progress = Platform::Progress("Raytracing Image", xRes*yRes);
 	//for each pixel generate a camera ray
     
-    std::cout << "Emitting Photons..." << std::endl;
-    std::vector<EmittedPhoton> emittedPhotons;
-    for (PhotonSource *source: scene.photonSources)
-    {
-        source->emitPhotons(emittedPhotons, scene);
+    if (scene.photonMap == NULL && scene.specularPhotonMap == NULL) {
+        scene.emit_scatterPhotons();
     }
-    
-    PhotonMap photonMap(1024*1024*1024);
-    PhotonMap specularPhotonMap(1024*1024*1024);
-    std::cout << "Scattering Photons..." << std::endl;
-    for (size_t i=0; i<emittedPhotons.size(); i++)
-    {
-        scene.photonScattering(emittedPhotons[i], photonMap, specularPhotonMap);
-    }
-    photonMap.balance();
-    specularPhotonMap.balance();
-    
+    Platform::Progress progress = Platform::Progress("Raytracing Image", xRes*yRes);    
     for (int i=0; i < xRes; i++) {
         for (int j=0; j<yRes; j++) {
             Ray r = Ray();
             scene.camera.generateRay(r, i, j);
-            Math::Vec3f col = recursiveRender(r, photonMap, specularPhotonMap, scene);
+            Math::Vec3f col = recursiveRender(r, *(scene.photonMap), *(scene.specularPhotonMap), scene);
             m_rgbaBuffer(i, j) = Math::Vec4f(col.x, col.y, col.z, 1.0);
         }
         progress.step(yRes);

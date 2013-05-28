@@ -22,6 +22,7 @@ typedef struct EmittedPhoton
     Math::Vec3f power;
     Math::Vec3d dir;
     bool        specularBounces;
+    bool        indirect;
 } EmittedPhoton;
 
 class PhotonSource

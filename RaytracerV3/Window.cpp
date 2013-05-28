@@ -19,7 +19,7 @@ using namespace Main;
 using namespace Math;
 
 const double g_angleFact = 0.2f;
-const double g_scaleFact = 0.002f;
+const double g_scaleFact = 0.0005f;
 
 const char * renderModeNames[] =
 {
@@ -73,7 +73,7 @@ Window::run()
         mainLoop();
         /* Swap front and back buffers and process events */
 
-        if (render || renderMode == RENDER_GL) {
+        if (render) {
             glFinish();
             glfwSwapBuffers();
             render = false;
@@ -91,7 +91,7 @@ Window::mainLoop()
     updateScreenSize();
     handle_keyboardInteraction();
     handle_mouse();
-    if (render  || renderMode == RENDER_GL) {
+    if (render) {
         switch (renderMode) {
             case RENDER_GL:
             {
@@ -103,6 +103,7 @@ Window::mainLoop()
             {
                 PhotonMapper renderer;
                 renderer.render(scene);
+                renderMode = RENDER_GL;
                 break;
             }
             default:

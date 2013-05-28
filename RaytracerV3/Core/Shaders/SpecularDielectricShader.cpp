@@ -71,7 +71,8 @@ SpecularDielectricShader::processPhoton(const HitInfo &hit,
                                     const Scene &scene) const
 {
     double b = scene.rand_gen->nextd(0.0, 1.0);
-    photon.specularBounces = true;
+    if (!photon.indirect)
+        photon.specularBounces = true;
     double reflectivity = Math::reflectance(hit.N, hit.I, 1.0, refractiveIndex);
 //    if (refractiveIndex >= 1.0)
 //    {

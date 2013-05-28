@@ -14,11 +14,9 @@
 #include "Camera.h"
 #include "Math/Rand.h"
 #include "PhotonSource.h"
-
+#include "PhotonMap.h"
 class Light;
 class Shape;
-class PhotonSource;
-class PhotonMap;
 using namespace std;
 class Scene
 {
@@ -30,6 +28,8 @@ public:
     vector<Shape *> shapes;
     vector<Light *> lights;
     vector<PhotonSource *> photonSources;
+    PhotonMap *photonMap;
+    PhotonMap *specularPhotonMap;
     Camera camera;
     
     float maxPhotonMapSearchDist;
@@ -46,9 +46,11 @@ public:
     
     Shape* intersect(Ray &r) const;
     
+    void emit_scatterPhotons();
     void photonScattering(EmittedPhoton photon,
                           PhotonMap &photonMap,
                           PhotonMap &specularPhotonMap) const;
+    void reset();
 
 private:
     int _monteCarloSamples;

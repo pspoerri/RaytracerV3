@@ -13,6 +13,7 @@
 #include "Shape.h"
 #include <assert.h>
 #include "PhotonMap.h"
+#include "Warp.h"
 
 using namespace Math;
 using namespace std;
@@ -157,8 +158,17 @@ LambertShader::processPhoton(const HitInfo & hit,
     double r = scene.rand_gen->nextd();
     if (r > surface_reflectance)
     {
-        photon.dir = Math::reflect(hit.N, hit.I);
+//        photon.dir = Math::reflect(hit.N, hit.I);
+        double x = scene.rand_gen->nextd();
+        double y = scene.rand_gen->nextd();
+        Vec3d d;
+        Warp::cosineHemisphere(&d, x, y);
+        Math::Mat44d tr;
+        tr.makeIdentity();
+        tr.rotateTo(Math::Vec3d(0,0,1), hit.N);
+        photon.dir = tr*d;
         photon.position = hit.P+0.001*hit.N;
+        photon.indirect = true;
         photon.specularBounces = false;
         scene.photonScattering(photon, photonMap, specularPhotonMap);
     }
