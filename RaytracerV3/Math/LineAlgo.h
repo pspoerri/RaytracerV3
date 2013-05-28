@@ -84,7 +84,48 @@ intersect(const Vec3<T> & ro, const Vec3<T> & rd,
     return true;
 }
 
+template <typename T>
+inline bool
+intersect(const Vec3<T> & ro, const Vec3<T> & rd,
+          const Vec3<T>& A,
+          const Vec3<T>& B,
+          const Vec3<T>& C,
+          const Vec3<T>& NA,
+          const Vec3<T>& NB,
+          const Vec3<T>& NC,
+          T t0, T t1,
+          T * t, Vec2<T> * uv, Vec3<T> * Ng)
+{
+    Vec3<T> AB = B - A;
+    Vec3<T> AC = C - A;
+    Vec3<T> N = cross(AB, AC);
+    T det = dot(rd, N);
+    
+    if (det == T(0))
+        return false;
+    
+    T detInv = T(1) / det;
+    Vec3<T> toA = ro - A;
+    
+    T a = dot(rd, cross(toA, AC)) * detInv;
+    if (a < T(0))
+        return false;
+    
+    T b = dot(rd, cross(AB, toA)) * detInv;
+    if (b < T(0) || a + b > T(1))
+        return false;
+    
+    T tempT = -dot(toA, N) * detInv;
+    if (tempT < t0 || tempT > t1)
+        return false;
+    T c = T(1)-a-b;
+    *t = tempT;
+    uv->set(a, b);
+    *Ng = (a*NA+b*NB+c*NC).normalize();
+    return true;
+}
 
+    
 //Templated (fast) Intersection test between a ray (ro,rd) and a triangle (A,B,C)
 //in the interval t0,t1. Returns only true or false.
 template <typename T>

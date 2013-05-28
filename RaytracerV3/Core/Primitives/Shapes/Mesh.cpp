@@ -59,6 +59,9 @@ namespace
                             mesh->vertices[mesh->vertexIndices[index].x],
                             mesh->vertices[mesh->vertexIndices[index].y],
                             mesh->vertices[mesh->vertexIndices[index].z],
+//                            mesh->normals[mesh->vertexIndices[index].x],
+//                            mesh->normals[mesh->vertexIndices[index].y],
+//                            mesh->normals[mesh->vertexIndices[index].z],
                             r->tMin, r->tMax,
                             &r->hit.t, &r->hit.uv, &r->hit.Ng))
         {
