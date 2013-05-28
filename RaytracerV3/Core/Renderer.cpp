@@ -12,3 +12,9 @@ Renderer::~Renderer()
 {
     
 }
+
+void
+Renderer::render(Scene &scene, bool wireframe)
+{
+    render(scene);
+}

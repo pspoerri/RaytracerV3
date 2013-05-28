@@ -22,6 +22,7 @@ public:
     ~RenderGL();
     
     virtual void render(Scene &scene);
+    virtual void render(Scene &scene, bool wireframe);
 };
 
 

@@ -33,7 +33,7 @@ Shape::fillHitInfo(Ray &r) const
 }
 
 void
-Shape::renderGL() const
+Shape::renderGL(bool wireframe) const
 {
     
 }

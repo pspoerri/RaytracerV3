@@ -23,11 +23,15 @@ radius(rad)
 }
 
 void
-Sphere::renderGL() const
+Sphere::renderGL(bool wireframe) const
 {
 	glPushMatrix();
     glTranslate(location);
-    glutWireSphere(radius, 16, 16);
+    if (wireframe)
+        glutWireSphere(radius, 16, 16);
+    else
+        glutSolidSphere(radius, 16, 16);
+    
 	glPopMatrix();
 }
 

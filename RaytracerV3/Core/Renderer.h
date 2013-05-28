@@ -17,7 +17,7 @@ class Renderer
 public:
     virtual ~Renderer();
     virtual void render(Scene &scene) = 0;
-    
+    virtual void render(Scene &scene, bool wireframe);
     virtual Math::Vec3f recursiveRender(Ray &r,
                                         PhotonMap& photonMap,
                                         PhotonMap& specularPhotonMap,

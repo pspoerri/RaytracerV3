@@ -18,6 +18,8 @@
 #include "DiffuseSquareAreaLight.h"
 #include "SpecularDielectricShader.h"
 #include "SpecularMirrorShader.h"
+#include <GL/glfw.h>
+
 
 using namespace Math;
 SceneLoader::SceneLoader(Scene &scene):
@@ -29,8 +31,29 @@ SceneLoader::SceneLoader(Scene &scene):
 void
 SceneLoader::loadScene()
 {
+    
     loadCornellBox();
 //    loadCave();
+}
+
+bool
+SceneLoader::handleSceneLoading()
+{
+    if (glfwGetKey('1')) {
+        loadCornellBox();
+        return true;
+    }
+    if (glfwGetKey('2'))
+    {
+        loadCave();
+        return true;
+    }
+    if (glfwGetKey('9'))
+    {
+        loadSpheres();
+        return true;
+    }
+    return false;
 }
 
 void
@@ -73,9 +96,9 @@ SceneLoader::loadCave()
     Vec3d entrance(0,-17,15);
     Vec3d cameraPos(0.6, -15.9,-6.9);
     Vec3d lightColor(1.0, 1.0, 1.0);
-//    Vec3d dir = (entrance-cameraPos).normalize();
-    Vec3d dir = Vec3d(4.79,-129.774,-55.50).normalize();
-    Vec3d up = Vec3d(0.745, 0.661, 0.08).normalize();
+    Vec3d dir = (entrance-cameraPos).normalize();
+//    Vec3d dir = Vec3d(-0.0677413, 0.85384, 0.516109).normalize();
+    Vec3d up = Vec3d(0,0,1).normalize();
 //    Vec3d dir = Vec3d(-0.21, 0.67,-0.015).normalize();
 //    Vec3d up = Vec3d(0,0,1).normalize();
     
@@ -160,7 +183,7 @@ SceneLoader::loadCornellBox()
     ////
     
     
-    scene.camera.updateCameraPos(Vec3d(0,4.5,0), Vec3d(0,0,0), Vec3d(0,0,1));
+    scene.camera.updateCameraPos(Vec3d(0,4.5,0), Vec3d(0,1,0), Vec3d(0,0,1));
 }
 
 

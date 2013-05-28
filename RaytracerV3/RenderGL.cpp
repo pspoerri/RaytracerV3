@@ -23,6 +23,11 @@ RenderGL::~RenderGL()
 void
 RenderGL::render(Scene &scene)
 {
+    render(scene, false);
+}
+void
+RenderGL::render(Scene &scene, bool wireframe)
+{
     m_fbo.resizeExistingFBO(scene.camera.xRes(), scene.camera.yRes());
     m_fbo.bindBuffer();
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -31,7 +36,7 @@ RenderGL::render(Scene &scene)
     
     for (const Shape *s: scene.shapes)
     {
-        s->renderGL();
+        s->renderGL(wireframe);
     }
     m_fbo.unbindBuffer();
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);

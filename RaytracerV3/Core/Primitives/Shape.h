@@ -23,7 +23,7 @@ public:
     virtual bool intersects(Ray& r) const;
     virtual void fillHitInfo(Ray& r) const;
 
-    virtual void renderGL() const = 0;
+    virtual void renderGL(bool wireframe=false) const = 0;
 
     virtual bool areaLight() const;
 };

@@ -24,6 +24,7 @@ namespace Main {
         uint width;
         bool initialized;
         bool render;
+        bool openGLWireFrameMode;
         Scene scene;
         SceneLoader sceneLoader;
         int mouseX;

@@ -30,7 +30,7 @@ public:
 		 Math::MeshBase * mesh,
 		 int maxDepth = 64, int maxObjects = 1);
 	
-	void renderGL() const;
+	void renderGL(bool wireframe=false) const;
 	
     bool intersect(Ray * r) const;
     

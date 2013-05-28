@@ -19,7 +19,7 @@ public:
 		   const Math::Vec3d & loc = Math::Vec3d(0.0f), double rad = 1.0f);
     const Math::Vec3d location;
 	const double radius;
-	void renderGL() const;
+	void renderGL(bool wireframe=false) const;
 	
     bool intersect(Ray & ray) const;
     void fillHitInfo(Ray &ray) const;

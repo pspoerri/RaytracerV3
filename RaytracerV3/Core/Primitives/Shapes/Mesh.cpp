@@ -92,12 +92,18 @@ m_maxObjects(maxObjects)
 }
 
 void
-Mesh::renderGL() const
+Mesh::renderGL(bool wireframe) const
 {
 	if (!m_mesh)
 		return;
     
 	glColor3f(1.0f, 1.0f, 1.0f);
+    if (wireframe)
+    {
+        glPolygonMode(GL_FRONT, GL_LINE);
+        glPolygonMode(GL_BACK, GL_LINE);
+    }
+    // Turn on wireframe mode
 	glBegin(GL_TRIANGLES);
 	for (int i = 0; i < m_mesh->numTris; ++i)
 	{
@@ -106,6 +112,11 @@ Mesh::renderGL() const
 		glVertex(m_mesh->vertices[m_mesh->vertexIndices[i].z]);
 	}
 	glEnd();
+    if (wireframe)
+    {
+        glPolygonMode(GL_FRONT, GL_FILL);
+        glPolygonMode(GL_BACK, GL_FILL);
+    }
 }
 
 bool

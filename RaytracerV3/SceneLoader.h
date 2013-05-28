@@ -20,7 +20,7 @@ public:
     void loadScene();
     void loadSpheres();
     void loadCave();
-    
+    bool handleSceneLoading();
     void loadCornellBox();
 
 };

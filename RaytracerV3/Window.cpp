@@ -56,6 +56,7 @@ Window::Window(uint width, uint height):
     renderMode = RENDER_GL;
     sceneLoader.loadScene();
     
+    openGLWireFrameMode = false;
 }
 
 int
@@ -73,7 +74,7 @@ Window::run()
         mainLoop();
         /* Swap front and back buffers and process events */
 
-        if (render) {
+        if (render || renderMode == RENDER_GL) {
             glFinish();
             glfwSwapBuffers();
             render = false;
@@ -91,12 +92,17 @@ Window::mainLoop()
     updateScreenSize();
     handle_keyboardInteraction();
     handle_mouse();
-    if (render) {
+    if (sceneLoader.handleSceneLoading())
+    {
+        render = true;
+        renderMode = RENDER_GL;
+    }
+    if (render || renderMode == RENDER_GL) {
         switch (renderMode) {
             case RENDER_GL:
             {
                 RenderGL renderer;
-                renderer.render(scene);
+                renderer.render(scene, openGLWireFrameMode);
                 break;
             }
             case RENDER_RAYTRACE:
@@ -268,5 +274,12 @@ Window::handle_keyboardInteraction()
     }
     if (glfwGetKey('r') || glfwGetKey('R')) {
         render = true;
+    }
+    
+    if (glfwGetKey('w') || glfwGetKey('W'))
+    {
+        openGLWireFrameMode = !openGLWireFrameMode;
+        if (renderMode != RENDER_RAYTRACE)
+            render = true;
     }
 }
