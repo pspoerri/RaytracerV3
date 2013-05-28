@@ -32,7 +32,6 @@ Camera::updateCameraPos(const Math::Vec3d &eye, const Math::Vec3d &center, const
     m_NDCToWindow.viewport(m_resolution.x, m_resolution.y);
     m_ScreenToWorld = m_NDCToWindow.inverse()*m_worldToNDC.inverse();
     m_worldToScreen = m_NDCToWindow*m_worldToNDC;
-    std::cout << "Camera pos: " << center << std::endl;
     update();
 }
 
@@ -113,7 +112,13 @@ Camera::setCameraToWorld(const Mat44d & c2w)
 
 	m_worldToNDC = m_perspective * m_worldToCamera;
 
+    Vec4d vd = m_ScreenToWorld*Math::Vec4f(0.0, 0.0, 1.0, 1.0)-cameraOrigin;
+    Vec3d d(vd.x, vd.y, vd.z);
+    d = (d).normalized();
     update();
+    std::cout << "Camera pos: " << cameraOrigin << std::endl;
+    std::cout << "View: " << d << std::endl;
+    std::cout << "Up: " << (m_ScreenToWorld*Math::Vec4f(0.5, 0.5, 0.0, 1.0)-m_ScreenToWorld*Math::Vec4f(0.5, 0, 0.0, 1.0)).normalize() << std::endl;
 }
 
 void
@@ -134,5 +139,6 @@ Camera::update() {
     m_ScreenToWorld = m_worldToNDC.inverse()*m_NDCToWindow.inverse();
     m_worldToScreen = m_NDCToWindow*m_worldToNDC;
     cameraOrigin = m_cameraToWorld*Math::Vec3d(0.0, 0.0, 0.0);
+    
 }
 
