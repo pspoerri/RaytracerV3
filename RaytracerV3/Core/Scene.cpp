@@ -19,6 +19,7 @@ specularPhotonMap(NULL),
 //    maxPhotonMapSearchDist = 0.1;
     maxPhotonMapSearchDist = 10.0;
     numPhotonMapPhotons = 100;
+    fog = false;
 }
 
 Scene::~Scene()
@@ -173,6 +174,7 @@ Scene::reset()
 {
     delete photonMap;
     delete specularPhotonMap;
+    fog = false;
     shapes.clear();
     photonSources.clear();
 }

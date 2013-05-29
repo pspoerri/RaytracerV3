@@ -22,6 +22,7 @@ public:
     void loadCave();
     bool handleSceneLoading();
     void loadCornellBox();
+    void loadCornellBoxFog();
 
 };
 #endif /* defined(__RaytracerV3__SceneLoader__) */

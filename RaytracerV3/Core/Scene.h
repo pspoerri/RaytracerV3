@@ -26,6 +26,9 @@ public:
     Math::RandMT *rand_gen;
 
     vector<Shape *> shapes;
+    bool fog;
+    Math::Vec3d fog_min;
+    Math::Vec3d fog_max;
     vector<PhotonSource *> photonSources;
     PhotonMap *photonMap;
     PhotonMap *specularPhotonMap;

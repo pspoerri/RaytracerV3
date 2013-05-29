@@ -39,7 +39,7 @@ bool
 SceneLoader::handleSceneLoading()
 {
     if (glfwGetKey('1')) {
-        loadCornellBox();
+        loadCornellBoxFog();
         return true;
     }
     if (glfwGetKey('2'))
@@ -47,6 +47,12 @@ SceneLoader::handleSceneLoading()
         loadCave();
         return true;
     }
+    if (glfwGetKey('3'))
+    {
+        loadCornellBox();
+        return true;
+    }
+        
     if (glfwGetKey('9'))
     {
         loadSpheres();
@@ -114,7 +120,7 @@ SceneLoader::loadCave()
     
     scene.camera.updateCameraPos(cameraPos, dir, up);
 
-    scene.maxPhotonMapSearchDist = 0.1;
+    scene.maxPhotonMapSearchDist = 0.5;
     scene.numPhotonMapPhotons = 500;
     scene._monteCarloSamples = 128;
 }
@@ -151,6 +157,9 @@ SceneLoader::loadCornellBox()
     double width = 0.5;
     double height = 0.5;
     
+    scene.fog = true;
+    scene.fog_min = Vec3d(-1.0,-1.0,-1.0);
+    scene.fog_max = Vec3d(0,0,0);
     IsotropicPointLight *light = new IsotropicPointLight(
                                                          Vec3d(0,0,1.001),
                                                        lightColor,
@@ -161,34 +170,70 @@ SceneLoader::loadCornellBox()
     scene.maxPhotonMapSearchDist = 0.1;
     scene.numPhotonMapPhotons = 500;
 
-//    DiffuseSquareAreaLight *areaLight = new DiffuseSquareAreaLight(
-//                                                                   mlight,
-//                                                                   lowerPos,
-//                                                                   dx,
-//                                                                   dy,
-//                                                                   height,
-//                                                                   width,
-//                                                                   normal,
-//                                                                   lightColor,
-//                                                                   10.0,
-//                                                                   1024*1024);
-//    scene.shapes.push_back(areaLight);
-//    scene.photonSources.push_back(areaLight);
-    
     double sphere_radius = 0.3;
     double pos = 1.0-1.8*sphere_radius;
     
-//    SpecularDielectricShader *refraction = new SpecularDielectricShader(2.42);
-//    Sphere *mirrored = new Sphere(refraction, Vec3d(pos, -pos, -1.0+sphere_radius), sphere_radius);
-//    Sphere *glass = new Sphere(refraction, Vec3d(-pos, pos, -1.0+sphere_radius), sphere_radius);
     SpecularMirrorShader *mirror = new SpecularMirrorShader(0.5);
     SpecularDielectricShader *refraction = new SpecularDielectricShader(1.333);
     Sphere *mirrored = new Sphere(mirror, Vec3d(pos, -pos, -1.0+sphere_radius), sphere_radius);
     Sphere *glass = new Sphere(refraction, Vec3d(-pos, pos, -1.0+sphere_radius), sphere_radius);
     scene.shapes.push_back(mirrored);
     scene.shapes.push_back(glass);
-    ////
+
+    scene.camera.updateCameraPos(Vec3d(0,4.5,0), Vec3d(0,1,0), Vec3d(0,0,1));
+}
+
+void
+SceneLoader::loadCornellBoxFog()
+{
+    reset();
+    MeshBase *mtop    = Math::readObjMesh("data/cornell_box/top.obj");
+    MeshBase *mbottom = Math::readObjMesh("data/cornell_box/bottom.obj");
+    MeshBase *mleft   = Math::readObjMesh("data/cornell_box/left.obj");
+    MeshBase *mright  = Math::readObjMesh("data/cornell_box/right.obj");
+    MeshBase *mlower  = Math::readObjMesh("data/cornell_box/lower.obj");
+    MeshBase *mlight  = Math::readObjMesh("data/cornell_box/light.obj");
     
+    Color3f white(1.0, 1.0, 1.0);
+    Color3f red(1.0, 0.0, 0.0);
+    Color3f green(0.0, 1.0, 0.0);
+    LambertShader *white_shader = new LambertShader(white,0.5);
+    LambertShader *green_shader = new LambertShader(green, 0.5);
+    LambertShader *red_shader = new LambertShader(red, 0.5);
+    
+    scene.shapes.push_back(new Mesh(white_shader, mtop));
+    scene.shapes.push_back(new Mesh(white_shader, mbottom));
+    scene.shapes.push_back(new Mesh(white_shader, mlower));
+    scene.shapes.push_back(new Mesh(red_shader, mleft));
+    scene.shapes.push_back(new Mesh(green_shader, mright));
+    
+    Vec3d lowerPos(-0.25, -0.25, 1);
+    Vec3d normal(0,0,-1);
+    Vec3d dx(1.0, 0, 0);
+    Vec3d dy(0, 1.0, 0);
+    Vec3d lightColor(1.0, 1.0, 1.0);
+    double width = 0.5;
+    double height = 0.5;
+    
+    IsotropicPointLight *light = new IsotropicPointLight(
+                                                         Vec3d(0,0,1.001),
+                                                         lightColor,
+                                                         70.0,
+                                                         1024*100);
+    scene.photonSources.push_back(light);
+    
+    scene.maxPhotonMapSearchDist = 0.1;
+    scene.numPhotonMapPhotons = 500;
+    
+    double sphere_radius = 0.3;
+    double pos = 1.0-1.8*sphere_radius;
+    
+    SpecularMirrorShader *mirror = new SpecularMirrorShader(0.5);
+    SpecularDielectricShader *refraction = new SpecularDielectricShader(1.333);
+    Sphere *mirrored = new Sphere(mirror, Vec3d(pos, -pos, -1.0+sphere_radius), sphere_radius);
+    Sphere *glass = new Sphere(refraction, Vec3d(-pos, pos, -1.0+sphere_radius), sphere_radius);
+    scene.shapes.push_back(mirrored);
+    scene.shapes.push_back(glass);
     
     scene.camera.updateCameraPos(Vec3d(0,4.5,0), Vec3d(0,1,0), Vec3d(0,0,1));
 }
