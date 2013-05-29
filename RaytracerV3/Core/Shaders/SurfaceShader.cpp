@@ -18,10 +18,23 @@ SurfaceShader::~SurfaceShader()
     
 }
 
+Math::Color3f SurfaceShader::shade(const HitInfo & hit,
+                                   const Scene &scene) const
+{
+    std::cout << "Warning: Executing SurfaceShader::shade()" << std::endl;
+    return Color3f(0,0,0);
+}
+
 
 Math::Color3f
-SurfaceShader::shade(const HitInfo &hit, const Scene &scene) const
+SurfaceShader::shade(const Renderer *render,
+                     const HitInfo & hit,
+                     PhotonMap &photonMap,
+                     PhotonMap &specularPhotonMap,
+                     const Scene &scene,
+                     bool gather) const
 {
+    std::cout << "Warning: Executing SurfaceShader::shade()" << std::endl;
     return Color3f(0,0,0);
 }
 
@@ -33,14 +46,4 @@ SurfaceShader::processPhoton(const HitInfo & hit,
                              const Scene &scene) const
 {
     return;
-}
-
-Math::Color3f
-SurfaceShader::shade(const Renderer *render,
-                     const HitInfo & hit,
-                     PhotonMap &photonMap,
-                     PhotonMap &specularPhotonMap,
-                     const Scene &scene) const
-{
-    return Color3f(0,0,0);
 }

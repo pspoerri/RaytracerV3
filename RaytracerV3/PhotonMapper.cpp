@@ -61,7 +61,7 @@ PhotonMapper::render(Scene &scene)
         for (int j=0; j<yRes; j++) {
             Ray r = Ray();
             scene.camera.generateRay(r, i, j);
-            Math::Vec3f col = recursiveRender(r, *(scene.photonMap), *(scene.specularPhotonMap), scene);
+            Math::Vec3f col = recursiveRender(r, *(scene.photonMap), *(scene.specularPhotonMap), scene, true);
             m_rgbaBuffer(i, j) = Math::Vec4f(col.x, col.y, col.z, 1.0);
         }
         progress.step(yRes);
@@ -82,12 +82,13 @@ Math::Vec3f
 PhotonMapper::recursiveRender(Ray &r,
                               PhotonMap &photonMap,
                               PhotonMap &specularPhotonMap,
-                              const Scene &scene) const
+                              const Scene &scene,
+                              bool gather) const
 {
     Shape *s_hit = scene.intersect(r);
     if (s_hit != NULL) {
         s_hit->fillHitInfo(r);
-        Math::Vec3f  col = s_hit->surfaceShader->shade(this, r.hit, photonMap, specularPhotonMap, scene);
+        Math::Vec3f  col = s_hit->surfaceShader->shade(this, r.hit, photonMap, specularPhotonMap, scene, gather);
         if (s_hit->areaLight()) {
             // TODO
             col = Math::Vec3f(1.0,1.0, 1.0);

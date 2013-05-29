@@ -12,8 +12,9 @@
 #include "Math/Vec3.h"
 #include "Math/Color.h"
 #include <vector>
-
 class Scene;
+class HitInfo;
+
 //#include "Scene.h"
 
 typedef struct EmittedPhoton
@@ -28,15 +29,25 @@ typedef struct EmittedPhoton
 class PhotonSource
 {
 public:
-    PhotonSource(const Math::Color3f& color, double power, int photons);
+    PhotonSource(const Math::Vec3d& position, const Math::Color3f& color, double power, int photons);
     ~PhotonSource();
     
     const Math::Color3f color;
+    const Math::Vec3d position;
     const double power;
     const int photons;
     
     virtual void emitPhotons(std::vector<EmittedPhoton>& photons, Scene& scene) = 0;
     
+    virtual Math::Color3f computeIntensity(const HitInfo &hit, const Scene &scene) const;
+    virtual Math::Color3f computeSurfaceIntensity(const HitInfo &hit, const Scene &scene) const;
+    
+    
+    virtual Math::Vec3d warp(const Math::Vec2d &v, const Math::Vec3d &origin) const;
+    virtual double      getPdf(const Math::Vec3d &p,  const Math::Vec3d &origin) const;
+    virtual double      getArea() const;
+    
+    virtual bool areaLight() const;
     
 };
 #endif /* defined(__RaytracerV3__PhotonSource__) */

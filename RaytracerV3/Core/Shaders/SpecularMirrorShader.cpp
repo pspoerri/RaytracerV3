@@ -29,13 +29,14 @@ SpecularMirrorShader::shade(const Renderer *renderer,
                             const HitInfo &hit,
                             PhotonMap &photonMap,
                             PhotonMap &specularPhotonMap,
-                            const Scene &scene) const
+                            const Scene &scene,
+                            bool gather) const
 {
     Ray r;
     r.d = Math::reflect(hit.N, hit.I);
     r.o = hit.P+0.001*hit.N;
 //    renderer->recursiv
-    return renderer->recursiveRender(r, photonMap, specularPhotonMap, scene);
+    return renderer->recursiveRender(r, photonMap, specularPhotonMap, scene, gather);
 }
 
 void

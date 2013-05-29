@@ -15,8 +15,7 @@ IsotropicPointLight::IsotropicPointLight(const Math::Vec3d& position,
                                          const Math::Color3f& color,
                                          double power,
                                          int photons):
-PhotonSource(color, power, photons),
-position(position)
+PhotonSource(position,color, power, photons)
 {
     
 }
@@ -42,4 +41,15 @@ IsotropicPointLight::emitPhotons(std::vector<EmittedPhoton>& photonEmitter, Scen
         Math::Warp::uniformSphere(&dir, sample.x, sample.y);
         photonEmitter.push_back({position, emittedPower, dir, false});
     }
+}
+
+Math::Color3f
+IsotropicPointLight::computeIntensity(const HitInfo &hit, const Scene &scene) const
+{
+    Math::Vec3d d = position-hit.P;
+    double d2 = d.length2();
+    double f = power/(4.0*M_PI*d2);
+    return Math::Color3f(color.x*f,
+                         color.y*f,
+                          color.z*f);
 }

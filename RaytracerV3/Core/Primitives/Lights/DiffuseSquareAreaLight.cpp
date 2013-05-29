@@ -24,7 +24,7 @@ DiffuseSquareAreaLight::DiffuseSquareAreaLight(Math::MeshBase * mesh,
                                                const Math::Color3f& color,
                                                double power,
                                                int photons):
-    PhotonSource(color, power, photons),
+    PhotonSource(lowerPos,color, power, photons),
     Mesh(new EmptyShader(), mesh),
     lowerPos(lowerPos),
     dx(dx.normalized()*width),

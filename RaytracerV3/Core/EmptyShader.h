@@ -19,10 +19,12 @@ public:
     
     virtual Math::Color3f shade(const HitInfo & hit, const Scene &scene) const;
     
-    virtual Math::Color3f shade(const HitInfo & hit,
+    virtual Math::Color3f shade(const Renderer *render,
+                                const HitInfo & hit,
                                 PhotonMap &photonMap,
                                 PhotonMap &specularPhotonMap,
-                                const Scene &scene) const;
+                                const Scene &scene,
+                                bool gather) const;
     
     virtual void processPhoton(EmittedPhoton photon,
                                PhotonMap &photonMap,

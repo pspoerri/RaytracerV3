@@ -19,8 +19,7 @@ public:
                         int photons);
     ~IsotropicPointLight();
     //    virtual Math::Color3f computeIntensity(const HitInfo &hit, const Scene &scene) const;
-    
-    const Math::Vec3d position;
-    virtual void emitPhotons(std::vector<EmittedPhoton>& photonEmitter, Scene& scene);
+        virtual void emitPhotons(std::vector<EmittedPhoton>& photonEmitter, Scene& scene);
+virtual Math::Color3f computeIntensity(const HitInfo &hit, const Scene &scene) const;
 };
 #endif /* defined(__RaytracerV3__IsotropicPointLight__) */

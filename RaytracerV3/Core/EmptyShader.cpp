@@ -24,10 +24,12 @@ EmptyShader::shade(const HitInfo & hit, const Scene &scene) const
 }
 
 Math::Color3f
-EmptyShader::shade(const HitInfo & hit,
+EmptyShader::shade(const Renderer *render,
+                   const HitInfo & hit,
                    PhotonMap &photonMap,
                    PhotonMap &specularPhotonMap,
-                   const Scene &scene) const
+                   const Scene &scene,
+                   bool gather) const
 {
     return Math::Color3f(0,0,0);
 }

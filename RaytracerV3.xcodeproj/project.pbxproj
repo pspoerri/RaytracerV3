@@ -38,7 +38,6 @@
 		5071D7431747D10B009A60D3 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D73D1747D10B009A60D3 /* Scene.cpp */; };
 		5071D7511747DAF7009A60D3 /* AreaLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D74B1747DAF7009A60D3 /* AreaLight.cpp */; };
 		5071D7521747DAF7009A60D3 /* IsotropicPointLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D74D1747DAF7009A60D3 /* IsotropicPointLight.cpp */; };
-		5071D7531747DAF7009A60D3 /* PointLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D74F1747DAF7009A60D3 /* PointLight.cpp */; };
 		5071D7591747DB1C009A60D3 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D7551747DB1C009A60D3 /* Mesh.cpp */; };
 		5071D75A1747DB1C009A60D3 /* Sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D7571747DB1C009A60D3 /* Sphere.cpp */; };
 		5071D75F1747DE07009A60D3 /* SpecularDielectricShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5071D75B1747DE07009A60D3 /* SpecularDielectricShader.cpp */; };
@@ -178,8 +177,6 @@
 		5071D74C1747DAF7009A60D3 /* AreaLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AreaLight.h; path = Primitives/Lights/AreaLight.h; sourceTree = "<group>"; };
 		5071D74D1747DAF7009A60D3 /* IsotropicPointLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IsotropicPointLight.cpp; path = Primitives/Lights/IsotropicPointLight.cpp; sourceTree = "<group>"; };
 		5071D74E1747DAF7009A60D3 /* IsotropicPointLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IsotropicPointLight.h; path = Primitives/Lights/IsotropicPointLight.h; sourceTree = "<group>"; };
-		5071D74F1747DAF7009A60D3 /* PointLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PointLight.cpp; path = Primitives/Lights/PointLight.cpp; sourceTree = "<group>"; };
-		5071D7501747DAF7009A60D3 /* PointLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointLight.h; path = Primitives/Lights/PointLight.h; sourceTree = "<group>"; };
 		5071D7551747DB1C009A60D3 /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Mesh.cpp; path = Primitives/Shapes/Mesh.cpp; sourceTree = "<group>"; };
 		5071D7561747DB1C009A60D3 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mesh.h; path = Primitives/Shapes/Mesh.h; sourceTree = "<group>"; };
 		5071D7571747DB1C009A60D3 /* Sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Sphere.cpp; path = Primitives/Shapes/Sphere.cpp; sourceTree = "<group>"; };
@@ -364,8 +361,6 @@
 				5071D74C1747DAF7009A60D3 /* AreaLight.h */,
 				5071D74D1747DAF7009A60D3 /* IsotropicPointLight.cpp */,
 				5071D74E1747DAF7009A60D3 /* IsotropicPointLight.h */,
-				5071D74F1747DAF7009A60D3 /* PointLight.cpp */,
-				5071D7501747DAF7009A60D3 /* PointLight.h */,
 				508C55E61753CD680096004A /* DiffuseSquareAreaLight.cpp */,
 				508C55E71753CD680096004A /* DiffuseSquareAreaLight.h */,
 			);
@@ -539,7 +534,6 @@
 				5071D7431747D10B009A60D3 /* Scene.cpp in Sources */,
 				5071D7511747DAF7009A60D3 /* AreaLight.cpp in Sources */,
 				5071D7521747DAF7009A60D3 /* IsotropicPointLight.cpp in Sources */,
-				5071D7531747DAF7009A60D3 /* PointLight.cpp in Sources */,
 				5071D7591747DB1C009A60D3 /* Mesh.cpp in Sources */,
 				5071D75A1747DB1C009A60D3 /* Sphere.cpp in Sources */,
 				5071D75F1747DE07009A60D3 /* SpecularDielectricShader.cpp in Sources */,

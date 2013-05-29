@@ -21,7 +21,8 @@ public:
     virtual Math::Vec3f recursiveRender(Ray &r,
                                         PhotonMap& photonMap,
                                         PhotonMap& specularPhotonMap,
-                                        const Scene& scene) const
+                                        const Scene& scene,
+                                        bool gather) const
     {
         return Math::Vec3f(0,0,0);
     }

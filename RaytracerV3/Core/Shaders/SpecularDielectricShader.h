@@ -27,7 +27,8 @@ public:
                                 const HitInfo & hit,
                                 PhotonMap &photonMap,
                                 PhotonMap &specularPhotonMap,
-                                const Scene &scene) const;
+                                const Scene &scene,
+                                bool gather) const;
     
     virtual void processPhoton(const HitInfo & hit,
                                EmittedPhoton photon,

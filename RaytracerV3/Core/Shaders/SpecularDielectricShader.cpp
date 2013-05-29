@@ -27,10 +27,11 @@ SpecularDielectricShader::shade(const HitInfo &hit, const Scene &scene) const
 
 Math::Color3f
 SpecularDielectricShader::shade(const Renderer *renderer,
-                            const HitInfo &hit,
-                            PhotonMap &photonMap,
-                            PhotonMap &specularPhotonMap,
-                            const Scene &scene) const
+                                const HitInfo &hit,
+                                PhotonMap &photonMap,
+                                PhotonMap &specularPhotonMap,
+                                const Scene &scene,
+                                bool gather) const
 {
 
     double reflectivity = Math::reflectance(hit.N, hit.I, 1.0, refractiveIndex);
@@ -57,9 +58,9 @@ SpecularDielectricShader::shade(const Renderer *renderer,
 
     return
         (1.0-reflectivity)
-            *renderer->recursiveRender(refracted, photonMap, specularPhotonMap, scene)
+            *renderer->recursiveRender(refracted, photonMap, specularPhotonMap, scene, gather)
         +reflectivity
-        *renderer->recursiveRender(reflected, photonMap, specularPhotonMap, scene)
+        *renderer->recursiveRender(reflected, photonMap, specularPhotonMap, scene, gather)
 ;
 }
 
