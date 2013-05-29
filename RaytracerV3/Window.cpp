@@ -56,7 +56,7 @@ Window::Window(uint width, uint height):
     renderMode = RENDER_GL;
     sceneLoader.loadScene();
     
-    openGLWireFrameMode = false;
+    openGLWireFrameMode = true;
 }
 
 int
