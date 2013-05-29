@@ -31,7 +31,7 @@ void
 SceneLoader::loadScene()
 {
     
-    loadCornellBox();
+    loadCornellBoxFog();
 //    loadCave();
 }
 
@@ -123,10 +123,12 @@ SceneLoader::loadCave()
     scene.maxPhotonMapSearchDist = 0.5;
     scene.numPhotonMapPhotons = 500;
     scene._monteCarloSamples = 128;
+    scene.fog.push_back(Box<Vec3d>(Vec3d(-100.0, -100.0, -100.0), Vec3d(100,100,-7)));
+    scene.rayMarchScatter = 10.0;
 }
 
 void
-SceneLoader::loadCornellBox()
+SceneLoader::loadCornellBoxFog()
 {
     reset();
     MeshBase *mtop    = Math::readObjMesh("data/cornell_box/top.obj");
@@ -155,8 +157,8 @@ SceneLoader::loadCornellBox()
     Vec3d lightColor(1.0, 1.0, 1.0);
     
     // FOG
-    scene.fog.push_back(Box<Vec3d>(Vec3d(-1.0, -1.0, -1.0), Vec3d(0,0,0)));
-
+    scene.fog.push_back(Box<Vec3d>(Vec3d(-1.0, -1.0, -1.0), Vec3d(1,1,1)));
+    scene.rayMarchScatter = 0.2;
     IsotropicPointLight *light = new IsotropicPointLight(
                                                          Vec3d(0,0,1.001),
                                                        lightColor,
@@ -181,7 +183,7 @@ SceneLoader::loadCornellBox()
 }
 
 void
-SceneLoader::loadCornellBoxFog()
+SceneLoader::loadCornellBox()
 {
     reset();
     MeshBase *mtop    = Math::readObjMesh("data/cornell_box/top.obj");
@@ -233,6 +235,7 @@ SceneLoader::loadCornellBoxFog()
     scene.shapes.push_back(glass);
     
     scene.camera.updateCameraPos(Vec3d(0,4.5,0), Vec3d(0,1,0), Vec3d(0,0,1));
+    scene.rayMarchScatter = 10.0;
 }
 
 

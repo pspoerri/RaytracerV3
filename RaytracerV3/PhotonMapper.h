@@ -31,6 +31,14 @@ public:
                                         PhotonMap& specularPhotonMap,
                                         const Scene& scene,
                                         bool gather) const;
-    
+    virtual Math::Vec3f rayMarch(Ray &r,
+                                 double tmin,
+                                 double tmax,
+                                 PhotonMap& photonMap,
+                                 PhotonMap& specularPhotonMap,
+                                 const Scene& scene,
+                                 const Shape* nearestShape,
+//                                 const Math::Box<Math::Vec3d>& box,
+                                 bool gather) const;
 };
 #endif /* defined(__RaytracerV3__PhotonMapper__) */

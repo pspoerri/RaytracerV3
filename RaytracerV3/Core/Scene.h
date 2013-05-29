@@ -31,6 +31,9 @@ public:
     vector<Math::Box<Math::Vec3d> > fog;
     PhotonMap *photonMap;
     PhotonMap *specularPhotonMap;
+    double sigma_t;
+    double sigma_s;
+    double rayMarchScatter;
     Camera camera;
     
     float maxPhotonMapSearchDist;

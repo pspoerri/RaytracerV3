@@ -19,6 +19,10 @@ specularPhotonMap(NULL),
 //    maxPhotonMapSearchDist = 0.1;
     maxPhotonMapSearchDist = 10.0;
     numPhotonMapPhotons = 100;
+    
+    sigma_s = 0.5;
+    sigma_t = 0.1;
+    rayMarchScatter = 0.1;
 }
 
 Scene::~Scene()
