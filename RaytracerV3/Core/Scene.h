@@ -26,7 +26,6 @@ public:
     Math::RandMT *rand_gen;
 
     vector<Shape *> shapes;
-    vector<Light *> lights;
     vector<PhotonSource *> photonSources;
     PhotonMap *photonMap;
     PhotonMap *specularPhotonMap;
@@ -52,8 +51,9 @@ public:
                           PhotonMap &specularPhotonMap) const;
     void reset();
 
-private:
     int _monteCarloSamples;
+
+private:
 };
 
 #endif /* defined(__RaytracerV3__Scene__) */

@@ -10,7 +10,6 @@
 #include "SceneLoader.h"
 #include "Sphere.h"
 #include "LambertShader.h"
-#include "PointLight.h"
 #include "IsotropicPointLight.h"
 #include "Math/MeshBase.h"
 #include "Mesh.h"
@@ -90,7 +89,7 @@ SceneLoader::loadCave()
     reset();
     MeshBase *cave = Math::readObjMesh("data/cave/cave.obj");
     Color3f white(1.0, 1.0, 1.0);
-    LambertShader *white_shader = new LambertShader(white,0.5);
+    LambertShader *white_shader = new LambertShader(white,0.1);
     scene.shapes.push_back(new Mesh(white_shader, cave));
 
     Vec3d entrance(0,-17,15);
@@ -105,12 +104,20 @@ SceneLoader::loadCave()
     IsotropicPointLight *light = new IsotropicPointLight(
                                                          entrance,
                                                          lightColor,
-                                                         50000.0,
+                                                         50000000.0,
                                                          10*1024*1024);
+    scene.photonSources.push_back(light);
+    light = new IsotropicPointLight(Vec3d(-1.01555 -14.4121 -7.67431),
+                                    lightColor,
+                                    100,
+                                    100*1024);
     scene.photonSources.push_back(light);
     
     scene.camera.updateCameraPos(cameraPos, dir, up);
 
+    scene.maxPhotonMapSearchDist = 0.1;
+    scene.numPhotonMapPhotons = 500;
+    scene._monteCarloSamples = 64;
 }
 
 void
@@ -149,8 +156,9 @@ SceneLoader::loadCornellBox()
                                                          Vec3d(0,0,1.001),
                                                        lightColor,
                                                        70.0,
-                                                       10*1024*1024);
+                                                       1024*100);
     scene.photonSources.push_back(light);
+        
     scene.maxPhotonMapSearchDist = 0.1;
     scene.numPhotonMapPhotons = 500;
 

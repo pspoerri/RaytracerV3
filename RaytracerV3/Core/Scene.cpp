@@ -14,7 +14,7 @@ Scene::Scene():
     rand_gen(new Math::RandMT(time(NULL))),
 photonMap(NULL),
 specularPhotonMap(NULL),
-    _monteCarloSamples(64)
+    _monteCarloSamples(32)
 {
 //    maxPhotonMapSearchDist = 0.1;
     maxPhotonMapSearchDist = 10.0;
@@ -174,6 +174,5 @@ Scene::reset()
     delete photonMap;
     delete specularPhotonMap;
     shapes.clear();
-    lights.clear();
     photonSources.clear();
 }
