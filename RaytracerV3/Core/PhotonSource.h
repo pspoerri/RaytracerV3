@@ -16,7 +16,12 @@ class Scene;
 class HitInfo;
 
 //#include "Scene.h"
-
+typedef struct VolumetricPhoton
+{
+    Math::Vec3d position;
+    Math::Vec3d power;
+    double      radius;
+};
 typedef struct EmittedPhoton
 {
     Math::Vec3d position;

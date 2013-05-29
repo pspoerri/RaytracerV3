@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		502588DD1745878E0067F080 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502588DC1745878E0067F080 /* GLUT.framework */; };
+		505B41AC17565484000D2C0B /* OctreeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 505B41A917565484000D2C0B /* OctreeNode.cpp */; };
+		505B41AD17565484000D2C0B /* Octree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 505B41AB17565484000D2C0B /* Octree.cpp */; };
 		506BFFDE17540CD000A3AC1C /* cave.obj in CopyFiles */ = {isa = PBXBuildFile; fileRef = 506BFFDC17540CB800A3AC1C /* cave.obj */; };
 		5071D6CA1747A1FE009A60D3 /* Progress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E2571726EE2900D447B8 /* Progress.cpp */; };
 		5071D6CB1747A20D009A60D3 /* Stopwatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5007E2591726EE2900D447B8 /* Stopwatch.cpp */; };
@@ -142,6 +144,10 @@
 		502588DF17458BA90067F080 /* SceneLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneLoader.h; sourceTree = "<group>"; };
 		5044526F1726DCA300C4849B /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
 		504452701726DCA300C4849B /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		505B41A817565484000D2C0B /* OctreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OctreeNode.h; sourceTree = "<group>"; };
+		505B41A917565484000D2C0B /* OctreeNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OctreeNode.cpp; sourceTree = "<group>"; };
+		505B41AA17565484000D2C0B /* Octree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Octree.h; sourceTree = "<group>"; };
+		505B41AB17565484000D2C0B /* Octree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Octree.cpp; sourceTree = "<group>"; };
 		506BFFDC17540CB800A3AC1C /* cave.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = cave.obj; sourceTree = "<group>"; };
 		506BFFDD17540CB800A3AC1C /* source.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = source.txt; sourceTree = "<group>"; };
 		5071D6A817479F4E009A60D3 /* PhotonMapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhotonMapper.cpp; sourceTree = "<group>"; };
@@ -222,6 +228,10 @@
 		5007E2211726EE0800D447B8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				505B41A817565484000D2C0B /* OctreeNode.h */,
+				505B41A917565484000D2C0B /* OctreeNode.cpp */,
+				505B41AA17565484000D2C0B /* Octree.h */,
+				505B41AB17565484000D2C0B /* Octree.cpp */,
 				5071D7101747A769009A60D3 /* Primitives */,
 				5071D70F1747A758009A60D3 /* Shaders */,
 				5071D7351747D10A009A60D3 /* Camera.cpp */,
@@ -540,6 +550,8 @@
 				5071D7601747DE07009A60D3 /* SpecularMirrorShader.cpp in Sources */,
 				508C55E81753CD680096004A /* DiffuseSquareAreaLight.cpp in Sources */,
 				508C55EB1753CDDD0096004A /* EmptyShader.cpp in Sources */,
+				505B41AC17565484000D2C0B /* OctreeNode.cpp in Sources */,
+				505B41AD17565484000D2C0B /* Octree.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
