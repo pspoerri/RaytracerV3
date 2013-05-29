@@ -21,7 +21,7 @@ typedef struct VolumetricPhoton
     Math::Vec3d position;
     Math::Vec3d power;
     double      radius;
-};
+} VolumetricPhoton;
 typedef struct EmittedPhoton
 {
     Math::Vec3d position;

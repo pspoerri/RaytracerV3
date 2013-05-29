@@ -35,7 +35,7 @@ SpecularDielectricShader::shade(const Renderer *renderer,
 {
 
     double reflectivity = Math::reflectance(hit.N, hit.I, 1.0, refractiveIndex);
-    double refractivity = 1.0-reflectivity;
+//    double refractivity = 1.0-reflectivity;
 //    if (refractiveIndex >= 1.0)
 //    {
 //        reflectivity = 0.0;

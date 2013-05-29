@@ -134,7 +134,6 @@ SceneLoader::loadCornellBox()
     MeshBase *mleft   = Math::readObjMesh("data/cornell_box/left.obj");
     MeshBase *mright  = Math::readObjMesh("data/cornell_box/right.obj");
     MeshBase *mlower  = Math::readObjMesh("data/cornell_box/lower.obj");
-    MeshBase *mlight  = Math::readObjMesh("data/cornell_box/light.obj");
     
     Color3f white(1.0, 1.0, 1.0);
     Color3f red(1.0, 0.0, 0.0);
@@ -154,8 +153,6 @@ SceneLoader::loadCornellBox()
     Vec3d dx(1.0, 0, 0);
     Vec3d dy(0, 1.0, 0);
     Vec3d lightColor(1.0, 1.0, 1.0);
-    double width = 0.5;
-    double height = 0.5;
     
     scene.fog = true;
     scene.fog_min = Vec3d(-1.0,-1.0,-1.0);
@@ -192,7 +189,7 @@ SceneLoader::loadCornellBoxFog()
     MeshBase *mleft   = Math::readObjMesh("data/cornell_box/left.obj");
     MeshBase *mright  = Math::readObjMesh("data/cornell_box/right.obj");
     MeshBase *mlower  = Math::readObjMesh("data/cornell_box/lower.obj");
-    MeshBase *mlight  = Math::readObjMesh("data/cornell_box/light.obj");
+//    MeshBase *mlight  = Math::readObjMesh("data/cornell_box/light.obj");
     
     Color3f white(1.0, 1.0, 1.0);
     Color3f red(1.0, 0.0, 0.0);
@@ -212,8 +209,8 @@ SceneLoader::loadCornellBoxFog()
     Vec3d dx(1.0, 0, 0);
     Vec3d dy(0, 1.0, 0);
     Vec3d lightColor(1.0, 1.0, 1.0);
-    double width = 0.5;
-    double height = 0.5;
+//    double width = 0.5;
+//    double height = 0.5;
     
     IsotropicPointLight *light = new IsotropicPointLight(
                                                          Vec3d(0,0,1.001),

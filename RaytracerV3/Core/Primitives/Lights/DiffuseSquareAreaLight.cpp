@@ -50,7 +50,6 @@ DiffuseSquareAreaLight::emitPhotons(std::vector<EmittedPhoton> &photonEmitter, S
     const double emittedPhotons = (double) samples.size();
     
     photonEmitter.reserve(photonEmitter.size()+photons);
-#warning Not Sure if correct
     float total_color = color.x+color.y+color.z;
     
     Math::Vec3f emittedPower = power/(emittedPhotons*total_color)*color;

@@ -32,7 +32,7 @@ IsotropicPointLight::emitPhotons(std::vector<EmittedPhoton>& photonEmitter, Scen
     scene.generateStratifiedJitteredSamples(samples, photons);
     const double sampleSize = samples.size();
     photonEmitter.reserve(photonEmitter.size()+photons);
-#warning Please check formula
+
     float total_color = color.x+color.y+color.z;
     Math::Vec3f emittedPower = power/(sampleSize*total_color)*color;
     for (Math::Vec2d &sample: samples)
