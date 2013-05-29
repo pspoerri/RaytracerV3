@@ -89,14 +89,13 @@ SceneLoader::loadCave()
     reset();
     MeshBase *cave = Math::readObjMesh("data/cave/cave.obj");
     Color3f white(1.0, 1.0, 1.0);
-    LambertShader *white_shader = new LambertShader(white,0.1);
+    LambertShader *white_shader = new LambertShader(white,0.5);
     scene.shapes.push_back(new Mesh(white_shader, cave));
 
-    Vec3d entrance(0,-17,15);
+    Vec3d entrance(-0.337823, -16.3292, 0.748166);
     Vec3d cameraPos(0.6, -15.9,-6.9);
     Vec3d lightColor(1.0, 1.0, 1.0);
-    Vec3d dir = (entrance-cameraPos).normalize();
-//    Vec3d dir = Vec3d(-0.0677413, 0.85384, 0.516109).normalize();
+    Vec3d dir = -(entrance-cameraPos).normalize();
     Vec3d up = Vec3d(0,0,1).normalize();
 //    Vec3d dir = Vec3d(-0.21, 0.67,-0.015).normalize();
 //    Vec3d up = Vec3d(0,0,1).normalize();
@@ -104,20 +103,20 @@ SceneLoader::loadCave()
     IsotropicPointLight *light = new IsotropicPointLight(
                                                          entrance,
                                                          lightColor,
-                                                         50000000.0,
-                                                         10*1024*1024);
+                                                         500000.0,
+                                                         1024*1024);
     scene.photonSources.push_back(light);
-    light = new IsotropicPointLight(Vec3d(-1.01555 -14.4121 -7.67431),
+    light = new IsotropicPointLight(Vec3d(-1.37158, 0.664807, -16.8048),
                                     lightColor,
-                                    100,
-                                    100*1024);
+                                    50,
+                                    1024*1024);
     scene.photonSources.push_back(light);
     
     scene.camera.updateCameraPos(cameraPos, dir, up);
 
     scene.maxPhotonMapSearchDist = 0.1;
     scene.numPhotonMapPhotons = 500;
-    scene._monteCarloSamples = 64;
+    scene._monteCarloSamples = 128;
 }
 
 void
