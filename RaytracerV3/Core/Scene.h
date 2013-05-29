@@ -15,6 +15,7 @@
 #include "Math/Rand.h"
 #include "PhotonSource.h"
 #include "PhotonMap.h"
+#include "Math/Box.h"
 class Light;
 class Shape;
 using namespace std;
@@ -26,10 +27,8 @@ public:
     Math::RandMT *rand_gen;
 
     vector<Shape *> shapes;
-    bool fog;
-    Math::Vec3d fog_min;
-    Math::Vec3d fog_max;
     vector<PhotonSource *> photonSources;
+    vector<Math::Box<Math::Vec3d> > fog;
     PhotonMap *photonMap;
     PhotonMap *specularPhotonMap;
     Camera camera;
