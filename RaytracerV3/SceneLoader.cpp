@@ -109,7 +109,7 @@ SceneLoader::loadCave()
     IsotropicPointLight *light = new IsotropicPointLight(
                                                          entrance,
                                                          lightColor,
-                                                         500000.0,
+                                                         50000.0,
                                                          1024*1024);
     scene.photonSources.push_back(light);
     light = new IsotropicPointLight(Vec3d(-1.37158, 0.664807, -16.8048),
@@ -120,11 +120,11 @@ SceneLoader::loadCave()
     
     scene.camera.updateCameraPos(cameraPos, dir, up);
 
-    scene.maxPhotonMapSearchDist = 0.5;
+    scene.maxPhotonMapSearchDist = 1.0;
     scene.numPhotonMapPhotons = 500;
-    scene._monteCarloSamples = 128;
+    scene._monteCarloSamples = 64;
     scene.fog.push_back(Box<Vec3d>(Vec3d(-100.0, -100.0, -100.0), Vec3d(100,100,-7)));
-    scene.rayMarchScatter = 10.0;
+    scene.rayMarchScatter = 5.0;
 }
 
 void
