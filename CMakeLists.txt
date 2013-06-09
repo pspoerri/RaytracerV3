@@ -62,6 +62,9 @@ set(SOURCES
     RaytracerV3/Window.cpp
     )
 
+file(COPY data DESTINATION .)
+
+
 add_executable(raytracerV3 ${SOURCES} ${SOURCES_MATH} ${SOURCES_OGL} ${SOURCES_PLATFORM} ${SOURCES_CORE})
 target_link_libraries(raytracerV3 ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} ${GLFW_LIBRARY})
 
