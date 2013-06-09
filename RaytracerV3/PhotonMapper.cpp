@@ -59,6 +59,8 @@ PhotonMapper::render(Scene &scene)
     }
     Platform::Progress progress = Platform::Progress("Raytracing Image", xRes*yRes);    
     for (int i=0; i < xRes; i++) {
+
+        #pragma omp parallel for
         for (int j=0; j<yRes; j++) {
             Ray r = Ray();
             scene.camera.generateRay(r, i, j);
