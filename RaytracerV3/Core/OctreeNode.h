@@ -16,7 +16,7 @@ class OctreeNode;
 #include <iostream>
 #include <vector>
 #include <utility>
-#include "types.h"
+//#include "types.h"
 #include "PhotonSource.h"
 
 using namespace Math;
